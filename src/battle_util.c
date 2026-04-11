@@ -9724,9 +9724,8 @@ bool32 IsSleepClauseEnabled(void)
 
 bool32 AreMultiPartiesFullTeams(void)
 {
-    enum DifficultyLevel difficulty = GetCurrentDifficultyLevel();
-
-    if (TESTING)
+#if TESTING
+    if (IsAITest())
     {
         u8 *partySizes = gBattleTestRunnerState->data.partySizes;
         bool32 fullTeam = FALSE;
@@ -9748,7 +9747,10 @@ bool32 AreMultiPartiesFullTeams(void)
             return FALSE;
         }
     }
-    else if (B_MULTI_HALF_TEAMS
+#else
+    enum DifficultyLevel difficulty = GetCurrentDifficultyLevel();
+
+    if (B_MULTI_HALF_TEAMS
      || TRAINER_BATTLE_PARAM.opponentA == TRAINER_LINK_OPPONENT
      || gBattleTypeFlags & BATTLE_TYPE_TOWER_LINK_MULTI
      || (gTrainers[difficulty][TRAINER_BATTLE_PARAM.opponentA].multiTeamSize == MULTI_TEAM_SIZE_HALF)
@@ -9757,7 +9759,7 @@ bool32 AreMultiPartiesFullTeams(void)
         gSpecialVar_Result = FALSE;
         return FALSE;
     }
-    
+#endif
     gSpecialVar_Result = TRUE;
     return TRUE;
 }
