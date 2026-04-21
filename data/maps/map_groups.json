@@ -33,7 +33,12 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_NewTownsAndRoutes",
+    "gMapGroup_NewDungeons",
+    "gMapGroup_IndoorPeriwinkle",
+    "gMapGroup_IndoorMarigold",
+    "gMapGroup_IndoorChartreuse"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -620,5 +625,38 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup_NewTownsAndRoutes": [
+    "PeriwinkleTown",
+    "PeriwinkleGarden",
+    "Route1",
+    "MarigoldTown",
+    "Route2",
+    "Route3",
+    "Route4",
+    "ChartreuseCity"
+  ],
+  "gMapGroup_NewDungeons": [
+    "MarigoldForest",
+    "ChartreuseCaveNorthEntrance"
+  ],
+  "gMapGroup_IndoorPeriwinkle": [
+    "PerwinkleTown_PlayersHouse_1F",
+    "PeriwinkleTown_PlayersHouse_2F",
+    "PeriwinkleTown_ProfessorAspensLab"
+  ],
+  "gMapGroup_IndoorMarigold": [
+    "MarigoldTown_PokemonCenter",
+    "MarigoldTown_Mart",
+    "MarigoldTown_RivalHouse_1F",
+    "MarigoldTown_RivalHouse_2F",
+    "MarigoldTown_House1"
+  ],
+  "gMapGroup_IndoorChartreuse": [
+    "ChartreuseCity_PokemonCenter",
+    "ChartreuseCity_Mart",
+    "ChartreuseCity_House1",
+    "ChartreuseCity_House2",
+    "ChartreuseCity_Gym"
   ]
 }

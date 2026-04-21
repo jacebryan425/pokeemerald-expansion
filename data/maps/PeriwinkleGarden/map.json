@@ -1,0 +1,31 @@
+{
+  "id": "MAP_PERIWINKLE_GARDEN",
+  "name": "PeriwinkleGarden",
+  "layout": "LAYOUT_PERIWINKLE_GARDEN",
+  "music": "MUS_LITTLEROOT",
+  "region_map_section": "MAPSEC_PERIWINKLE_GARDEN",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_PERIWINKLE_TOWN",
+      "offset": 0,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE1",
+      "offset": 28,
+      "direction": "right"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

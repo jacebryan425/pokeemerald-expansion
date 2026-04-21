@@ -1,0 +1,19 @@
+mapscripts PeriwinkleTown_MapScripts {}
+
+script PeriwinkleTown_EventScript_PlayersHouse {
+    lock
+    msgbox("{PLAYER}'s House.")
+    release
+}
+
+script PeriwinkleTown_EventScript_ProfessorAspensLab {
+    lock
+    msgbox("Professor Aspen's Lab.")
+    release
+}
+
+script PeriwinkleTown_EventScript_Sign {
+    lock
+    msgbox("Periwinkle Town")
+    release
+}

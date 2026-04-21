@@ -1163,3 +1163,49 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
+
+	.include "data/maps/PerwinkleTown_PlayersHouse_1F/scripts.inc"
+
+	.include "data/maps/Route2/scripts.inc"
+
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/MarigoldTown_PokemonCenter/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/PeriwinkleTown/scripts.inc"
+
+	.include "data/maps/MarigoldTown/scripts.inc"
+
+	.include "data/maps/Route3/scripts.inc"
+
+	.include "data/maps/ChartreuseCaveNorthEntrance/scripts.inc"
+
+	.include "data/maps/ChartreuseCity/scripts.inc"
+
+	.include "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.inc"
+
+	.include "data/maps/MarigoldForest/scripts.inc"
+
+	.include "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.inc"
+
+	.include "data/maps/PeriwinkleGarden/scripts.inc"
+
+	.include "data/maps/ChartreuseCity_House1/scripts.inc"
+
+	.include "data/maps/MarigoldTown_RivalHouse_2F/scripts.inc"
+
+	.include "data/maps/ChartreuseCity_House2/scripts.inc"
+
+	.include "data/maps/ChartreuseCity_Gym/scripts.inc"
+
+	.include "data/maps/MarigoldTown_Mart/scripts.inc"
+
+	.include "data/maps/MarigoldTown_RivalHouse_1F/scripts.inc"
+
+	.include "data/maps/ChartreuseCity_Mart/scripts.inc"
+
+	.include "data/maps/ChartreuseCity_PokemonCenter/scripts.inc"
+
+	.include "data/maps/MarigoldTown_House1/scripts.inc"

@@ -1,0 +1,53 @@
+mapscripts PeriwinkleTown_PlayersHouse_2F_MapScripts {}
+
+raw `
+PeriwinkleTown_PlayersHouse_2F_EventScript_WallClock::
+    goto_if_set FLAG_SET_WALL_CLOCK, PeriwinkleTown_PlayersHouse_2F_EventScript_CheckWallClock
+    msgbox PeriwinkleTown_PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
+    call PeriwinkleTown_PlayersHouse_2F_EventScript_SetWallClock
+    delay 30
+    setflag FLAG_SET_WALL_CLOCK
+    releaseall
+    end
+
+PeriwinkleTown_PlayersHouse_2F_EventScript_CheckWallClock::
+	incrementgamestat GAME_STAT_CHECKED_CLOCK
+	fadescreen FADE_TO_BLACK
+	special Special_ViewWallClock
+	waitstate
+	releaseall
+	end
+
+PeriwinkleTown_PlayersHouse_2F_EventScript_SetWallClock::
+	fadescreen FADE_TO_BLACK
+	special StartWallClock
+	waitstate
+	return
+
+PeriwinkleTown_PlayersHouse_2F_Text_ClockIsStopped:
+	.string "The clock is stopped…\p"
+	.string "Better set it and start it!$"
+`
+
+script PeriwinkleTown_PlayersHouse_2F_EventScript_GameCube {
+    lock
+    msgbox("It's a Nintendo GameCube with\n"
+            "Super Monkey Ball.\p"
+            "Bro, I knew I liked you dude.\n"
+            "Come here, bring it in.")
+    release
+}
+
+script PeriwinkleTown_PlayersHouse_2F_EventScript_Notebook {
+    lock
+    msgbox("You flip through an old journal\n"
+            "written during your time in a distant\l"
+            "region.\p"
+            "'Last week I narrowly defeated the\n"
+            "Elite Four, and on my way back home,\l"
+            "I caught the last Pokémon I needed\l"
+            "to complete the Professor's Pokédex.\p"
+            "Not much left to do here in Kanto,\n"
+            "I think it's time for a change.'")
+    release
+}

@@ -1,0 +1,34 @@
+mapscripts Route1_MapScripts {}
+
+script Route1_EventScript_Sign {
+    lock
+    msgbox("Route 1")
+    release
+}
+
+script Route1_EventScript_TrainerTip1 {
+    lock
+    msgbox("Be careful walking through the\n"
+            "tall grass!\p"
+            "Wild Pokémon could catch you off guard\n"
+            "at any moment.")
+    release
+}
+
+script Route1_EventScript_TrainerTip2 {
+    lock
+    msgbox("Routes are full of fellow trainers\n"
+            "looking to hone their skills.\p"
+            "If one locks eyes with you,\n"
+            "you must battle!")
+    release
+}
+
+script Route1_EventScript_TrainerTip3 {
+    lock
+    msgbox("This region is full of hidden areas.\p"
+            "Use the skills you learn and\n"
+            "a little bit of imagination to discover\l"
+            "them all.")
+    release
+}
