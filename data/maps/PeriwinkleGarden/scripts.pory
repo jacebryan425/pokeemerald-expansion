@@ -1,0 +1,71 @@
+mapscripts PeriwinkleGarden_MapScripts {}
+
+script PeriwinkleGarden_EventScript_BeginStarterSequence {
+    lock
+    msgbox("Hey! Over here!")
+    addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
+    release
+}
+
+script PeriwinkleGarden_EventScript_ProfessorAspen {
+    lock
+    faceplayer
+    msgbox("Professor Aspen: Look at this!")
+    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown)
+    waitmovement(0)
+    msgbox("Somebody caught these three poor\n
+            Pokémon and just left them here,\l
+            trapped inside of their balls!\p
+            I know...")
+    faceplayer
+    msgbox("{PLAYER}, you seem to be\n
+            without a partner Pokémon.\p
+            Would you like to have one of these\n
+            Pokémon join you?", MSGBOX_YESNO)
+    while (var(VAR_RESULT) != 1) {
+        msgbox("...You really won't save one of these
+                poor Pokémon?", MSGBOX_YESNO)
+    }
+    msgbox("Great! Go on and choose.")
+    setflag(FLAG_STARTER_SELECTION)
+    release
+}
+
+script PeriwinkleGarden_EventScript_PreventEscapeEast {
+    lock
+    if (flag(FLAG_STARTER_SELECTION)) {
+            msgbox("Wait, where are you going?!\n
+            Don't you want to save one of these\l
+            Pokémon?")
+            applymovement(OBJ_EVENT_ID_PLAYER, PeriwinkleGarden_WalkLeft)
+            waitmovement(0)
+    } else {
+            msgbox("Wait, don't go!\n
+            Come and see this!")
+            applymovement(OBJ_EVENT_ID_PLAYER, PeriwinkleGarden_WalkLeft)
+            waitmovement(0)
+    }
+    release
+}
+
+script PeriwinkleGarden_EventScript_PreventEscapeNorth {
+    lock
+    msgbox("Wait, where are you going?!\n
+            Don't you want to save one of these\l
+            Pokémon?")
+    applymovement(OBJ_EVENT_ID_PLAYER, PeriwinkleGarden_WalkDown)
+    waitmovement(0)
+    release
+}
+
+movement PeriwinkleGarden_FaceDown {
+        face_down
+}
+
+movement PeriwinkleGarden_WalkDown {
+        walk_down
+}
+
+movement PeriwinkleGarden_WalkLeft {
+        walk_left
+}

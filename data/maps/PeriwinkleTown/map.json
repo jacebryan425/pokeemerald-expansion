@@ -49,7 +49,7 @@
       "elevation": 0,
       "var": "VAR_PERIWINKLE_TOWN_STATE",
       "var_value": "0",
-      "script": "PeriwinkleTown_EventScript_GoToGarden"
+      "script": "PeriwinkleTown_EventScript_PreventEscape"
     },
     {
       "type": "trigger",
@@ -58,7 +58,7 @@
       "elevation": 0,
       "var": "VAR_PERIWINKLE_TOWN_STATE",
       "var_value": "0",
-      "script": "PeriwinkleTown_EventScript_GoToGarden"
+      "script": "PeriwinkleTown_EventScript_PreventEscape"
     }
   ],
   "bg_events": [

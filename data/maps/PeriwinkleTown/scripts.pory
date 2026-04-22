@@ -18,7 +18,7 @@ script PeriwinkleTown_EventScript_Sign {
     release
 }
 
-script PeriwinkleTown_EventScript_GoToGarden {
+script PeriwinkleTown_EventScript_PreventEscape {
     lock
     msgbox("It might not be wise to leave town\n 
             without a Pokémon...")
@@ -27,6 +27,6 @@ script PeriwinkleTown_EventScript_GoToGarden {
     release
 }
 
-movement PeriwinkleTown_PlayerMovement {
+movement PeriwinkleTown_WalkUp {
     walk_up
 }
