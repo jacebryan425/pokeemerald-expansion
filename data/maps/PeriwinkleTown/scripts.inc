@@ -37,6 +37,8 @@ PeriwinkleTown_EventScript_PreventEscape::
 	lock
 # 23 "data/maps/PeriwinkleTown/scripts.pory"
 	msgbox PeriwinkleTown_EventScript_PreventEscape_Text_0
+# 24 "data/maps/PeriwinkleTown/scripts.pory"
+	waitmessage
 # 25 "data/maps/PeriwinkleTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, PeriwinkleTown_WalkUp
 # 26 "data/maps/PeriwinkleTown/scripts.pory"
@@ -66,4 +68,4 @@ PeriwinkleTown_EventScript_Sign_Text_0:
 
 PeriwinkleTown_EventScript_PreventEscape_Text_0:
 # 23 "data/maps/PeriwinkleTown/scripts.pory"
-	.string "It might not be wise to leave town\n  without a Pokémon...$"
+	.string "It might not be wise to leave town\nwithout a Pokémon...$"

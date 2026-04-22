@@ -13,48 +13,32 @@ script PeriwinkleGarden_EventScript_ProfessorAspen {
     msgbox("Professor Aspen: Look at this!")
     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown)
     waitmovement(0)
-    msgbox("Somebody caught these three poor\n
-            Pokémon and just left them here,\l
-            trapped inside of their balls!\p
-            I know...")
+    msgbox("Somebody caught these three poor\nPokémon and just left them here,\ltrapped inside of their balls!\pI know...")
     faceplayer
-    msgbox("{PLAYER}, you seem to be\n
-            without a partner Pokémon.\p
-            Would you like to have one of these\n
-            Pokémon join you?", MSGBOX_YESNO)
+    msgbox("{PLAYER}, you seem to be\nwithout a partner Pokémon.\pWould you like to have one of these\nPokémon join you?", MSGBOX_YESNO)
     while (var(VAR_RESULT) != 1) {
-        msgbox("...You really won't save one of these
-                poor Pokémon?", MSGBOX_YESNO)
+        msgbox("...You really won't save one of\nthese poor Pokémon?", MSGBOX_YESNO)
     }
     msgbox("Great! Go on and choose.")
+    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown)
+    waitmovement(0)
     setflag(FLAG_STARTER_SELECTION)
     release
 }
 
-script PeriwinkleGarden_EventScript_PreventEscapeEast {
+script PeriwinkleGarden_EventScript_PreventEscape {
     lock
     if (flag(FLAG_STARTER_SELECTION)) {
-            msgbox("Wait, where are you going?!\n
-            Don't you want to save one of these\l
-            Pokémon?")
+            msgbox("Wait, where are you going?!\nDon't you want to save one of\lthese Pokémon?")
+            waitmessage
             applymovement(OBJ_EVENT_ID_PLAYER, PeriwinkleGarden_WalkLeft)
             waitmovement(0)
     } else {
-            msgbox("Wait, don't go!\n
-            Come and see this!")
+            msgbox("Wait, don't go!\nCome and see this!")
+            waitmessage
             applymovement(OBJ_EVENT_ID_PLAYER, PeriwinkleGarden_WalkLeft)
             waitmovement(0)
     }
-    release
-}
-
-script PeriwinkleGarden_EventScript_PreventEscapeNorth {
-    lock
-    msgbox("Wait, where are you going?!\n
-            Don't you want to save one of these\l
-            Pokémon?")
-    applymovement(OBJ_EVENT_ID_PLAYER, PeriwinkleGarden_WalkDown)
-    waitmovement(0)
     release
 }
 
@@ -63,38 +47,41 @@ script PeriwinkleGarden_EventScript_ChikoritaBall {
     faceplayer
     if (flag(FLAG_STARTER_SELECTION)) {
             showmonpic(SPECIES_CHIKORITA, 10, 3)
-            msgbox("Do you want the Leaf Pokémon,\n
-                    Chikorita?", MSGBOX_YESNO)
+            playmoncry(SPECIES_CHIKORITA, CRY_MODE_NORMAL)
+            waitmoncry
+            msgbox("Do you want the Leaf Pokémon,\nChikorita?", MSGBOX_YESNO)
             if (var(VAR_RESULT) == YES) {
                     givemon(SPECIES_CHIKORITA, 5, ITEM_NONE)
+                    setflag(FLAG_SYS_POKEMON_GET)
                     playfanfare(MUS_OBTAIN_ITEM)
                     msgbox("Received Chikorita!")
                     waitfanfare
                     setflag(FLAG_CHIKORITA_CHOSEN)
+                    removeobject(CHIKORITA_BALL)
                     hidemonpic
-                    msgbox("Very well, then.\p
-                            I'll take these two and release them\n
-                            back into their habitats.")
+                    msgbox("Very well, then.\pI'll take these two and release them\nback into their habitats.")
+                    waitmessage
                     setflag(FLAG_TORCHIC_CHOSEN)
+                    removeobject(TORCHIC_BALL)
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseChikorita_1)
                     waitmovement(0)
+                    delay(30)
                     setflag(FLAG_SQUIRTLE_CHOSEN)
+                    removeobject(SQUIRTLE_BALL)
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseChikorita_2)
                     waitmovement(0)
-                    msgbox("But first, I have something back at\n
-                            the lab that I need to talk to you\l
-                            about, {PLAYER}.
-                            Please come by when you have the time.")
+                    msgbox("But first, I have something back at\nthe lab that I need to talk to you\labout, {PLAYER}.\pPlease come by when you have the time.")
+                    waitmessage
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway)
                     waitmovement(0)
                     setflag(FLAG_HIDE_PROFESSOR_ASPEN)
+                    removeobject(PROFESSOR_ASPEN)
                     addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
                     addvar(VAR_PERIWINKLE_TOWN_STATE, 1)
             }
+            hidemonpic
     } else {
-            msgbox("It's a Poké Ball containing a\n
-                    wild Pokémon.\p
-                    It's covered in weeds.")
+            msgbox("It's a Poké Ball containing a\nwild Pokémon.\p...It's covered in weeds.")
 
     }
     release
@@ -105,40 +92,43 @@ script PeriwinkleGarden_EventScript_TorchicBall {
     faceplayer
     if (flag(FLAG_STARTER_SELECTION)) {
             showmonpic(SPECIES_TORCHIC, 10, 3)
-            msgbox("Do you want the Chick Pokémon,\n
-                    Torchic?", MSGBOX_YESNO)
+            playmoncry(SPECIES_TORCHIC, CRY_MODE_NORMAL)
+            waitmoncry
+            msgbox("Do you want the Chick Pokémon,\nTorchic?", MSGBOX_YESNO)
             if (var(VAR_RESULT) == YES) {
                     givemon(SPECIES_TORCHIC, 5, ITEM_NONE)
+                    setflag(FLAG_SYS_POKEMON_GET)
                     playfanfare(MUS_OBTAIN_ITEM)
                     msgbox("Received Torchic!")
                     waitfanfare
                     setflag(FLAG_TORCHIC_CHOSEN)
+                    removeobject(TORCHIC_BALL)
                     hidemonpic
-                    msgbox("Very well, then.\p
-                            I'll take these two and release them\n
-                            back into their habitats.")
+                    msgbox("Very well, then.\pI'll take these two and release them\nback into their habitats.")
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseTorchic_1)
                     waitmovement(0)
+                    delay(30)
                     setflag(FLAG_CHIKORITA_CHOSEN)
+                    removeobject(CHIKORITA_BALL)
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseTorchic_2)
                     waitmovement(0)
+                    delay(30)
                     setflag(FLAG_SQUIRTLE_CHOSEN)
+                    removeobject(SQUIRTLE_BALL)
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseTorchic_1)
                     waitmovement(0)
-                    msgbox("But first, I have something back at\n
-                            the lab that I need to talk to you\l
-                            about, {PLAYER}.
-                            Please come by when you have the time.")
+                    msgbox("But first, I have something back at\nthe lab that I need to talk to you\labout, {PLAYER}.\pPlease come by when you have the time.")
+                    waitmessage
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway)
                     waitmovement(0)
                     setflag(FLAG_HIDE_PROFESSOR_ASPEN)
+                    removeobject(PROFESSOR_ASPEN)
                     addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
                     addvar(VAR_PERIWINKLE_TOWN_STATE, 1)
             }
+            hidemonpic
     } else {
-            msgbox("It's a Poké Ball containing a\n
-                    wild Pokémon.\p
-                    It's hot to the touch.")
+            msgbox("It's a Poké Ball containing a\nwild Pokémon.\p...It's hot to the touch.")
 
     }
     release
@@ -149,40 +139,41 @@ script PeriwinkleGarden_EventScript_SquirtleBall {
     faceplayer
     if (flag(FLAG_STARTER_SELECTION)) {
             showmonpic(SPECIES_SQUIRTLE, 10, 3)
-            msgbox("Do you want the Tiny Turtle Pokémon,\n
-                    Squirtle?", MSGBOX_YESNO)
+            playmoncry(SPECIES_SQUIRTLE, CRY_MODE_NORMAL)
+            waitmoncry
+            msgbox("Do you want the Tiny Turtle Pokémon,\nSquirtle?", MSGBOX_YESNO)
             if (var(VAR_RESULT) == YES) {
                     givemon(SPECIES_SQUIRTLE, 5, ITEM_NONE)
+                    setflag(FLAG_SYS_POKEMON_GET)
                     playfanfare(MUS_OBTAIN_ITEM)
                     msgbox("Received Squirtle!")
                     waitfanfare
                     setflag(FLAG_SQUIRTLE_CHOSEN)
+                    removeobject(SQUIRTLE_BALL)
                     hidemonpic
-                    msgbox("Very well, then.\p
-                            I'll take these two and release them\n
-                            back into their habitats.")
+                    msgbox("Very well, then.\pI'll take these two and release them\nback into their habitats.")
+                    waitmessage
+                    setflag(FLAG_TORCHIC_CHOSEN)
+                    removeobject(TORCHIC_BALL)
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseSquirtle_1)
                     waitmovement(0)
+                    delay(30)
                     setflag(FLAG_CHIKORITA_CHOSEN)
+                    removeobject(CHIKORITA_BALL)
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseSquirtle_2)
                     waitmovement(0)
-                    setflag(FLAG_TORCHIC_CHOSEN)
-                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseSquirtle_2)
-                    waitmovement(0)
-                    msgbox("But first, I have something back at\n
-                            the lab that I need to talk to you\l
-                            about, {PLAYER}.
-                            Please come by when you have the time.")
+                    msgbox("But first, I have something back at\nthe lab that I need to talk to you\labout, {PLAYER}.\pPlease come by when you have the time.")
+                    waitmessage
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway)
                     waitmovement(0)
                     setflag(FLAG_HIDE_PROFESSOR_ASPEN)
+                    removeobject(PROFESSOR_ASPEN)
                     addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
                     addvar(VAR_PERIWINKLE_TOWN_STATE, 1)
             }
+            hidemonpic
     } else {
-            msgbox("It's a Poké Ball containing a\n
-                    wild Pokémon.\p
-                    It's a little wet.")
+            msgbox("It's a Poké Ball containing a\nwild Pokémon.\p...It's a little wet.")
 
     }
     release
@@ -224,11 +215,11 @@ movement PeriwinkleGarden_ChoseTorchic_2 {
 
 movement PeriwinkleGarden_ChoseSquirtle_1 {
         walk_left
-        walk_left
         face_down
 }
 
 movement PeriwinkleGarden_ChoseSquirtle_2 {
+        walk_right
         walk_right
         face_down
 }

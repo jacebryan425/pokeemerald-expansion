@@ -46,8 +46,12 @@ Route1_EventScript_Zigzagoon::
 # 37 "data/maps/Route1/scripts.pory"
 	lock
 # 38 "data/maps/Route1/scripts.pory"
-	msgbox Route1_EventScript_Zigzagoon_Text_0
+	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
 # 39 "data/maps/Route1/scripts.pory"
+	waitmoncry
+# 40 "data/maps/Route1/scripts.pory"
+	msgbox Route1_EventScript_Zigzagoon_Text_0
+# 41 "data/maps/Route1/scripts.pory"
 	release
 	return
 
@@ -78,5 +82,5 @@ Route1_EventScript_TrainerTip3_Text_0:
 	.string "them all.$"
 
 Route1_EventScript_Zigzagoon_Text_0:
-# 38 "data/maps/Route1/scripts.pory"
+# 40 "data/maps/Route1/scripts.pory"
 	.string "Zig-zig, Zigzagoon-goon!$"
