@@ -2,7 +2,7 @@ mapscripts PeriwinkleTown_ProfessorAspensLab_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         if (flag(FLAG_HIDE_PROFESSOR_ASPEN) == true) {
             clearflag(FLAG_HIDE_PROFESSOR_ASPEN_LAB)
-            showobject(PROFESSOR_BIRCH)
+            showobjectat(1, MAP_PERIWINKLE_TOWN_PROFESSOR_ASPENS_LAB)
         } else {
             setflag(FLAG_HIDE_PROFESSOR_ASPEN_LAB)
         }
