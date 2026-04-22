@@ -17,3 +17,16 @@ script PeriwinkleTown_EventScript_Sign {
     msgbox("Periwinkle Town")
     release
 }
+
+script PeriwinkleTown_EventScript_GoToGarden {
+    lock
+    msgbox("It might not be wise to leave town 
+            without a Pokémon...")
+    applymovement(OBJ_EVENT_ID_PLAYER, PeriwinkleTown_PlayerMovement)
+    waitmovement(0)
+    release
+}
+
+movement PeriwinkleTown_PlayerMovement {
+    walk_up
+}
