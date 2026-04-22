@@ -32,13 +32,13 @@ PeriwinkleTown_EventScript_Sign::
 	return
 
 
-PeriwinkleTown_EventScript_GoToGarden::
+PeriwinkleTown_EventScript_PreventEscape::
 # 22 "data/maps/PeriwinkleTown/scripts.pory"
 	lock
 # 23 "data/maps/PeriwinkleTown/scripts.pory"
-	msgbox PeriwinkleTown_EventScript_GoToGarden_Text_0
+	msgbox PeriwinkleTown_EventScript_PreventEscape_Text_0
 # 25 "data/maps/PeriwinkleTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PeriwinkleTown_PlayerMovement
+	applymovement OBJ_EVENT_ID_PLAYER, PeriwinkleTown_WalkUp
 # 26 "data/maps/PeriwinkleTown/scripts.pory"
 	waitmovement 0
 # 27 "data/maps/PeriwinkleTown/scripts.pory"
@@ -47,7 +47,7 @@ PeriwinkleTown_EventScript_GoToGarden::
 
 
 # 30 "data/maps/PeriwinkleTown/scripts.pory"
-PeriwinkleTown_PlayerMovement:
+PeriwinkleTown_WalkUp:
 # 31 "data/maps/PeriwinkleTown/scripts.pory"
 	walk_up
 	step_end
@@ -64,6 +64,6 @@ PeriwinkleTown_EventScript_Sign_Text_0:
 # 17 "data/maps/PeriwinkleTown/scripts.pory"
 	.string "Periwinkle Town$"
 
-PeriwinkleTown_EventScript_GoToGarden_Text_0:
+PeriwinkleTown_EventScript_PreventEscape_Text_0:
 # 23 "data/maps/PeriwinkleTown/scripts.pory"
-	.string "It might not be wise to leave town  without a Pokémon...$"
+	.string "It might not be wise to leave town\n  without a Pokémon...$"

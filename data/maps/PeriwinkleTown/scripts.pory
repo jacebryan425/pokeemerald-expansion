@@ -22,7 +22,7 @@ script PeriwinkleTown_EventScript_PreventEscape {
     lock
     msgbox("It might not be wise to leave town\n 
             without a Pokémon...")
-    applymovement(OBJ_EVENT_ID_PLAYER, PeriwinkleTown_PlayerMovement)
+    applymovement(OBJ_EVENT_ID_PLAYER, PeriwinkleTown_WalkUp)
     waitmovement(0)
     release
 }

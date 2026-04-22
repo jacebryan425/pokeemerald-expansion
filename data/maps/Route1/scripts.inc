@@ -42,6 +42,16 @@ Route1_EventScript_TrainerTip3::
 	return
 
 
+Route1_EventScript_Zigzagoon::
+# 37 "data/maps/Route1/scripts.pory"
+	lock
+# 38 "data/maps/Route1/scripts.pory"
+	msgbox Route1_EventScript_Zigzagoon_Text_0
+# 39 "data/maps/Route1/scripts.pory"
+	release
+	return
+
+
 Route1_EventScript_Sign_Text_0:
 # 5 "data/maps/Route1/scripts.pory"
 	.string "Route 1$"
@@ -66,3 +76,7 @@ Route1_EventScript_TrainerTip3_Text_0:
 	.string "Use the skills you learn and\n"
 	.string "a little bit of imagination to discover\l"
 	.string "them all.$"
+
+Route1_EventScript_Zigzagoon_Text_0:
+# 38 "data/maps/Route1/scripts.pory"
+	.string "Zig-zig, Zigzagoon-goon!$"
