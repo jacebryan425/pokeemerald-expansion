@@ -89,6 +89,7 @@ script PeriwinkleGarden_EventScript_ChikoritaBall {
                     waitmovement(0)
                     setflag("FLAG_HIDE_PROFESSOR_ASPEN")
                     addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
+                    addvar(VAR_PERIWINKLE_TOWN_STATE, 1)
             }
     } else {
             msgbox("It's a Poké Ball containing a\n
@@ -132,6 +133,7 @@ script PeriwinkleGarden_EventScript_TorchicBall {
                     waitmovement(0)
                     setflag("FLAG_HIDE_PROFESSOR_ASPEN")
                     addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
+                    addvar(VAR_PERIWINKLE_TOWN_STATE, 1)
             }
     } else {
             msgbox("It's a Poké Ball containing a\n
@@ -175,6 +177,7 @@ script PeriwinkleGarden_EventScript_SquirtleBall {
                     waitmovement(0)
                     setflag("FLAG_HIDE_PROFESSOR_ASPEN")
                     addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
+                    addvar(VAR_PERIWINKLE_TOWN_STATE, 1)
             }
     } else {
             msgbox("It's a Poké Ball containing a\n
