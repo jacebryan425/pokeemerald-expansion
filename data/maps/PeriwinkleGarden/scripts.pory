@@ -61,6 +61,7 @@ script PeriwinkleGarden_EventScript_ChikoritaBall {
                     hidemonpic
                     msgbox("Very well, then.\pI'll take these two and release them\nback into their habitats.")
                     waitmessage
+                    closemessage
                     setflag(FLAG_TORCHIC_CHOSEN)
                     removeobject(TORCHIC_BALL)
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseChikorita_1)
@@ -72,6 +73,7 @@ script PeriwinkleGarden_EventScript_ChikoritaBall {
                     waitmovement(0)
                     msgbox("But first, I have something back at\nthe lab that I need to talk to you\labout, {PLAYER}.\pPlease come by when you have the time.")
                     waitmessage
+                    closemessage
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway)
                     waitmovement(0)
                     setflag(FLAG_HIDE_PROFESSOR_ASPEN)
@@ -105,6 +107,8 @@ script PeriwinkleGarden_EventScript_TorchicBall {
                     removeobject(TORCHIC_BALL)
                     hidemonpic
                     msgbox("Very well, then.\pI'll take these two and release them\nback into their habitats.")
+                    waitmessage
+                    closemessage
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseTorchic_1)
                     waitmovement(0)
                     delay(30)
@@ -119,6 +123,7 @@ script PeriwinkleGarden_EventScript_TorchicBall {
                     waitmovement(0)
                     msgbox("But first, I have something back at\nthe lab that I need to talk to you\labout, {PLAYER}.\pPlease come by when you have the time.")
                     waitmessage
+                    closemessage
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway)
                     waitmovement(0)
                     setflag(FLAG_HIDE_PROFESSOR_ASPEN)
@@ -153,6 +158,7 @@ script PeriwinkleGarden_EventScript_SquirtleBall {
                     hidemonpic
                     msgbox("Very well, then.\pI'll take these two and release them\nback into their habitats.")
                     waitmessage
+                    closemessage
                     setflag(FLAG_TORCHIC_CHOSEN)
                     removeobject(TORCHIC_BALL)
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseSquirtle_1)
@@ -164,6 +170,7 @@ script PeriwinkleGarden_EventScript_SquirtleBall {
                     waitmovement(0)
                     msgbox("But first, I have something back at\nthe lab that I need to talk to you\labout, {PLAYER}.\pPlease come by when you have the time.")
                     waitmessage
+                    closemessage
                     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway)
                     waitmovement(0)
                     setflag(FLAG_HIDE_PROFESSOR_ASPEN)

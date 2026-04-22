@@ -1,0 +1,27 @@
+mapscripts PeriwinkleTown_ProfessorAspensLab_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if (flag(FLAG_HIDE_PROFESSOR_ASPEN) == true) {
+            clearflag(FLAG_HIDE_PROFESSOR_ASPEN_LAB)
+            showobject(PROFESSOR_BIRCH)
+        } else {
+            setflag(FLAG_HIDE_PROFESSOR_ASPEN_LAB)
+        }
+    }
+}
+
+script PeriwinkleTown_ProfessorAspensLab_EventScript_Scientist {
+    lock
+    faceplayer
+    if (flag(FLAG_HIDE_PROFESSOR_ASPEN) == true) {
+            msgbox("I've been working for Professor Aspen\n"
+                    "for a quite a while now.\p"
+                    "He's been a very good boss, and I\n"
+                    "get a pretty sweet benefits package.")
+    } else {
+            msgbox("Looking for Professor Aspen?\p"
+                    "He's not here.\p"
+                    "When he left, he told me he was\n"
+                    "going for a walk in Periwinkle Garden.")
+    }
+    release
+}

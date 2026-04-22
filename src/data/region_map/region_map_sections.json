@@ -1125,43 +1125,43 @@
     },
     {
       "id": "MAPSEC_PERIWINKLE_TOWN",
-      "name": "PERIWINKLE TOWN"
+      "name": "Periwinkle Town"
     },
     {
       "id": "MAPSEC_PERIWINKLE_GARDEN",
-      "name": "PERIWINKLE GARDEN"
+      "name": "Periwinkle Garden"
     },
     {
       "id": "MAPSEC_ROUTE_1",
-      "name": "ROUTE 1"
+      "name": "Route 1"
     },
     {
       "id": "MAPSEC_ROUTE_2",
-      "name": "ROUTE 2"
+      "name": "Route 2"
     },
     {
       "id": "MAPSEC_ROUTE_3",
-      "name": "ROUTE 3"
+      "name": "Route 3"
     },
     {
       "id": "MAPSEC_ROUTE_4",
-      "name": "ROUTE 4"
+      "name": "Route 4"
     },
     {
       "id": "MAPSEC_MARIGOLD_TOWN",
-      "name": "MARIGOLD TOWN"
+      "name": "Marigold Town"
     },
     {
       "id": "MAPSEC_CHARTREUSE_CITY",
-      "name": "CHARTREUSE CITY"
+      "name": "Chartreuse City"
     },
     {
       "id": "MAPSEC_MARIGOLD_FOREST",
-      "name": "MARIGOLD FOREST"
+      "name": "Marigold Forest"
     },
     {
       "id": "MAPSEC_CHARTREUSE_CAVE",
-      "name": "CHARTREUSE CAVE"
+      "name": "Chartreuse Cave"
     }
   ]
 }
