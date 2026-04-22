@@ -25,3 +25,21 @@ script PeriwinkleTown_ProfessorAspensLab_EventScript_Scientist {
     }
     release
 }
+
+script PeriwinkleTown_ProfessorAspensLab_EventScript_Dex {
+    lock
+    msgbox("It's a Pokédex, just like the one\n"
+            "you had back in Kanto.\p"
+            "This one looks way more advanced.")
+    release
+}
+
+script PeriwinkleTown_ProfessorAspensLab_EventScript_Birch {
+    lock
+    faceplayer
+    if (flag(FLAG_RECEIVED_DEX_FROM_ASPEN)) {
+
+    } else {
+
+    }
+}

@@ -664,8 +664,8 @@
 #define FLAG_HIDE_ZIGZAGOON_1          0x269 // Changed
 #define FLAG_HIDE_ZIGZAGOON_2          0x26A // Changed
 #define FLAG_HIDE_PROFESSOR_ASPEN_LAB  0x26B // Changed
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
+#define FLAG_RECEIVED_DEX_FROM_ASPEN   0x26C // Changed
+#define FLAG_HIDE_DEX                  0x26D // Changed
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag
 #define FLAG_UNUSED_0x26F  0x26F // Unused Flag
 #define FLAG_UNUSED_0x270  0x270 // Unused Flag
