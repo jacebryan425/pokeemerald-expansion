@@ -38,6 +38,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PeriwinkleGarden_ProfessorAspen",
       "flag": "FLAG_HIDE_PROFESSOR_ASPEN"
+    },
+    {
+      "local_id": "CHIKORITA_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 15,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PeriwinkleGarden_EventScript_ChikoritaBall",
+      "flag": "FLAG_CHIKORITA_CHOSEN"
+    },
+    {
+      "local_id": "TORCHIC_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 16,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PeriwinkleGarden_EventScript_TorchicBall",
+      "flag": "FLAG_TORCHIC_CHOSEN"
+    },
+    {
+      "local_id": "SQUIRTLE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 17,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PeriwinkleGarden_EventScript_SquirtleBall",
+      "flag": "FLAG_SQUIRTLE_CHOSEN"
     }
   ],
   "warp_events": [],

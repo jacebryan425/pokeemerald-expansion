@@ -58,6 +58,133 @@ script PeriwinkleGarden_EventScript_PreventEscapeNorth {
     release
 }
 
+script PeriwinkleGarden_EventScript_ChikoritaBall {
+    lock
+    faceplayer
+    if (flag(FLAG_STARTER_SELECTION)) {
+            showmonpic(SPECIES_CHIKORITA, 10, 3)
+            msgbox("Do you want the Leaf Pokémon,\n
+                    Chikorita?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                    givemon(SPECIES_CHIKORITA, 5, ITEM_NONE)
+                    playfanfare(MUS_OBTAIN_ITEM)
+                    msgbox("Received Chikorita!")
+                    waitfanfare
+                    setflag(FLAG_CHIKORITA_CHOSEN)
+                    hidemonpic
+                    msgbox("Very well, then.\p
+                            I'll take these two and release them\n
+                            back into their habitats.")
+                    setflag("FLAG_TORCHIC_CHOSEN")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseChikorita_1)
+                    waitmovement(0)
+                    setflag("FLAG_SQUIRTLE_CHOSEN")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseChikorita_2)
+                    waitmovement(0)
+                    msgbox("But first, I have something back at\n
+                            the lab that I need to talk to you\l
+                            about, {PLAYER}.
+                            Please come by when you have the time.")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway)
+                    waitmovement(0)
+                    setflag("FLAG_HIDE_PROFESSOR_ASPEN")
+                    addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
+            }
+    } else {
+            msgbox("It's a Poké Ball containing a\n
+                    wild Pokémon.\p
+                    It's covered in weeds.")
+
+    }
+    release
+}
+
+script PeriwinkleGarden_EventScript_TorchicBall {
+    lock
+    faceplayer
+    if (flag(FLAG_STARTER_SELECTION)) {
+            showmonpic(SPECIES_TORCHIC, 10, 3)
+            msgbox("Do you want the Chick Pokémon,\n
+                    Torchic?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                    givemon(SPECIES_TORCHIC, 5, ITEM_NONE)
+                    playfanfare(MUS_OBTAIN_ITEM)
+                    msgbox("Received Torchic!")
+                    waitfanfare
+                    setflag(FLAG_TORCHIC_CHOSEN)
+                    hidemonpic
+                    msgbox("Very well, then.\p
+                            I'll take these two and release them\n
+                            back into their habitats.")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseTorchic_1)
+                    waitmovement(0)
+                    setflag("FLAG_CHIKORITA_CHOSEN")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseTorchic_2)
+                    waitmovement(0)
+                    setflag("FLAG_SQUIRTLE_CHOSEN")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseTorchic_1)
+                    waitmovement(0)
+                    msgbox("But first, I have something back at\n
+                            the lab that I need to talk to you\l
+                            about, {PLAYER}.
+                            Please come by when you have the time.")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway)
+                    waitmovement(0)
+                    setflag("FLAG_HIDE_PROFESSOR_ASPEN")
+                    addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
+            }
+    } else {
+            msgbox("It's a Poké Ball containing a\n
+                    wild Pokémon.\p
+                    It's hot to the touch.")
+
+    }
+    release
+}
+
+script PeriwinkleGarden_EventScript_SquirtleBall {
+    lock
+    faceplayer
+    if (flag(FLAG_STARTER_SELECTION)) {
+            showmonpic(SPECIES_SQUIRTLE, 10, 3)
+            msgbox("Do you want the Tiny Turtle Pokémon,\n
+                    Squirtle?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                    givemon(SPECIES_SQUIRTLE, 5, ITEM_NONE)
+                    playfanfare(MUS_OBTAIN_ITEM)
+                    msgbox("Received Squirtle!")
+                    waitfanfare
+                    setflag(FLAG_SQUIRTLE_CHOSEN)
+                    hidemonpic
+                    msgbox("Very well, then.\p
+                            I'll take these two and release them\n
+                            back into their habitats.")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseSquirtle_1)
+                    waitmovement(0)
+                    setflag("FLAG_CHIKORITA_CHOSEN")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseSquirtle_2)
+                    waitmovement(0)
+                    setflag("FLAG_TORCHIC_CHOSEN")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ChoseSquirtle_2)
+                    waitmovement(0)
+                    msgbox("But first, I have something back at\n
+                            the lab that I need to talk to you\l
+                            about, {PLAYER}.
+                            Please come by when you have the time.")
+                    applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway)
+                    waitmovement(0)
+                    setflag("FLAG_HIDE_PROFESSOR_ASPEN")
+                    addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
+            }
+    } else {
+            msgbox("It's a Poké Ball containing a\n
+                    wild Pokémon.\p
+                    It's a little wet.")
+
+    }
+    release
+}
+
 movement PeriwinkleGarden_FaceDown {
         face_down
 }
@@ -68,4 +195,41 @@ movement PeriwinkleGarden_WalkDown {
 
 movement PeriwinkleGarden_WalkLeft {
         walk_left
+}
+
+movement PeriwinkleGarden_ChoseChikorita_1 {
+        walk_right
+        face_down
+}
+
+movement PeriwinkleGarden_ChoseChikorita_2 {
+        walk_left
+        walk_left
+        face_down
+}
+
+movement PeriwinkleGarden_ChoseTorchic_1 {
+        walk_left
+        face_down
+}
+
+movement PeriwinkleGarden_ChoseTorchic_2 {
+        walk_right
+        walk_right
+        face_down
+}
+
+movement PeriwinkleGarden_ChoseSquirtle_1 {
+        walk_left
+        walk_left
+        face_down
+}
+
+movement PeriwinkleGarden_ChoseSquirtle_2 {
+        walk_right
+        face_down
+}
+
+movement PeriwinkleGarden_ProfessorBirchWalksAway {
+        walk_right * 12
 }

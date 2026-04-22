@@ -32,3 +32,9 @@ script Route1_EventScript_TrainerTip3 {
             "them all.")
     release
 }
+
+script Route1_EventScript_Zigzagoon {
+    lock
+    msgbox("Zig-zig, Zigzagoon-goon!")
+    release
+}
