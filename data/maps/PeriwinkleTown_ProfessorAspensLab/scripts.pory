@@ -54,6 +54,7 @@ script PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen {
                     "completion of his Pokédex, I knew\l"
                     "that you were the right person to\l"
                     "entrust it with.")
+            closemessage
             if (var(VAR_FACING) == DIR_SOUTH) {
                     applymovement(PROFESSOR_ASPEN, moves(
                                     walk_right
@@ -89,9 +90,10 @@ script PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen {
             msgbox("{PLAYER} received the Pokédex!")
             waitfanfare
             setflag(FLAG_SYS_POKEDEX_GET)
-            setflag(FLAG_SYS_NATIONAL_DEX)
             setflag(FLAG_RECEIVED_DEX_FROM_ASPEN)
             special(SetUnlockedPokedexFlags)
+            setflag(FLAG_SYS_NATIONAL_DEX)
+            special(EnableNationalPokedex)
             msgbox("Here are a few Poké Balls to help\n"
                     "get you started.")
             playfanfare(MUS_OBTAIN_ITEM)
