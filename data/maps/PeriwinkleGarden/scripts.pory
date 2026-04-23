@@ -54,7 +54,7 @@ script PeriwinkleGarden_EventScript_ChikoritaBall {
                     givemon(SPECIES_CHIKORITA, 5, ITEM_NONE)
                     setflag(FLAG_SYS_POKEMON_GET)
                     playfanfare(MUS_OBTAIN_ITEM)
-                    msgbox("Received Chikorita!")
+                    msgbox("{PLAYER} received Chikorita!")
                     waitfanfare
                     setflag(FLAG_CHIKORITA_CHOSEN)
                     removeobject(CHIKORITA_BALL)
@@ -101,7 +101,7 @@ script PeriwinkleGarden_EventScript_TorchicBall {
                     givemon(SPECIES_TORCHIC, 5, ITEM_NONE)
                     setflag(FLAG_SYS_POKEMON_GET)
                     playfanfare(MUS_OBTAIN_ITEM)
-                    msgbox("Received Torchic!")
+                    msgbox("{PLAYER} received Torchic!")
                     waitfanfare
                     setflag(FLAG_TORCHIC_CHOSEN)
                     removeobject(TORCHIC_BALL)
@@ -151,7 +151,7 @@ script PeriwinkleGarden_EventScript_SquirtleBall {
                     givemon(SPECIES_SQUIRTLE, 5, ITEM_NONE)
                     setflag(FLAG_SYS_POKEMON_GET)
                     playfanfare(MUS_OBTAIN_ITEM)
-                    msgbox("Received Squirtle!")
+                    msgbox("{PLAYER} received Squirtle!")
                     waitfanfare
                     setflag(FLAG_SQUIRTLE_CHOSEN)
                     removeobject(SQUIRTLE_BALL)

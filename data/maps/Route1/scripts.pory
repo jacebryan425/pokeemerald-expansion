@@ -1,4 +1,13 @@
-mapscripts Route1_MapScripts {}
+mapscripts Route1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if (flag(FLAG_RECEIVED_DEX_FROM_ASPEN) == true) {
+            setflag(FLAG_HIDE_ZIGZAGOON_1)
+            setflag(FLAG_HIDE_ZIGZAGOON_2)
+            removeobject(1, MAP_ROUTE1)
+            removeobject(2, MAP_ROUTE1)
+        }
+    }
+}
 
 script Route1_EventScript_Sign {
     lock

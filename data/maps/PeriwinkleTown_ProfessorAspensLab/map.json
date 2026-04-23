@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PeriwinkleTown_ProfessorAspensLab_EventScript_Birch",
+      "script": "PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen",
       "flag": "FLAG_HIDE_PROFESSOR_ASPEN_LAB"
     },
     {
@@ -42,6 +42,7 @@
       "flag": "0"
     },
     {
+      "local_id": "POKEDEX",
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 6,
       "y": 1,

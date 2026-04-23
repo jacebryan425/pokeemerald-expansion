@@ -34,12 +34,86 @@ script PeriwinkleTown_ProfessorAspensLab_EventScript_Dex {
     release
 }
 
-script PeriwinkleTown_ProfessorAspensLab_EventScript_Birch {
+script PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen {
     lock
     faceplayer
     if (flag(FLAG_RECEIVED_DEX_FROM_ASPEN)) {
-
+            msgbox("How is your Pokédex progress coming\n"
+                    "along, {PLAYER}?\p"
+                    "We're rooting for you!")
     } else {
-
+            msgbox("Welcome to our research lab,\n"
+                    "{PLAYER}!\p"
+                    "I have something very exciting I would\n"
+                    "like to share with you.\p"
+                    "On my desk sits a highly advanced\n"
+                    "revision of the Pokédex.\p"
+                    "I've been saving it for a well-seasoned\l"
+                    "and experienced trainer.\p"
+                    "When Oak told me about your impressive\n"
+                    "completion of his Pokédex, I knew\l"
+                    "that you were the right person to\l"
+                    "entrust with it.")
+            GetPlayerFacingDirection
+            if (var(VAR_FACING == DIR_SOUTH)) {
+                    applymovement(PROFESSOR_ASPEN, moves(
+                                    walk_right
+                                    walk_up * 2
+                                    walk_left
+                                    face_up))
+                    waitmovement(0)
+            } else {
+                    applymovement(PROFESSOR_ASPEN, moves(
+                                    walk_up * 2))
+                    waitmovement(0)
+            }
+            delay(30)
+            setflag(FLAG_HIDE_DEX)
+            removeobject(POKEDEX)
+            delay(30)
+            if (var(VAR_FACING == DIR_SOUTH)) {
+                    applymovement(PROFESSOR_ASPEN, moves(
+                                    walk_right
+                                    walk_down * 2
+                                    walk_left
+                                    face_player
+                    ))
+                    waitmovement(0)
+            } else {
+                    applymovement(PROFESSOR_ASPEN, moves(
+                                    walk_down * 2
+                                    face_player
+                    ))
+                    waitmovement(0)
+            }
+            msgbox("{PLAYER} received Pokédex!")
+            playfanfare(MUS_OBTAIN_ITEM)
+            waitfanfare
+            setflag(FLAG_SYS_POKEDEX_GET)
+            setflag(FLAG_SYS_NATIONAL_DEX)
+            setflag(FLAG_RECEIVED_DEX_FROM_ASPEN)
+            special(SetUnlockedPokedexFlags)
+            msgbox("Here are a few Poké Balls to help\n
+                    get you started.")
+            giveitem(ITEM_POKE_BALL, 1)
+            additem(ITEM_POKE_BALL, 9)
+            msgbox("I trust that a trainer as skilled\n"
+                    "as yourself knows how to catch a\l"
+                    "wild Pokémon and won't need my help\l"
+                    "explaining, correct?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                msgbox("Excellent, that will save us both time.")
+            } else {
+                msgbox("Oh well, I'm sure you'll be able to\n
+                        figure it out.")
+            }
+            msgbox("{PLAYER}, I want to thank you\n"
+                    "for agreeing to help with our\l"
+                    "research.\p"
+                    "I encourage you to explore every\n"
+                    "corner of our region and fill as many\l"
+                    "pages of that Pokédex as possible.\p"
+                    "We're rooting for you!")
     }
+    release
 }
