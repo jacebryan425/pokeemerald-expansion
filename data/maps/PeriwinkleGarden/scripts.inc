@@ -506,7 +506,7 @@ PeriwinkleGarden_EventScript_ChikoritaBall_Text_0:
 
 PeriwinkleGarden_EventScript_ChikoritaBall_Text_1:
 # 57 "data/maps/PeriwinkleGarden/scripts.pory"
-	.string "Received Chikorita!$"
+	.string "{PLAYER} received Chikorita!$"
 
 PeriwinkleGarden_EventScript_ChikoritaBall_Text_2:
 # 62 "data/maps/PeriwinkleGarden/scripts.pory"
@@ -526,7 +526,7 @@ PeriwinkleGarden_EventScript_TorchicBall_Text_0:
 
 PeriwinkleGarden_EventScript_TorchicBall_Text_1:
 # 104 "data/maps/PeriwinkleGarden/scripts.pory"
-	.string "Received Torchic!$"
+	.string "{PLAYER} received Torchic!$"
 
 PeriwinkleGarden_EventScript_TorchicBall_Text_2:
 # 136 "data/maps/PeriwinkleGarden/scripts.pory"
@@ -538,7 +538,7 @@ PeriwinkleGarden_EventScript_SquirtleBall_Text_0:
 
 PeriwinkleGarden_EventScript_SquirtleBall_Text_1:
 # 154 "data/maps/PeriwinkleGarden/scripts.pory"
-	.string "Received Squirtle!$"
+	.string "{PLAYER} received Squirtle!$"
 
 PeriwinkleGarden_EventScript_SquirtleBall_Text_2:
 # 183 "data/maps/PeriwinkleGarden/scripts.pory"

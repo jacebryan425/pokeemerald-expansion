@@ -54,7 +54,6 @@ script PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen {
                     "completion of his Pokédex, I knew\l"
                     "that you were the right person to\l"
                     "entrust with it.")
-            GetPlayerFacingDirection
             if (var(VAR_FACING == DIR_SOUTH)) {
                     applymovement(PROFESSOR_ASPEN, moves(
                                     walk_right
