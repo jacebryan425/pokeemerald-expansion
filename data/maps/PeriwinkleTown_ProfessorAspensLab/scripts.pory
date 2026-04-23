@@ -48,13 +48,13 @@ script PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen {
                     "like to share with you.\p"
                     "On my desk sits a highly advanced\n"
                     "revision of the Pokédex.\p"
-                    "I've been saving it for a well-seasoned\l"
+                    "I've been saving it for a well-seasoned\n"
                     "and experienced trainer.\p"
                     "When Oak told me about your impressive\n"
                     "completion of his Pokédex, I knew\l"
                     "that you were the right person to\l"
-                    "entrust with it.")
-            if (var(VAR_FACING == DIR_SOUTH)) {
+                    "entrust it with.")
+            if (var(VAR_FACING) == DIR_SOUTH) {
                     applymovement(PROFESSOR_ASPEN, moves(
                                     walk_right
                                     walk_up * 2
@@ -70,7 +70,7 @@ script PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen {
             setflag(FLAG_HIDE_DEX)
             removeobject(POKEDEX)
             delay(30)
-            if (var(VAR_FACING == DIR_SOUTH)) {
+            if (var(VAR_FACING) == DIR_SOUTH) {
                     applymovement(PROFESSOR_ASPEN, moves(
                                     walk_right
                                     walk_down * 2
@@ -85,17 +85,19 @@ script PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen {
                     ))
                     waitmovement(0)
             }
-            msgbox("{PLAYER} received Pokédex!")
             playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("{PLAYER} received the Pokédex!")
             waitfanfare
             setflag(FLAG_SYS_POKEDEX_GET)
             setflag(FLAG_SYS_NATIONAL_DEX)
             setflag(FLAG_RECEIVED_DEX_FROM_ASPEN)
             special(SetUnlockedPokedexFlags)
-            msgbox("Here are a few Poké Balls to help\n
-                    get you started.")
-            giveitem(ITEM_POKE_BALL, 1)
-            additem(ITEM_POKE_BALL, 9)
+            msgbox("Here are a few Poké Balls to help\n"
+                    "get you started.")
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("{PLAYER} received 10 Poké Balls!")
+            waitfanfare
+            additem(ITEM_POKE_BALL, 10)
             msgbox("I trust that a trainer as skilled\n"
                     "as yourself knows how to catch a\l"
                     "wild Pokémon and won't need my help\l"
@@ -103,8 +105,8 @@ script PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen {
             if (var(VAR_RESULT) == YES) {
                 msgbox("Excellent, that will save us both time.")
             } else {
-                msgbox("Oh well, I'm sure you'll be able to\n
-                        figure it out.")
+                msgbox("Oh well, I'm sure you'll be able to\n"
+                        "figure it out.")
             }
             msgbox("{PLAYER}, I want to thank you\n"
                     "for agreeing to help with our\l"

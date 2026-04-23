@@ -58,8 +58,8 @@ PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen::
 # 45 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_1
 # 57 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	compare VAR_FACING == DIR_SOUTH, 0
-	goto_if_ne PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_6
+	compare VAR_FACING, DIR_SOUTH
+	goto_if_eq PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_6
 # 65 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Movement_1
 # 67 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
@@ -74,17 +74,17 @@ PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_5:
 # 72 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	delay 30
 # 73 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	compare VAR_FACING == DIR_SOUTH, 0
-	goto_if_ne PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_10
+	compare VAR_FACING, DIR_SOUTH
+	goto_if_eq PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_10
 # 82 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Movement_3
 # 86 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	waitmovement 0
 PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_9:
 # 88 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_2
-# 89 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
+# 89 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_2
 # 90 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	waitfanfare
 # 91 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
@@ -98,21 +98,25 @@ PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_9:
 # 95 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_3
 # 97 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	giveitem ITEM_POKE_BALL, 1
+	playfanfare MUS_OBTAIN_ITEM
 # 98 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	additem ITEM_POKE_BALL, 9
+	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_4
 # 99 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_4, MSGBOX_YESNO
-# 103 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+	waitfanfare
+# 100 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+	additem ITEM_POKE_BALL, 10
+# 101 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_5, MSGBOX_YESNO
+# 105 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_14
-# 106 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_6
-PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_13:
-# 109 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+# 108 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_7
+PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_13:
+# 111 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_8
 PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_1:
-# 117 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+# 119 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	release
 	return
 
@@ -136,8 +140,8 @@ PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_10:
 	goto PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_9
 
 PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_14:
-# 104 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_5
+# 106 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+	msgbox PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_6
 	goto PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_13
 
 
@@ -221,7 +225,7 @@ PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_1:
 	.string "like to share with you.\p"
 	.string "On my desk sits a highly advanced\n"
 	.string "revision of the Pokédex.\p"
-	.string "I've been saving it for a well-seasoned\l"
+	.string "I've been saving it for a well-seasoned\n"
 	.string "and experienced trainer.\p"
 	.string "When Oak told me about your impressive\n"
 	.string "completion of his Pokédex, I knew\l"
@@ -229,30 +233,36 @@ PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_1:
 	.string "entrust with it.$"
 
 PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_2:
-# 88 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+# 89 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	.string "{PLAYER} received Pokédex!$"
 
 PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_3:
 # 95 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	.string "Here are a few Poké Balls to help\n get you started.$"
+	.string "Here are a few Poké Balls to help\n"
+	.string "get you started.$"
 
 PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_4:
-# 99 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+# 98 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+	.string "{PLAYER} received 10 Poké Balls!$"
+
+PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_5:
+# 101 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	.string "I trust that a trainer as skilled\n"
 	.string "as yourself knows how to catch a\l"
 	.string "wild Pokémon and won't need my help\l"
 	.string "explaining, correct?$"
 
-PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_5:
-# 104 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	.string "Excellent, that will save us both time.$"
-
 PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_6:
 # 106 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
-	.string "Oh well, I'm sure you'll be able to\n figure it out.$"
+	.string "Excellent, that will save us both time.$"
 
 PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_7:
-# 109 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+# 108 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
+	.string "Oh well, I'm sure you'll be able to\n"
+	.string "figure it out.$"
+
+PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen_Text_8:
+# 111 "data/maps/PeriwinkleTown_ProfessorAspensLab/scripts.pory"
 	.string "{PLAYER}, I want to thank you\n"
 	.string "for agreeing to help with our\l"
 	.string "research.\p"
