@@ -8,13 +8,35 @@ script PeriwinkleTown_EventScript_PlayersHouse {
 
 script PeriwinkleTown_EventScript_ProfessorAspensLab {
     lock
-    msgbox("Professor Aspen's Lab.")
+    msgbox("Professor Aspen's Research Lab.")
     release
 }
 
 script PeriwinkleTown_EventScript_Sign {
     lock
-    msgbox("Periwinkle Town")
+    msgbox("PERIWINKLE TOWN")
+    release
+}
+
+script PeriwinkleTown_EventScript_FatMan {
+    lock
+    faceplayer
+    msgbox("The power of technology is incredible!\p"
+            "Fans of a video game can make their own\n"
+            "version of it on their computer!")
+    release
+}
+
+script PeriwinkleTown_EventScript_NPC {
+    lock
+    faceplayer
+    msgbox("This lake seems so vast and endless.\n"
+            "I could spend all day staring off onto\l"
+            "the horizon.")
+    waitmessage
+    closemessage
+    applymovement(PERIWINKLE_TOWN_NPC, moves(face_up))
+    waitmovement(0)
     release
 }
 
