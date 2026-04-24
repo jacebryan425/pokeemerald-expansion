@@ -666,7 +666,7 @@
 #define FLAG_HIDE_PROFESSOR_ASPEN_LAB  0x26B // Changed
 #define FLAG_RECEIVED_DEX_FROM_ASPEN   0x26C // Changed
 #define FLAG_HIDE_DEX                  0x26D // Changed
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
+#define FLAG_EXP_SHARE                 0x26E // Changed
 #define FLAG_UNUSED_0x26F  0x26F // Unused Flag
 #define FLAG_UNUSED_0x270  0x270 // Unused Flag
 #define FLAG_UNUSED_0x271  0x271 // Unused Flag
