@@ -1363,4 +1363,4 @@ static const struct SpriteFrameImage sPicTable_ApricornTree[] = {
 
 static const struct SpriteFrameImage sPicTable_PokeDex[] = {
     overworld_frame(gObjectEventPic_PokeDex, 2, 2, 0),
-}
+};
