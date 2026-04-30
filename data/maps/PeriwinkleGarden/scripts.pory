@@ -3,6 +3,7 @@ mapscripts PeriwinkleGarden_MapScripts {}
 script PeriwinkleGarden_EventScript_BeginStarterSequence {
     lock
     msgbox("Hey! Over here!")
+    setrespawn(HEAL_LOCATION_PERIWINKLE_TOWN)
     addvar(VAR_PERIWINKLE_GARDEN_STATE, 1)
     release
 }
