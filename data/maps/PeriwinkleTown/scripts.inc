@@ -72,17 +72,19 @@ PeriwinkleTown_EventScript_PreventEscape::
 # 46 "data/maps/PeriwinkleTown/scripts.pory"
 	waitmessage
 # 47 "data/maps/PeriwinkleTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PeriwinkleTown_WalkUp
+	closemessage
 # 48 "data/maps/PeriwinkleTown/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, PeriwinkleTown_WalkUp
 # 49 "data/maps/PeriwinkleTown/scripts.pory"
+	waitmovement 0
+# 50 "data/maps/PeriwinkleTown/scripts.pory"
 	release
 	return
 
 
-# 52 "data/maps/PeriwinkleTown/scripts.pory"
-PeriwinkleTown_WalkUp:
 # 53 "data/maps/PeriwinkleTown/scripts.pory"
+PeriwinkleTown_WalkUp:
+# 54 "data/maps/PeriwinkleTown/scripts.pory"
 	walk_up
 	step_end
 
