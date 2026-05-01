@@ -665,11 +665,11 @@
 #define FLAG_HIDE_ZIGZAGOON_2          0x26A // Changed
 #define FLAG_HIDE_PROFESSOR_ASPEN_LAB  0x26B // Changed
 #define FLAG_RECEIVED_DEX_FROM_ASPEN   0x26C // Changed
-#define FLAG_HIDE_DEX                  0x26D // Changed
-#define FLAG_EXP_SHARE                 0x26E // Changed
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
+#define FLAG_HIDE_DEX                  0x26D // Changed - used to hide Dex sprite
+#define FLAG_EXP_SHARE                 0x26E // Changed - used to toggle Exp. Share
+#define FLAG_DEXNAV_SEARCHING          0x26F // Changed - searching for mon
+#define FLAG_DEXNAV_GET                0x270 // Changed - DexNav shows in start menu
+#define FLAG_DEXNAV_DETECTOR_MODE      0x271 // Changed - allow player to find hidden mons
 #define FLAG_UNUSED_0x272  0x272 // Unused Flag
 #define FLAG_UNUSED_0x273  0x273 // Unused Flag
 #define FLAG_UNUSED_0x274  0x274 // Unused Flag

@@ -95,15 +95,15 @@
 #define VAR_POKELOT_RND1                                 0x404B
 #define VAR_POKELOT_RND2                                 0x404C
 #define VAR_POKELOT_PRIZE_PLACE                          0x404D
-#define VAR_PERIWINKLE_TOWN_STATE                        0x404E // Changed Variable, used to prevent entry to Route 1
+#define VAR_PERIWINKLE_TOWN_STATE                        0x404E // Changed - used to prevent entry to Route 1
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_LITTLEROOT_TOWN_STATE                        0x4050
 #define VAR_OLDALE_TOWN_STATE                            0x4051
-#define VAR_PERIWINKLE_GARDEN_STATE                      0x4052 // Changed Variable, used to start starter sequence
+#define VAR_PERIWINKLE_GARDEN_STATE                      0x4052 // Changed - used to start starter sequence
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_VERDANTURF_TOWN_STATE                        0x4055 // Unused Var
-#define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
+#define VAR_DEXNAV_SPECIES                               0x4055 // Changed - registered DexNav species
+#define VAR_DEXNAV_STEP_COUNTER                          0x4056 // Changed - steps for finding hidden mon
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
 #define VAR_MAUVILLE_CITY_STATE                          0x4059 // Unused Var

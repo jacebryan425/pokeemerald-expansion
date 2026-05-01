@@ -104,7 +104,7 @@ PeriwinkleTown_EventScript_ProfessorAspensLab_Text_0:
 
 PeriwinkleTown_EventScript_Sign_Text_0:
 # 17 "data/maps/PeriwinkleTown/scripts.pory"
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}PERIWINKLE TOWN$"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Periwinkle Town.$"
 
 PeriwinkleTown_EventScript_FatMan_Text_0:
 # 24 "data/maps/PeriwinkleTown/scripts.pory"

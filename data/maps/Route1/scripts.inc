@@ -76,7 +76,7 @@ Route1_EventScript_Zigzagoon::
 
 Route1_EventScript_Sign_Text_0:
 # 14 "data/maps/Route1/scripts.pory"
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}ROUTE 1$"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Route 1.$"
 
 Route1_EventScript_TrainerTip1_Text_0:
 # 20 "data/maps/Route1/scripts.pory"
