@@ -11,7 +11,7 @@ mapscripts Route1_MapScripts {
 
 script Route1_EventScript_Sign {
     lock
-    msgbox("Route 1")
+    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}Route 1.")
     release
 }
 
@@ -44,8 +44,8 @@ script Route1_EventScript_TrainerTip3 {
 
 script Route1_EventScript_Zigzagoon {
     lock
+    msgbox("Zig-zig, Zigzagoon-goon!")
     playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
     waitmoncry
-    msgbox("Zig-zig, Zigzagoon-goon!")
     release
 }

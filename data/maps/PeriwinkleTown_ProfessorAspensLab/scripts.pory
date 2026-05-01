@@ -96,10 +96,7 @@ script PeriwinkleTown_ProfessorAspensLab_EventScript_Aspen {
             special(EnableNationalPokedex)
             msgbox("Here are a few Poké Balls to help\n"
                     "get you started.")
-            playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("{PLAYER} received 10 Poké Balls!")
-            waitfanfare
-            additem(ITEM_POKE_BALL, 10)
+            giveitem(ITEM_POKE_BALL, 10)
             msgbox("I trust that a trainer as skilled\n"
                     "as yourself knows how to catch a\l"
                     "wild Pokémon and won't need my help\l"

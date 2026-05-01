@@ -476,7 +476,7 @@ PeriwinkleGarden_EventScript_BeginStarterSequence_Text_0:
 
 PeriwinkleGarden_EventScript_ProfessorAspen_Text_0:
 # 14 "data/maps/PeriwinkleGarden/scripts.pory"
-	.string "Professor Aspen: Look at this!$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Professor Aspen:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Look at this!$"
 
 PeriwinkleGarden_EventScript_ProfessorAspen_Text_1:
 # 17 "data/maps/PeriwinkleGarden/scripts.pory"

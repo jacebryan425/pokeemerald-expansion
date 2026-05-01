@@ -11,7 +11,7 @@ script PeriwinkleGarden_EventScript_BeginStarterSequence {
 script PeriwinkleGarden_EventScript_ProfessorAspen {
     lock
     faceplayer
-    msgbox("Professor Aspen: Look at this!")
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Professor Aspen:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Look at this!")
     applymovement(PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown)
     waitmovement(0)
     msgbox("Somebody caught these three poor\nPokémon and just left them here,\ltrapped inside of their balls!\pI know...")

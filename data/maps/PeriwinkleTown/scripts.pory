@@ -14,7 +14,7 @@ script PeriwinkleTown_EventScript_ProfessorAspensLab {
 
 script PeriwinkleTown_EventScript_Sign {
     lock
-    msgbox("PERIWINKLE TOWN")
+    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}Periwinkle Town.")
     release
 }
 
