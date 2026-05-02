@@ -44,8 +44,8 @@ script Route1_EventScript_TrainerTip3 {
 
 script Route1_EventScript_Zigzagoon {
     lock
-    msgbox("Zig-zig, Zigzagoon-goon!")
     playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
+    msgbox("Zig-zig, Zigzagoon-goon!")
     waitmoncry
     release
 }
