@@ -1,13 +1,4 @@
-mapscripts Route1_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION {
-        if (flag(FLAG_RECEIVED_DEX_FROM_ASPEN) == true) {
-            setflag(FLAG_HIDE_ZIGZAGOON_1)
-            setflag(FLAG_HIDE_ZIGZAGOON_2)
-            removeobject(1, MAP_ROUTE1)
-            removeobject(2, MAP_ROUTE1)
-        }
-    }
-}
+mapscripts Route1_MapScripts {}
 
 script Route1_EventScript_Sign {
     lock
@@ -42,10 +33,128 @@ script Route1_EventScript_TrainerTip3 {
     release
 }
 
-script Route1_EventScript_Zigzagoon {
+script Route1_EventScript_Zigzagoon1 {
     lock
-    playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
-    msgbox("Zig-zig, Zigzagoon-goon!")
-    waitmoncry
+    if (flag(FLAG_RECEIVED_DEX_FROM_ASPEN) == true) {
+        setwildbattle(SPECIES_ZIGZAGOON, 3, ITEM_NONE)
+        playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_ENCOUNTER)
+        msgbox("Zig-zig, Zigzagoon-goon!")
+        waitmoncry
+        dowildbattle
+        specialvar(VAR_RESULT, GetBattleOutcome)
+        if (var(VAR_RESULT) == B_OUTCOME_CAUGHT || var(VAR_RESULT) == B_OUTCOME_WON || var(VAR_RESULT) == B_OUTCOME_RAN) {
+            playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_WEAK)
+            msgbox("Zig-za...goon...")
+            waitmoncry
+            closemessage
+            delay(30)
+            applymovement(ZIGZAGOON_1, moves(walk_left * 4, walk_down * 10))
+            waitmovement(0)
+            setflag(FLAG_HIDE_ZIGZAGOON_1)
+            removeobject(ZIGZAGOON_1)
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+            applymovement(ZIGZAGOON_2, moves(face_up))
+            waitmovement(0)
+            setwildbattle(SPECIES_ZIGZAGOON, 3, ITEM_NONE)
+            playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_ENCOUNTER)
+            msgbox("Zig-zig, Zigzagoon-goon!")
+            waitmoncry
+            dowildbattle
+            specialvar(VAR_RESULT, GetBattleOutcome)
+            if (var(VAR_RESULT) == B_OUTCOME_CAUGHT || var(VAR_RESULT) == B_OUTCOME_WON || var(VAR_RESULT) == B_OUTCOME_RAN) {
+                playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_WEAK)
+                msgbox("Zig-za...goon...")
+                waitmoncry
+                closemessage
+                delay(30)
+                applymovement(ZIGZAGOON_2, moves(walk_left * 4, walk_down * 10))
+                waitmovement(0)
+                setflag(FLAG_HIDE_ZIGZAGOON_2)
+                removeobject(ZIGZAGOON_2)
+            }
+        }
+    } else {
+        playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
+        msgbox("Zig-zig, Zigzagoon-goon!")
+        waitmoncry
+    }
+    release
+}
+
+script Route1_EventScript_Zigzagoon2 {
+    lock
+    if (flag(FLAG_RECEIVED_DEX_FROM_ASPEN) == true) {
+        setwildbattle(SPECIES_ZIGZAGOON, 3, ITEM_NONE)
+        playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_ENCOUNTER)
+        msgbox("Zig-zig, Zigzagoon-goon!")
+        waitmoncry
+        dowildbattle
+        specialvar(VAR_RESULT, GetBattleOutcome)
+        if (var(VAR_RESULT) == B_OUTCOME_CAUGHT || var(VAR_RESULT) == B_OUTCOME_WON || var(VAR_RESULT) == B_OUTCOME_RAN) {
+            playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_WEAK)
+            msgbox("Zig-za...goon...")
+            waitmoncry
+            closemessage
+            delay(30)
+            applymovement(ZIGZAGOON_2, moves(walk_left * 4, walk_down * 10))
+            waitmovement(0)
+            setflag(FLAG_HIDE_ZIGZAGOON_2)
+            removeobject(ZIGZAGOON_2)
+            if (var(VAR_FACING) == DIR_SOUTH) {
+                applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+                waitmovement(0)
+            } else {
+                applymovement(ZIGZAGOON_1, moves(walk_down, walk_right))
+                waitmovement(0)
+            }
+            setwildbattle(SPECIES_ZIGZAGOON, 3, ITEM_NONE)
+            playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_ENCOUNTER)
+            msgbox("Zig-zig, Zigzagoon-goon!")
+            waitmoncry
+            dowildbattle
+            specialvar(VAR_RESULT, GetBattleOutcome)
+            if (var(VAR_RESULT) == B_OUTCOME_CAUGHT || var(VAR_RESULT) == B_OUTCOME_WON || var(VAR_RESULT) == B_OUTCOME_RAN) {
+                playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_WEAK)
+                msgbox("Zig-za...goon...")
+                waitmoncry
+                closemessage
+                delay(30)
+                applymovement(ZIGZAGOON_1, moves(walk_left * 4, walk_down * 10))
+                waitmovement(0)
+                setflag(FLAG_HIDE_ZIGZAGOON_1)
+                removeobject(ZIGZAGOON_1)
+            }
+        }
+    } else {
+        playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
+        msgbox("Zig-zig, Zigzagoon-goon!")
+        waitmoncry
+    }
+    release
+}
+
+script Route1_EventScript_PotionNPC {
+    lock
+    faceplayer
+    if (flag(FLAG_GAVE_POTION) == true) {
+        msgbox("Come visit me at the Marigold\n"
+                "Poké Mart if you'd ever like to\l"
+                "purchase more items.")
+    } elif (flag(FLAG_HIDE_ZIGZAGOON_1) == true && flag(FLAG_HIDE_ZIGZAGOON_2) == true) {
+        msgbox("Thank you for fighting off those\n"
+                "Zigzagoon!\l"
+                "Now I can get back to town.\p"
+                "Here's something to express my\n"
+                "gratitude.")
+        giveitem(ITEM_POTION, 5)
+        setflag(FLAG_GAVE_POTION)
+        msgbox("Come visit me at the Marigold\n"
+                "Poké Mart if you'd ever like to\l"
+                "purchase more items.")
+    } else {
+        msgbox("Those scary Zigzagoon chased me and\n"
+                "then blocked off the path!\p"
+                "How am I going to make it back to town?!")
+    }
     release
 }

@@ -670,7 +670,7 @@
 #define FLAG_DEXNAV_SEARCHING          0x26F // Changed - searching for mon
 #define FLAG_DEXNAV_GET                0x270 // Changed - DexNav shows in start menu
 #define FLAG_DEXNAV_DETECTOR_MODE      0x271 // Changed - allow player to find hidden mons
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
+#define FLAG_GAVE_POTION               0x272 // Changed - NPC in Route 1
 #define FLAG_UNUSED_0x273  0x273 // Unused Flag
 #define FLAG_UNUSED_0x274  0x274 // Unused Flag
 #define FLAG_UNUSED_0x275  0x275 // Unused Flag
