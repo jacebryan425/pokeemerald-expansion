@@ -14,13 +14,13 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_PERIWINKLE_TOWN",
-      "offset": 0,
+      "map": "MAP_ROUTE1",
+      "offset": 28,
       "direction": "right"
     },
     {
-      "map": "MAP_ROUTE1",
-      "offset": 28,
+      "map": "MAP_PERIWINKLE_TOWN",
+      "offset": 0,
       "direction": "right"
     }
   ],
