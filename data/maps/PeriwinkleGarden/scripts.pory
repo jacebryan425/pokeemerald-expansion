@@ -187,6 +187,11 @@ script PeriwinkleGarden_EventScript_SquirtleBall {
     release
 }
 
+script PeriwinkleGarden_ItemScript_Potion {
+        finditem(ITEM_POTION, 1)
+        setflag(FLAG_ITEM_PERIWINKLE_GARDEN_POTION)
+}
+
 movement PeriwinkleGarden_FaceDown {
         face_down
 }

@@ -4505,7 +4505,7 @@
       "id": "LAYOUT_PERIWINKLE_GARDEN",
       "name": "PeriwinkleGarden_Layout",
       "width": 30,
-      "height": 66,
+      "height": 76,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/PeriwinkleGarden/border.bin",

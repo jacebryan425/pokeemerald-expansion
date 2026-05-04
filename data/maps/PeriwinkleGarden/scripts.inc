@@ -370,44 +370,44 @@ PeriwinkleGarden_EventScript_SquirtleBall_6:
 	goto PeriwinkleGarden_EventScript_SquirtleBall_5
 
 
-# 190 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_FaceDown:
+PeriwinkleGarden_ItemScript_Potion::
 # 191 "data/maps/PeriwinkleGarden/scripts.pory"
+	finditem ITEM_POTION, 1
+# 192 "data/maps/PeriwinkleGarden/scripts.pory"
+	setflag FLAG_ITEM_PERIWINKLE_GARDEN_POTION
+	return
+
+
+# 195 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_FaceDown:
+# 196 "data/maps/PeriwinkleGarden/scripts.pory"
 	face_down
 	step_end
 
-# 194 "data/maps/PeriwinkleGarden/scripts.pory"
+# 199 "data/maps/PeriwinkleGarden/scripts.pory"
 PeriwinkleGarden_WalkDown:
-# 195 "data/maps/PeriwinkleGarden/scripts.pory"
+# 200 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_down
 	step_end
 
-# 198 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_WalkLeft:
-# 199 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_left
-	step_end
-
-# 202 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseChikorita_1:
 # 203 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
+PeriwinkleGarden_WalkLeft:
 # 204 "data/maps/PeriwinkleGarden/scripts.pory"
-	face_down
+	walk_left
 	step_end
 
 # 207 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseChikorita_2:
+PeriwinkleGarden_ChoseChikorita_1:
 # 208 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_left
+	walk_right
 # 209 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_left
-# 210 "data/maps/PeriwinkleGarden/scripts.pory"
 	face_down
 	step_end
 
+# 212 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_ChoseChikorita_2:
 # 213 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseTorchic_1:
+	walk_left
 # 214 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_left
 # 215 "data/maps/PeriwinkleGarden/scripts.pory"
@@ -415,58 +415,66 @@ PeriwinkleGarden_ChoseTorchic_1:
 	step_end
 
 # 218 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseTorchic_2:
+PeriwinkleGarden_ChoseTorchic_1:
 # 219 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
+	walk_left
 # 220 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
-# 221 "data/maps/PeriwinkleGarden/scripts.pory"
 	face_down
 	step_end
 
+# 223 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_ChoseTorchic_2:
 # 224 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseSquirtle_1:
+	walk_right
 # 225 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_left
+	walk_right
 # 226 "data/maps/PeriwinkleGarden/scripts.pory"
 	face_down
 	step_end
 
 # 229 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseSquirtle_2:
+PeriwinkleGarden_ChoseSquirtle_1:
 # 230 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
+	walk_left
 # 231 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
-# 232 "data/maps/PeriwinkleGarden/scripts.pory"
 	face_down
 	step_end
 
+# 234 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_ChoseSquirtle_2:
 # 235 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_right
+# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_right
+# 237 "data/maps/PeriwinkleGarden/scripts.pory"
+	face_down
+	step_end
+
+# 240 "data/maps/PeriwinkleGarden/scripts.pory"
 PeriwinkleGarden_ProfessorBirchWalksAway:
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
 	step_end
 

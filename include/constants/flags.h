@@ -656,6 +656,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
+//Changed flags
 #define FLAG_HIDE_PROFESSOR_ASPEN      0x264 // Changed
 #define FLAG_STARTER_SELECTION         0x265 // Changed
 #define FLAG_CHIKORITA_CHOSEN          0x266 // Changed
@@ -1222,7 +1223,8 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
+//New Item Ball flags
+#define FLAG_ITEM_PERIWINKLE_GARDEN_POTION                          0x493
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
 #define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
