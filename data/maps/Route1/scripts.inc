@@ -310,6 +310,26 @@ Route1_EventScript_PotionNPC_5:
 	goto Route1_EventScript_PotionNPC_4
 
 
+Route1_EventScript_Bobby::
+# 163 "data/maps/Route1/scripts.pory"
+	trainerbattle_single TRAINER_BOBBY_ROUTE1, Bobby_Intro, Bobby_Outro
+# 164 "data/maps/Route1/scripts.pory"
+	msgbox PostBattle_Bobby, MSGBOX_AUTOCLOSE
+# 165 "data/maps/Route1/scripts.pory"
+	waitmessage
+	end
+
+
+Route1_EventScript_Eli::
+# 170 "data/maps/Route1/scripts.pory"
+	trainerbattle_single TRAINER_ELI_ROUTE1, Eli_Intro, Eli_Outro
+# 171 "data/maps/Route1/scripts.pory"
+	msgbox PostBattle_Eli, MSGBOX_AUTOCLOSE
+# 172 "data/maps/Route1/scripts.pory"
+	waitmessage
+	end
+
+
 # 51 "data/maps/Route1/scripts.pory"
 Route1_EventScript_Zigzagoon1_Movement_0:
 # 51 "data/maps/Route1/scripts.pory"
@@ -420,3 +440,29 @@ Route1_EventScript_PotionNPC_Text_2:
 	.string "Those scary Zigzagoon chased me and\n"
 	.string "then blocked off the path!\p"
 	.string "How am I going to make it back to town?!$"
+
+Bobby_Intro::
+# 176 "data/maps/Route1/scripts.pory"
+	.string "Are you from here?\n"
+	.string "I haven't seen you around before.$"
+
+Bobby_Outro::
+# 181 "data/maps/Route1/scripts.pory"
+	.string "Wow, you're strong!$"
+
+PostBattle_Bobby::
+# 185 "data/maps/Route1/scripts.pory"
+	.string "I want to be as strong as you one day.$"
+
+Eli_Intro::
+# 189 "data/maps/Route1/scripts.pory"
+	.string "Do you want to see my new Pokémon?$"
+
+Eli_Outro::
+# 193 "data/maps/Route1/scripts.pory"
+	.string "No! My new Pokémon!$"
+
+PostBattle_Eli::
+# 197 "data/maps/Route1/scripts.pory"
+	.string "Different Pokémon seem to show up\n"
+	.string "here during different times of day.$"

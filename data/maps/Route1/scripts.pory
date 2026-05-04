@@ -158,3 +158,43 @@ script Route1_EventScript_PotionNPC {
     }
     release
 }
+
+script Route1_EventScript_Bobby {
+    trainerbattle_single(TRAINER_BOBBY_ROUTE1, Bobby_Intro, Bobby_Outro)
+    msgbox(PostBattle_Bobby, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script Route1_EventScript_Eli {
+    trainerbattle_single(TRAINER_ELI_ROUTE1, Eli_Intro, Eli_Outro)
+    msgbox(PostBattle_Eli, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Bobby_Intro {
+    "Are you from here?\n"
+    "I haven't seen you around before."
+}
+
+text Bobby_Outro {
+    "Wow, you're strong!"
+}
+
+text PostBattle_Bobby {
+    "I want to be as strong as you one day."
+}
+
+text Eli_Intro {
+    "Do you want to see my new Pokémon?"
+}
+
+text Eli_Outro {
+    "No! My new Pokémon!"
+}
+
+text PostBattle_Eli {
+    "Different Pokémon seem to show up\n"
+    "here during different times of day."
+}
