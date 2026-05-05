@@ -29,7 +29,22 @@
       "direction": "right"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "local_id": "RIVAL",
+      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "x": 9,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "HIDE_APRIL_MARIGOLD_TOWN"
+    }
+  ],
   "warp_events": [
     {
       "x": 10,
@@ -74,6 +89,52 @@
       "dest_warp_id": "5"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_MARIGOLD_TOWN_STATE",
+      "var_value": "0",
+      "script": "MarigoldTown_EventScript_Trigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_MARIGOLD_TOWN_STATE",
+      "var_value": "0",
+      "script": "MarigoldTown_EventScript_Trigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_MARIGOLD_TOWN_STATE",
+      "var_value": "0",
+      "script": "MarigoldTown_EventScript_Trigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_MARIGOLD_TOWN_STATE",
+      "var_value": "0",
+      "script": "MarigoldTown_EventScript_Trigger4"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "MarigoldTown_EventScript_Sign"
+    }
+  ]
 }

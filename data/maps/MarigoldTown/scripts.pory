@@ -1,0 +1,154 @@
+mapscripts MarigoldTown_MapScripts {}
+
+script MarigoldTown_EventScript_Sign {
+    lock
+    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}Marigold Town.")
+    release
+}
+
+script MarigoldTown_EventScript_Trigger1 {
+    lock
+    playbgm(MUS_FOLLOW_ME, TRUE)
+    playse(SE_PIN)
+    applymovement(RIVAL, moves(face_left,
+                                emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    delay(30)
+    msgbox("Hey! You're {PLAYER},\n"
+            "that new trainer from Kanto, right?")
+    waitmessage
+    applymovement(RIVAL, moves(walk_left * 2))
+    waitmovement(0)
+    call(MarigoldTown_EventScript_MeetRival)
+}
+
+script MarigoldTown_EventScript_Trigger2 {
+    lock
+    playbgm(MUS_FOLLOW_ME, TRUE)
+    playse(SE_PIN)
+    applymovement(RIVAL, moves(face_left,
+                                emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    delay(30)
+    msgbox("Hey! You're {PLAYER},\n"
+            "that new trainer from Kanto, right?")
+    waitmessage
+    applymovement(RIVAL, moves(walk_left * 2))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up, face_right))
+    waitmovement(0)
+    call(MarigoldTown_EventScript_MeetRival)
+}
+
+script MarigoldTown_EventScript_Trigger3 {
+    lock
+    playbgm(MUS_FOLLOW_ME, TRUE)
+    playse(SE_PIN)
+    applymovement(RIVAL, moves(face_left,
+                                emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    delay(30)
+    msgbox("Hey! You're {PLAYER},\n"
+            "that new trainer from Kanto, right?")
+    waitmessage
+    applymovement(RIVAL, moves(walk_left * 2))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 2, face_right))
+    waitmovement(0)
+    call(MarigoldTown_EventScript_MeetRival)
+}
+
+script MarigoldTown_EventScript_Trigger4 {
+    lock
+    playbgm(MUS_FOLLOW_ME, TRUE)
+    playse(SE_PIN)
+    applymovement(RIVAL, moves(face_left,
+                                emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    delay(30)
+    msgbox("Hey! You're {PLAYER},\n"
+            "that new trainer from Kanto, right?")
+    waitmessage
+    applymovement(RIVAL, moves(walk_left * 2))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 3, face_right))
+    waitmovement(0)
+    call(MarigoldTown_EventScript_MeetRival)
+}
+
+script MarigoldTown_EventScript_MeetRival {
+    msgbox("I'm April. I'm Professor Aspen's\n"
+            "other assistant.\p"
+            "Aspen asked me to meet you here and\n"
+            "show you around Marigold.\p"
+            "I figured a trainer such as yourself\n"
+            "wouldn't need help finding your way\l"
+            "around, but he insisted...")
+    waitmessage
+    closemessage
+    applymovement(RIVAL, moves(walk_right, face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, face_up))
+    waitmovement(0)
+    msgbox("This is a Poké Mart, as I'm sure you\n"
+            "already know.")
+    applymovement(RIVAL, moves(face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    msgbox("If you're ever running low on items,\n"
+            "this is the place to go.")
+    waitmessage
+    closemessage
+    applymovement(RIVAL, moves(walk_right * 7, face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right * 7, face_up))
+    waitmovement(0)
+    msgbox("This is my house!")
+    applymovement(RIVAL, moves(face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    msgbox("I'm not home very often, but hey,\n"
+            "it's still part of the tour.")
+    waitmessage
+    closemessage
+    applymovement(RIVAL, moves(walk_down * 10, walk_left * 5, face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, walk_down * 10, walk_left * 4, face_up))
+    waitmovement(0)
+    msgbox("And lastly, this is a Pokémon Center.\p"
+            "If your Pokémon are ever in trouble,\n"
+            "they'll heal them back to full health.")
+    applymovement(RIVAL, moves(face_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(0)
+    msgbox("That's the end of the tour...\n"
+            "Marigold's a pretty small town.\p"
+            "Hey, wait a second, is that...")
+    waitmessage
+    closemessage
+    playse(SE_PIN)
+    applymovement(RIVAL, moves(emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    delay(30)
+    msgbox("It is! Aspen gave you the new Pokédex?!\n"
+            "That's an even better model than the\l"
+            "one I have!\p"
+            "I'm going to go see if he has an extra\n"
+            "one for me...\p"
+            "You should make your way over to\n"
+            "Chartreuse City.\p"
+            "It's quite a ways away from here, so\n"
+            "go ask my neighbor if she can lend\l"
+            "you her Town Map.\p"
+            "I'll catch up with you later, {PLAYER}!")
+    waitmessage
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    waitmovement(0)
+    applymovement(RIVAL, moves(walk_down, walk_right * 5, walk_up *12))
+    waitmovement(0)
+    setflag(HIDE_APRIL_MARIGOLD_TOWN)
+    removeobject(RIVAL)
+    addvar(VAR_MARIGOLD_TOWN_STATE, 1)
+    fadedefaultbgm
+    release
+}
