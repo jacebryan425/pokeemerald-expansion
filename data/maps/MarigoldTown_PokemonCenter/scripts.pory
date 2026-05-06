@@ -1,0 +1,61 @@
+mapscripts MarigoldTown_PokemonCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setrespawn(HEAL_LOCATION_MARIGOLD_TOWN)
+    }
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script MarigoldTown_PokemonCenter_EventScript_Nurse {
+    setvar(VAR_0x800B, 1)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
+}
+
+script MarigoldTown_PokemonCenter_ExpShareNPC {
+    lock
+    faceplayer
+    if (flag(FLAG_EXP_SHARE) == TRUE) {
+        msgbox("Isn't life just so much easier\n"
+                "with the Exp. Share?")
+    } else {
+        getpartysize
+        if (var(VAR_RESULT) >= 2) {
+            msgbox("Isn't it pretty tedious having\n"
+                    "to level each of your Pokémon\l"
+                    "individually?\p"
+                    "What if I told you I had an item\n"
+                    "that would give all of your Pokémon\l"
+                    "experience instead of just one?\p"
+                    "Would you be interested?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                msgbox("Perfect! Here you go.")
+                giveitem(ITEM_EXP_SHARE)
+                setflag(FLAG_EXP_SHARE)
+                msgbox("Farewell, tedious grinding!\p"
+                        "You can always turn it off if you\n"
+                        "decide you like a challenge.")
+            } else {
+                msgbox("Fair enough.\p"
+                        "Some say using it is cheating.\n"
+                        "I see things a different way.\p"
+                        "Come back if you change your mind.")
+            }
+        } else {
+            msgbox("Come and see me once you have more\n"
+                    "than one Pokémon.")
+        }
+    }
+    release
+}
+
+script MarigoldTown_PokemonCenter_NPC {
+    lock
+    faceplayer
+    msgbox("Marigold is so far away from any of\n"
+            "the big cities.\p"
+            "I can't imagine why anyone would want\n"
+            "to live here.")
+    release
+}
