@@ -1,0 +1,66 @@
+mapscripts MarigoldTown_House1_MapScripts {}
+
+script MarigoldTown_House1_EventScript_TownMapNPC {
+    lock
+    faceplayer
+    if (flag(FLAG_GAVE_TOWN_MAP) == true) {
+        msgbox("Have you found yourself getting\n"
+                "lost lately?")
+    } else {
+        msgbox("Oh, hi!\p"
+                "...April told you I'd give you a\n"
+                "Town Map?\p"
+                "I'm sure I have an extra one laying\n"
+                "around somewhere...")
+        waitmessage
+        closemessage
+        if (var(VAR_FACING) == DIR_SOUTH) {
+            applymovement(TOWNMAP_NPC, moves(walk_left,
+                                            walk_up * 2,
+                                            walk_right * 4,
+                                            face_up))
+            waitmovement(0)
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+            waitmovement(0)
+            delay(30)
+            playse(SE_PIN)
+            applymovement(TOWNMAP_NPC, moves(emote_exclamation_mark))
+            waitmovement(0)
+            waitse
+            delay(16)
+            msgbox("Here it is!")
+            waitmessage
+            closemessage
+            applymovement(TOWNMAP_NPC, moves(walk_left * 4,
+                                            walk_down * 2,
+                                            walk_right,
+                                            face_up))
+            waitmovement(0)
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+            waitmovement(0)
+        } else {
+            applymovement(TOWNMAP_NPC, moves(walk_up * 2,
+                                            walk_right * 3,
+                                            face_up))
+            waitmovement(0)
+            delay(30)
+            playse(SE_PIN)
+            applymovement(TOWNMAP_NPC, moves(emote_exclamation_mark))
+            waitmovement(0)
+            waitse
+            delay(16)
+            msgbox("Here it is!")
+            waitmessage
+            closemessage
+            applymovement(TOWNMAP_NPC, moves(walk_left * 3,
+                                            walk_down * 2,
+                                            face_player))
+            waitmovement(0)
+        }
+        giveitem(ITEM_TOWN_MAP, 1)
+        setflag(FLAG_GAVE_TOWN_MAP)
+        msgbox("I hope it helps you get to where\n"
+                "you need to go!")
+    }
+    release
+}

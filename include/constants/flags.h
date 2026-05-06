@@ -673,7 +673,7 @@
 #define FLAG_DEXNAV_DETECTOR_MODE      0x271 // Changed - allow player to find hidden mons
 #define FLAG_GAVE_POTION               0x272 // Changed - NPC in Route 1
 #define HIDE_APRIL_MARIGOLD_TOWN       0x273 // Changed
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
+#define FLAG_GAVE_TOWN_MAP             0x274 // Changed - NPC in Marigold Town
 #define FLAG_UNUSED_0x275  0x275 // Unused Flag
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
