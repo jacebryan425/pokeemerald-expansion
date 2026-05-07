@@ -118,7 +118,7 @@ MarigoldTown_PokemonCenter_ExpShareNPC_Text_4:
 MarigoldTown_PokemonCenter_ExpShareNPC_Text_5:
 # 46 "data/maps/MarigoldTown_PokemonCenter/scripts.pory"
 	.string "Come and see me once you have more\n"
-	.string "than one Pokémon.$"
+	.string "than one Pokémon in your party.$"
 
 MarigoldTown_PokemonCenter_NPC_Text_0:
 # 56 "data/maps/MarigoldTown_PokemonCenter/scripts.pory"

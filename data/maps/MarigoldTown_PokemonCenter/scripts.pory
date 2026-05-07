@@ -44,7 +44,7 @@ script MarigoldTown_PokemonCenter_ExpShareNPC {
             }
         } else {
             msgbox("Come and see me once you have more\n"
-                    "than one Pokémon.")
+                    "than one Pokémon in your party.")
         }
     }
     release
