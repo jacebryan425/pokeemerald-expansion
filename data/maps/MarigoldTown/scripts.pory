@@ -45,8 +45,7 @@ script MarigoldTown_EventScript_Trigger3 {
     lock
     playbgm(MUS_FOLLOW_ME, TRUE)
     playse(SE_PIN)
-    applymovement(RIVAL, moves(face_left,
-                                emote_exclamation_mark))
+    applymovement(RIVAL, moves(emote_exclamation_mark))
     waitmovement(0)
     waitse
     delay(30)
@@ -63,8 +62,7 @@ script MarigoldTown_EventScript_Trigger4 {
     lock
     playbgm(MUS_FOLLOW_ME, TRUE)
     playse(SE_PIN)
-    applymovement(RIVAL, moves(face_left,
-                                emote_exclamation_mark))
+    applymovement(RIVAL, moves(emote_exclamation_mark))
     waitmovement(0)
     waitse
     delay(30)

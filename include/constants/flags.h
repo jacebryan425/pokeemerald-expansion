@@ -674,7 +674,7 @@
 #define FLAG_GAVE_POTION               0x272 // Changed - NPC in Route 1
 #define HIDE_APRIL_MARIGOLD_TOWN       0x273 // Changed
 #define FLAG_GAVE_TOWN_MAP             0x274 // Changed - NPC in Marigold Town
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
+#define FLAG_HIDE_POTION_NPC           0x275 // Changed - used to hide Mart Employee in Route 1
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag

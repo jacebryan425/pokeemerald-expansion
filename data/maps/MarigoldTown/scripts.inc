@@ -78,158 +78,158 @@ MarigoldTown_EventScript_Trigger3::
 # 47 "data/maps/MarigoldTown/scripts.pory"
 	playse SE_PIN
 # 48 "data/maps/MarigoldTown/scripts.pory"
-	applymovement RIVAL, MarigoldTown_EventScript_Trigger1_Movement_0
+	applymovement RIVAL, MarigoldTown_EventScript_Trigger3_Movement_0
+# 49 "data/maps/MarigoldTown/scripts.pory"
+	waitmovement 0
 # 50 "data/maps/MarigoldTown/scripts.pory"
-	waitmovement 0
-# 51 "data/maps/MarigoldTown/scripts.pory"
 	waitse
-# 52 "data/maps/MarigoldTown/scripts.pory"
+# 51 "data/maps/MarigoldTown/scripts.pory"
 	delay 30
-# 53 "data/maps/MarigoldTown/scripts.pory"
+# 52 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_Trigger1_Text_0
-# 55 "data/maps/MarigoldTown/scripts.pory"
+# 54 "data/maps/MarigoldTown/scripts.pory"
 	waitmessage
-# 56 "data/maps/MarigoldTown/scripts.pory"
+# 55 "data/maps/MarigoldTown/scripts.pory"
 	applymovement RIVAL, MarigoldTown_EventScript_Trigger1_Movement_1
+# 56 "data/maps/MarigoldTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_Trigger3_Movement_1
 # 57 "data/maps/MarigoldTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_Trigger3_Movement_0
-# 58 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
-# 59 "data/maps/MarigoldTown/scripts.pory"
+# 58 "data/maps/MarigoldTown/scripts.pory"
 	call MarigoldTown_EventScript_MeetRival
 	return
 
 
 MarigoldTown_EventScript_Trigger4::
-# 63 "data/maps/MarigoldTown/scripts.pory"
+# 62 "data/maps/MarigoldTown/scripts.pory"
 	lock
-# 64 "data/maps/MarigoldTown/scripts.pory"
+# 63 "data/maps/MarigoldTown/scripts.pory"
 	playbgm MUS_FOLLOW_ME, TRUE
-# 65 "data/maps/MarigoldTown/scripts.pory"
+# 64 "data/maps/MarigoldTown/scripts.pory"
 	playse SE_PIN
+# 65 "data/maps/MarigoldTown/scripts.pory"
+	applymovement RIVAL, MarigoldTown_EventScript_Trigger3_Movement_0
 # 66 "data/maps/MarigoldTown/scripts.pory"
-	applymovement RIVAL, MarigoldTown_EventScript_Trigger1_Movement_0
-# 68 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
-# 69 "data/maps/MarigoldTown/scripts.pory"
+# 67 "data/maps/MarigoldTown/scripts.pory"
 	waitse
-# 70 "data/maps/MarigoldTown/scripts.pory"
+# 68 "data/maps/MarigoldTown/scripts.pory"
 	delay 30
-# 71 "data/maps/MarigoldTown/scripts.pory"
+# 69 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_Trigger1_Text_0
-# 73 "data/maps/MarigoldTown/scripts.pory"
+# 71 "data/maps/MarigoldTown/scripts.pory"
 	waitmessage
-# 74 "data/maps/MarigoldTown/scripts.pory"
+# 72 "data/maps/MarigoldTown/scripts.pory"
 	applymovement RIVAL, MarigoldTown_EventScript_Trigger1_Movement_1
-# 75 "data/maps/MarigoldTown/scripts.pory"
+# 73 "data/maps/MarigoldTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_Trigger4_Movement_0
-# 76 "data/maps/MarigoldTown/scripts.pory"
+# 74 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
-# 77 "data/maps/MarigoldTown/scripts.pory"
+# 75 "data/maps/MarigoldTown/scripts.pory"
 	call MarigoldTown_EventScript_MeetRival
 	return
 
 
 MarigoldTown_EventScript_MeetRival::
-# 81 "data/maps/MarigoldTown/scripts.pory"
+# 79 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_MeetRival_Text_0
+# 86 "data/maps/MarigoldTown/scripts.pory"
+	waitmessage
+# 87 "data/maps/MarigoldTown/scripts.pory"
+	closemessage
 # 88 "data/maps/MarigoldTown/scripts.pory"
-	waitmessage
-# 89 "data/maps/MarigoldTown/scripts.pory"
-	closemessage
-# 90 "data/maps/MarigoldTown/scripts.pory"
 	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_0
-# 91 "data/maps/MarigoldTown/scripts.pory"
+# 89 "data/maps/MarigoldTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_0
-# 92 "data/maps/MarigoldTown/scripts.pory"
+# 90 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
-# 93 "data/maps/MarigoldTown/scripts.pory"
+# 91 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_MeetRival_Text_1
+# 93 "data/maps/MarigoldTown/scripts.pory"
+	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_1
+# 94 "data/maps/MarigoldTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_2
 # 95 "data/maps/MarigoldTown/scripts.pory"
-	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_1
+	waitmovement 0
 # 96 "data/maps/MarigoldTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_2
-# 97 "data/maps/MarigoldTown/scripts.pory"
-	waitmovement 0
-# 98 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_MeetRival_Text_2
+# 98 "data/maps/MarigoldTown/scripts.pory"
+	waitmessage
+# 99 "data/maps/MarigoldTown/scripts.pory"
+	closemessage
 # 100 "data/maps/MarigoldTown/scripts.pory"
-	waitmessage
-# 101 "data/maps/MarigoldTown/scripts.pory"
-	closemessage
-# 102 "data/maps/MarigoldTown/scripts.pory"
 	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_3
-# 103 "data/maps/MarigoldTown/scripts.pory"
+# 101 "data/maps/MarigoldTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_3
-# 104 "data/maps/MarigoldTown/scripts.pory"
+# 102 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
-# 105 "data/maps/MarigoldTown/scripts.pory"
+# 103 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_MeetRival_Text_3
-# 106 "data/maps/MarigoldTown/scripts.pory"
+# 104 "data/maps/MarigoldTown/scripts.pory"
 	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_1
-# 107 "data/maps/MarigoldTown/scripts.pory"
+# 105 "data/maps/MarigoldTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_2
-# 108 "data/maps/MarigoldTown/scripts.pory"
+# 106 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
-# 109 "data/maps/MarigoldTown/scripts.pory"
+# 107 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_MeetRival_Text_4
+# 109 "data/maps/MarigoldTown/scripts.pory"
+	waitmessage
+# 110 "data/maps/MarigoldTown/scripts.pory"
+	closemessage
 # 111 "data/maps/MarigoldTown/scripts.pory"
-	waitmessage
-# 112 "data/maps/MarigoldTown/scripts.pory"
-	closemessage
-# 113 "data/maps/MarigoldTown/scripts.pory"
 	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_4
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_5
-# 115 "data/maps/MarigoldTown/scripts.pory"
+# 113 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
-# 116 "data/maps/MarigoldTown/scripts.pory"
+# 114 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_MeetRival_Text_5
-# 119 "data/maps/MarigoldTown/scripts.pory"
+# 117 "data/maps/MarigoldTown/scripts.pory"
 	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_2
-# 120 "data/maps/MarigoldTown/scripts.pory"
+# 118 "data/maps/MarigoldTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_1
-# 121 "data/maps/MarigoldTown/scripts.pory"
+# 119 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
-# 122 "data/maps/MarigoldTown/scripts.pory"
+# 120 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_MeetRival_Text_6
+# 123 "data/maps/MarigoldTown/scripts.pory"
+	waitmessage
+# 124 "data/maps/MarigoldTown/scripts.pory"
+	closemessage
 # 125 "data/maps/MarigoldTown/scripts.pory"
-	waitmessage
-# 126 "data/maps/MarigoldTown/scripts.pory"
-	closemessage
-# 127 "data/maps/MarigoldTown/scripts.pory"
 	playse SE_PIN
-# 128 "data/maps/MarigoldTown/scripts.pory"
-	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_6
-# 129 "data/maps/MarigoldTown/scripts.pory"
+# 126 "data/maps/MarigoldTown/scripts.pory"
+	applymovement RIVAL, MarigoldTown_EventScript_Trigger3_Movement_0
+# 127 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
-# 130 "data/maps/MarigoldTown/scripts.pory"
+# 128 "data/maps/MarigoldTown/scripts.pory"
 	waitse
-# 131 "data/maps/MarigoldTown/scripts.pory"
+# 129 "data/maps/MarigoldTown/scripts.pory"
 	delay 30
-# 132 "data/maps/MarigoldTown/scripts.pory"
+# 130 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_MeetRival_Text_7
-# 143 "data/maps/MarigoldTown/scripts.pory"
+# 141 "data/maps/MarigoldTown/scripts.pory"
 	waitmessage
-# 144 "data/maps/MarigoldTown/scripts.pory"
+# 142 "data/maps/MarigoldTown/scripts.pory"
 	closemessage
+# 143 "data/maps/MarigoldTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_6
+# 144 "data/maps/MarigoldTown/scripts.pory"
+	waitmovement 0
 # 145 "data/maps/MarigoldTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_7
+	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_7
 # 146 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
 # 147 "data/maps/MarigoldTown/scripts.pory"
-	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_8
-# 148 "data/maps/MarigoldTown/scripts.pory"
-	waitmovement 0
-# 149 "data/maps/MarigoldTown/scripts.pory"
 	setflag HIDE_APRIL_MARIGOLD_TOWN
-# 150 "data/maps/MarigoldTown/scripts.pory"
+# 148 "data/maps/MarigoldTown/scripts.pory"
 	removeobject RIVAL
-# 151 "data/maps/MarigoldTown/scripts.pory"
+# 149 "data/maps/MarigoldTown/scripts.pory"
 	addvar VAR_MARIGOLD_TOWN_STATE, 1
-# 152 "data/maps/MarigoldTown/scripts.pory"
+# 150 "data/maps/MarigoldTown/scripts.pory"
 	fadedefaultbgm
-# 153 "data/maps/MarigoldTown/scripts.pory"
+# 151 "data/maps/MarigoldTown/scripts.pory"
 	release
 	return
 
@@ -258,189 +258,189 @@ MarigoldTown_EventScript_Trigger2_Movement_0:
 	face_right
 	step_end
 
-# 57 "data/maps/MarigoldTown/scripts.pory"
+# 48 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_Trigger3_Movement_0:
-# 57 "data/maps/MarigoldTown/scripts.pory"
+# 48 "data/maps/MarigoldTown/scripts.pory"
+	emote_exclamation_mark
+	step_end
+
+# 56 "data/maps/MarigoldTown/scripts.pory"
+MarigoldTown_EventScript_Trigger3_Movement_1:
+# 56 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 57 "data/maps/MarigoldTown/scripts.pory"
+# 56 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 57 "data/maps/MarigoldTown/scripts.pory"
+# 56 "data/maps/MarigoldTown/scripts.pory"
 	face_right
 	step_end
 
-# 75 "data/maps/MarigoldTown/scripts.pory"
+# 73 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_Trigger4_Movement_0:
-# 75 "data/maps/MarigoldTown/scripts.pory"
+# 73 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 75 "data/maps/MarigoldTown/scripts.pory"
+# 73 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 75 "data/maps/MarigoldTown/scripts.pory"
+# 73 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 75 "data/maps/MarigoldTown/scripts.pory"
+# 73 "data/maps/MarigoldTown/scripts.pory"
 	face_right
 	step_end
 
-# 90 "data/maps/MarigoldTown/scripts.pory"
+# 88 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_MeetRival_Movement_0:
-# 90 "data/maps/MarigoldTown/scripts.pory"
+# 88 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 90 "data/maps/MarigoldTown/scripts.pory"
+# 88 "data/maps/MarigoldTown/scripts.pory"
 	face_up
 	step_end
 
-# 95 "data/maps/MarigoldTown/scripts.pory"
+# 93 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_MeetRival_Movement_1:
-# 95 "data/maps/MarigoldTown/scripts.pory"
+# 93 "data/maps/MarigoldTown/scripts.pory"
 	face_left
 	step_end
 
-# 96 "data/maps/MarigoldTown/scripts.pory"
+# 94 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_MeetRival_Movement_2:
-# 96 "data/maps/MarigoldTown/scripts.pory"
+# 94 "data/maps/MarigoldTown/scripts.pory"
 	face_right
 	step_end
 
-# 102 "data/maps/MarigoldTown/scripts.pory"
+# 100 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_MeetRival_Movement_3:
-# 102 "data/maps/MarigoldTown/scripts.pory"
+# 100 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 102 "data/maps/MarigoldTown/scripts.pory"
+# 100 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 102 "data/maps/MarigoldTown/scripts.pory"
+# 100 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 102 "data/maps/MarigoldTown/scripts.pory"
+# 100 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 102 "data/maps/MarigoldTown/scripts.pory"
+# 100 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 102 "data/maps/MarigoldTown/scripts.pory"
+# 100 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 102 "data/maps/MarigoldTown/scripts.pory"
+# 100 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 102 "data/maps/MarigoldTown/scripts.pory"
+# 100 "data/maps/MarigoldTown/scripts.pory"
 	face_up
 	step_end
 
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_MeetRival_Movement_4:
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
-# 113 "data/maps/MarigoldTown/scripts.pory"
+# 111 "data/maps/MarigoldTown/scripts.pory"
 	face_up
 	step_end
 
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_MeetRival_Movement_5:
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
-# 114 "data/maps/MarigoldTown/scripts.pory"
+# 112 "data/maps/MarigoldTown/scripts.pory"
 	face_up
 	step_end
 
-# 128 "data/maps/MarigoldTown/scripts.pory"
+# 143 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_MeetRival_Movement_6:
-# 128 "data/maps/MarigoldTown/scripts.pory"
-	emote_exclamation_mark
+# 143 "data/maps/MarigoldTown/scripts.pory"
+	face_down
 	step_end
 
 # 145 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_MeetRival_Movement_7:
 # 145 "data/maps/MarigoldTown/scripts.pory"
-	face_down
-	step_end
-
-# 147 "data/maps/MarigoldTown/scripts.pory"
-MarigoldTown_EventScript_MeetRival_Movement_8:
-# 147 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 147 "data/maps/MarigoldTown/scripts.pory"
+# 145 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
 	step_end
 
@@ -454,7 +454,7 @@ MarigoldTown_EventScript_Trigger1_Text_0:
 	.string "that new trainer from Kanto, right?$"
 
 MarigoldTown_EventScript_MeetRival_Text_0:
-# 81 "data/maps/MarigoldTown/scripts.pory"
+# 79 "data/maps/MarigoldTown/scripts.pory"
 	.string "I'm April. I'm Professor Aspen's\n"
 	.string "other assistant.\p"
 	.string "Aspen asked me to meet you here and\n"
@@ -464,38 +464,38 @@ MarigoldTown_EventScript_MeetRival_Text_0:
 	.string "around, but he insisted...$"
 
 MarigoldTown_EventScript_MeetRival_Text_1:
-# 93 "data/maps/MarigoldTown/scripts.pory"
+# 91 "data/maps/MarigoldTown/scripts.pory"
 	.string "This is a Poké Mart, as I'm sure you\n"
 	.string "already know.$"
 
 MarigoldTown_EventScript_MeetRival_Text_2:
-# 98 "data/maps/MarigoldTown/scripts.pory"
+# 96 "data/maps/MarigoldTown/scripts.pory"
 	.string "If you're ever running low on items,\n"
 	.string "this is the place to go.$"
 
 MarigoldTown_EventScript_MeetRival_Text_3:
-# 105 "data/maps/MarigoldTown/scripts.pory"
+# 103 "data/maps/MarigoldTown/scripts.pory"
 	.string "This is my house!$"
 
 MarigoldTown_EventScript_MeetRival_Text_4:
-# 109 "data/maps/MarigoldTown/scripts.pory"
+# 107 "data/maps/MarigoldTown/scripts.pory"
 	.string "I'm not home very often, but hey,\n"
 	.string "it's still part of the tour.$"
 
 MarigoldTown_EventScript_MeetRival_Text_5:
-# 116 "data/maps/MarigoldTown/scripts.pory"
+# 114 "data/maps/MarigoldTown/scripts.pory"
 	.string "And lastly, this is a Pokémon Center.\p"
 	.string "If your Pokémon are ever in trouble,\n"
 	.string "they'll heal them back to full health.$"
 
 MarigoldTown_EventScript_MeetRival_Text_6:
-# 122 "data/maps/MarigoldTown/scripts.pory"
+# 120 "data/maps/MarigoldTown/scripts.pory"
 	.string "That's the end of the tour...\n"
 	.string "Marigold's a pretty small town.\p"
 	.string "Hey, wait a second, is that...$"
 
 MarigoldTown_EventScript_MeetRival_Text_7:
-# 132 "data/maps/MarigoldTown/scripts.pory"
+# 130 "data/maps/MarigoldTown/scripts.pory"
 	.string "It is! Aspen gave you the new Pokédex?!\n"
 	.string "That's an even better model than the\l"
 	.string "one I have!\p"

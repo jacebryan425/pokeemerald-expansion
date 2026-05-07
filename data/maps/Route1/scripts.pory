@@ -1,4 +1,11 @@
-mapscripts Route1_MapScripts {}
+mapscripts Route1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION{
+        if (var(VAR_MARIGOLD_TOWN_STATE) == 1) {
+            setflag(FLAG_HIDE_POTION_NPC)
+            removeobject(POTION_NPC)
+        }
+    }
+}
 
 script Route1_EventScript_Sign {
     lock
@@ -35,7 +42,7 @@ script Route1_EventScript_TrainerTip3 {
 
 script Route1_EventScript_Zigzagoon1 {
     lock
-    if (flag(FLAG_RECEIVED_DEX_FROM_ASPEN) == true) {
+    if (var(VAR_ROUTE_1_STATE) == 1) {
         setwildbattle(SPECIES_ZIGZAGOON, 3, ITEM_NONE)
         playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_ENCOUNTER)
         msgbox("Zig-zig, Zigzagoon-goon!")
@@ -83,7 +90,7 @@ script Route1_EventScript_Zigzagoon1 {
 
 script Route1_EventScript_Zigzagoon2 {
     lock
-    if (flag(FLAG_RECEIVED_DEX_FROM_ASPEN) == true) {
+    if (var(VAR_ROUTE_1_STATE) == 1) {
         setwildbattle(SPECIES_ZIGZAGOON, 3, ITEM_NONE)
         playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_ENCOUNTER)
         msgbox("Zig-zig, Zigzagoon-goon!")
@@ -141,9 +148,10 @@ script Route1_EventScript_PotionNPC {
                 "Poké Mart if you'd ever like to\l"
                 "purchase more items.")
     } elif (flag(FLAG_HIDE_ZIGZAGOON_1) == true && flag(FLAG_HIDE_ZIGZAGOON_2) == true) {
-        msgbox("Thank you for fighting off those\n"
-                "Zigzagoon!\l"
-                "Now I can get back to town.\p"
+        msgbox("Thank you for chasing off those\n"
+                "Zigzagoon!\p"
+                "Now I can get back to town in time\n"
+                "for my shift.\p"
                 "Here's something to express my\n"
                 "gratitude.")
         giveitem(ITEM_POTION, 5)
@@ -151,6 +159,18 @@ script Route1_EventScript_PotionNPC {
         msgbox("Come visit me at the Marigold\n"
                 "Poké Mart if you'd ever like to\l"
                 "purchase more items.")
+    } elif (var(VAR_ROUTE_1_STATE) == 1) {
+        msgbox("Please chase those Zigzagoon off\n"
+                "for me!\p"
+                "I'm going to be late for my shift!")
+    } elif (flag(FLAG_RECEIVED_DEX_FROM_ASPEN) == TRUE) {
+        msgbox("Those scary Zigzagoon chased me and\n"
+                "then blocked off the path!\p"
+                "How am I going to make it back to town?!\p"
+                "Oh...that looks like a Pokédex!\n"
+                "Surely you're strong enough to chase\l"
+                "them off for me!")
+        addvar(VAR_ROUTE_1_STATE, 1)
     } else {
         msgbox("Those scary Zigzagoon chased me and\n"
                 "then blocked off the path!\p"

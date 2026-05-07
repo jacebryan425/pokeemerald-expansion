@@ -1,2 +1,50 @@
 mapscripts MarigoldTown_Mart_MapScripts {}
 
+script MarigoldTown_Mart_Employee {
+    lock
+    faceplayer
+    if (var(VAR_MARIGOLD_TOWN_STATE) == 2) {
+        message("How may I help you?")
+        waitmessage
+        pokemart(0)
+        msgbox("Thank you, come again.")
+    } else {
+        msgbox("Nice to see you again!\p"
+                "Thank you again for chasing those\n"
+                "scary Zigzagoon off.\p"
+                "I have something neat that just came\n"
+                "in and I'd like to give them to you.")
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("{PLAYER} received Running Shoes!")
+        waitfanfare
+        setflag(FLAG_RECEIVED_RUNNING_SHOES)
+        setflag(FLAG_SYS_B_DASH)
+        msgbox("Press the B button while wearing these\n"
+                "to run super fast!\p"
+                "Your haters will never be able to\n"
+                "catch you!\p"
+                "Oh, yeah...\n"
+                "Did you want to buy something?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            message("How may I help you?")
+            waitmessage
+            pokemart(0)
+            msgbox("Thank you, come again.")
+        } else {
+            msgbox("Very well, maybe some other time.")
+        }
+        addvar(VAR_MARIGOLD_TOWN_STATE, 1)
+    }
+    release
+}
+
+script MarigoldTown_Mart_NPC {
+    lock
+    faceplayer
+    msgbox("I came here because I ran out of\n"
+            "eggs, but the clerk said they don't\l"
+            "sell them here.\p"
+            "What am I supposed to bake cookies\n"
+            "with, a Potion? Get real.")
+    release
+}
