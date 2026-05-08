@@ -62,17 +62,17 @@ PeriwinkleTown_PlayersHouse_2F_EventScript_GameCube::
 	lock
 # 34 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
 	msgbox PeriwinkleTown_PlayersHouse_2F_EventScript_GameCube_Text_0
-# 38 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
+# 36 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
 	release
 	return
 
 
 PeriwinkleTown_PlayersHouse_2F_EventScript_Notebook::
-# 42 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
+# 40 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
 	lock
-# 43 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
+# 41 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
 	msgbox PeriwinkleTown_PlayersHouse_2F_EventScript_Notebook_Text_0
-# 52 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
+# 49 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
 	release
 	return
 
@@ -80,18 +80,15 @@ PeriwinkleTown_PlayersHouse_2F_EventScript_Notebook::
 PeriwinkleTown_PlayersHouse_2F_EventScript_GameCube_Text_0:
 # 34 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
 	.string "It's a Nintendo GameCube with\n"
-	.string "Super Monkey Ball.\p"
-	.string "Bro, I knew I liked you dude.\n"
-	.string "Come here, bring it in.$"
+	.string "Super Monkey Ball.$"
 
 PeriwinkleTown_PlayersHouse_2F_EventScript_Notebook_Text_0:
-# 43 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
+# 41 "data/maps/PeriwinkleTown_PlayersHouse_2F/scripts.pory"
 	.string "You flip through an old journal\n"
-	.string "written during your time in a distant\l"
-	.string "region.\p"
-	.string "'Last week I narrowly defeated the\n"
+	.string "written during your time in Kanto.\p"
+	.string "“Last week I narrowly defeated the\n"
 	.string "Elite Four, and on my way back home,\l"
 	.string "I caught the last Pokémon I needed\l"
 	.string "to complete the Professor's Pokédex.\p"
 	.string "Not much left to do here in Kanto,\n"
-	.string "I think it's time for a change.'$"
+	.string "I think it's time for a change.”$"

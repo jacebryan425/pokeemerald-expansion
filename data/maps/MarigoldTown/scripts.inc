@@ -209,27 +209,27 @@ MarigoldTown_EventScript_MeetRival::
 	delay 30
 # 130 "data/maps/MarigoldTown/scripts.pory"
 	msgbox MarigoldTown_EventScript_MeetRival_Text_7
-# 141 "data/maps/MarigoldTown/scripts.pory"
-	waitmessage
 # 142 "data/maps/MarigoldTown/scripts.pory"
-	closemessage
+	waitmessage
 # 143 "data/maps/MarigoldTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_6
+	closemessage
 # 144 "data/maps/MarigoldTown/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, MarigoldTown_EventScript_MeetRival_Movement_6
 # 145 "data/maps/MarigoldTown/scripts.pory"
-	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_7
-# 146 "data/maps/MarigoldTown/scripts.pory"
 	waitmovement 0
+# 146 "data/maps/MarigoldTown/scripts.pory"
+	applymovement RIVAL, MarigoldTown_EventScript_MeetRival_Movement_7
 # 147 "data/maps/MarigoldTown/scripts.pory"
-	setflag HIDE_APRIL_MARIGOLD_TOWN
+	waitmovement 0
 # 148 "data/maps/MarigoldTown/scripts.pory"
-	removeobject RIVAL
+	setflag HIDE_APRIL_MARIGOLD_TOWN
 # 149 "data/maps/MarigoldTown/scripts.pory"
-	addvar VAR_MARIGOLD_TOWN_STATE, 1
+	removeobject RIVAL
 # 150 "data/maps/MarigoldTown/scripts.pory"
-	fadedefaultbgm
+	addvar VAR_MARIGOLD_TOWN_STATE, 1
 # 151 "data/maps/MarigoldTown/scripts.pory"
+	fadedefaultbgm
+# 152 "data/maps/MarigoldTown/scripts.pory"
 	release
 	return
 
@@ -398,49 +398,49 @@ MarigoldTown_EventScript_MeetRival_Movement_5:
 	face_up
 	step_end
 
-# 143 "data/maps/MarigoldTown/scripts.pory"
+# 144 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_MeetRival_Movement_6:
-# 143 "data/maps/MarigoldTown/scripts.pory"
+# 144 "data/maps/MarigoldTown/scripts.pory"
 	face_down
 	step_end
 
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 MarigoldTown_EventScript_MeetRival_Movement_7:
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
-# 145 "data/maps/MarigoldTown/scripts.pory"
+# 146 "data/maps/MarigoldTown/scripts.pory"
 	walk_up
 	step_end
 
@@ -501,7 +501,8 @@ MarigoldTown_EventScript_MeetRival_Text_7:
 	.string "one I have!\p"
 	.string "I'm going to go see if he has an extra\n"
 	.string "one for me...\p"
-	.string "You should make your way over to\n"
+	.string "Once you're done exploring Marigold,\n"
+	.string "you should make your way over to\l"
 	.string "Chartreuse City.\p"
 	.string "It's quite a ways away from here, so\n"
 	.string "go ask my neighbor if she can lend\l"

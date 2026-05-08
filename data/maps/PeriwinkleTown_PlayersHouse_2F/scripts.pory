@@ -32,22 +32,19 @@ PeriwinkleTown_PlayersHouse_2F_Text_ClockIsStopped:
 script PeriwinkleTown_PlayersHouse_2F_EventScript_GameCube {
     lock
     msgbox("It's a Nintendo GameCube with\n"
-            "Super Monkey Ball.\p"
-            "Bro, I knew I liked you dude.\n"
-            "Come here, bring it in.")
+            "Super Monkey Ball.")
     release
 }
 
 script PeriwinkleTown_PlayersHouse_2F_EventScript_Notebook {
     lock
     msgbox("You flip through an old journal\n"
-            "written during your time in a distant\l"
-            "region.\p"
-            "'Last week I narrowly defeated the\n"
+            "written during your time in Kanto.\p"
+            "“Last week I narrowly defeated the\n"
             "Elite Four, and on my way back home,\l"
             "I caught the last Pokémon I needed\l"
             "to complete the Professor's Pokédex.\p"
             "Not much left to do here in Kanto,\n"
-            "I think it's time for a change.'")
+            "I think it's time for a change.”")
     release
 }

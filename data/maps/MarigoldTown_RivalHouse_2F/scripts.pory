@@ -1,0 +1,31 @@
+mapscripts MarigoldTown_RivalHouse_2F_MapScripts {}
+
+script MarigoldTown_RivalHouse_2F_EventScript_GameCube {
+    lock
+    msgbox("It's a Nintendo GameCube with\n"
+            "Super Monkey Ball.\p"
+            "I knew I liked this girl.")
+    release
+}
+
+script MarigoldTown_RivalHouse_2F_EventScript_Notebook {
+    lock
+    msgbox("It's not right to look through someone\n"
+            "else's journal.\p"
+            "Do it anyway?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("“Aspen told me today about a new\n"
+                "trainer moving here from Kanto.\p"
+                "I hope we can be friends, but I'll\n"
+                "admit, I'm a little intimidated.”")
+    } else {
+        msgbox("Probably a good call.")
+    }
+    release
+}
+
+script MarigoldTown_RivalHouse_2F_EventScript_CheckRivalPC {
+    lock
+    msgbox("You don't know the password...")
+    release
+}
