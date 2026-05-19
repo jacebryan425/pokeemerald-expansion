@@ -1,0 +1,145 @@
+mapscripts Route2_MapScripts {}
+
+script Route2_EventScript_Lisa {
+    trainerbattle_single(TRAINER_LISA_ROUTE2, Lisa_Intro, Lisa_Outro)
+    msgbox(PostBattle_Lisa, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Lisa_Intro {
+    "Hey, you look like a strong trainer!\n"
+    "Do you want to battle?"
+}
+
+text Lisa_Outro {
+    "Oh...rude."
+}
+
+text PostBattle_Lisa {
+    "Most of the trainers who come through\n"
+    "here aren't nearly as strong as you."
+}
+
+script Route2_EventScript_Chris {
+    trainerbattle_single(TRAINER_CHRIS_ROUTE2, Chris_Intro, Chris_Outro)
+    msgbox(PostBattle_Chris, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Chris_Intro {
+    "I'm looking for Bug-type Pokémon!\n"
+    "Have you seen any around here?"
+}
+
+text Chris_Outro {
+    "Hey! What gives?"
+}
+
+text PostBattle_Chris {
+    "If you find any more Bug-types,\n"
+    "let me know."
+}
+
+script Route2_EventScript_Nate {
+    trainerbattle_single(TRAINER_NATE_ROUTE2, Nate_Intro, Nate_Outro)
+    msgbox(PostBattle_Nate, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Nate_Intro {
+    "I've been itching to battle someone\n"
+    "all day!"
+}
+
+text Nate_Outro {
+    "Wow, that was great!"
+}
+
+text PostBattle_Nate {
+    "I hope we can battle again sometime!"
+}
+
+script Route2_EventScript_Ned {
+    trainerbattle_single(TRAINER_NED_ROUTE2, Ned_Intro, Ned_Outro)
+    msgbox(PostBattle_Ned, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Ned_Intro {
+    "I just caught a new Pokémon in\n"
+    "Marigold Forest.\p"
+    "Want to see it?"
+}
+
+text Ned_Outro {
+    "What!? It didn't do any damage!"
+}
+
+text PostBattle_Ned {
+    "I'm gonna go back in to look for\n"
+    "some stronger Pokémon!"
+}
+
+script Route2_EventScript_NPC1 {
+    lock
+    faceplayer
+    msgbox("Someone once told me that Pokémon can\n"
+            "live in trees.\p"
+            "I've been shaking this tree for hours,\n"
+            "but I haven't seen a single one!")
+    release
+}
+
+script Route2_EventScript_NPC2 {
+    lock
+    faceplayer
+    msgbox("There's a vast desert at the other end\n"
+            "of this river.\p"
+            "Unfortunately for me, I can't swim,\n"
+            "so I have no way of being able to\l"
+            "explore it.")
+    release
+}
+
+script Route2_EventScript_NPC3 {
+    lock
+    faceplayer
+    msgbox("Marigold Forest is filled with all sorts\n"
+            "of Bug-type Pokémon.\p"
+            "I try not to stay in there for too long,\n"
+            "being around them creeps me out!")
+    release
+}
+
+script Route2_EventScript_TrainerTip1 {
+    lock
+    msgbox("Ledges can act as shortcuts.\p"
+            "Think before you hop over them\n"
+            "though, as you won't be able to climb\l"
+            "back up!")
+    release
+}
+
+script Route2_EventScript_TrainerTip2 {
+    lock
+    msgbox("Certain moves Pokémon know can inflict\n"
+            "harmful status conditions.\p"
+            "Be sure to stay stocked up on items\n"
+            "that can heal those conditions!")
+    release
+}
+
+script Route2_EventScript_Sign {
+    lock
+    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}Route 2.")
+    release
+}
+
+script Route2_ItemScript_Antidote {
+        finditem(ITEM_ANTIDOTE, 1)
+        setflag(FLAG_ITEM_ROUTE_2_ANTIDOTE)
+}

@@ -1225,7 +1225,7 @@
 
 //New Item Ball flags
 #define FLAG_ITEM_PERIWINKLE_GARDEN_POTION                          0x493
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
+#define FLAG_ITEM_ROUTE_2_ANTIDOTE                                  0x494
 #define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
