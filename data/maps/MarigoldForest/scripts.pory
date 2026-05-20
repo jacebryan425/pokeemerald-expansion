@@ -1,0 +1,222 @@
+mapscripts MarigoldForest_MapScripts {}
+
+script MarigoldForest_TrainerScript_Ted {
+    trainerbattle_single(TRAINER_TED_MARIGOLDFOREST, Ted_Intro, Ted_Outro)
+    msgbox(PostBattle_Ted, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Ted_Intro {
+    "Bug Pokémon aren't very strong,\n"
+    "but I want to catch them all!"
+}
+
+text Ted_Outro {
+    "See? Not very strong."
+}
+
+text PostBattle_Ted {
+    "Bug Pokémon are so cool!\p"
+    "I know other people think they're icky,\n"
+    "but I just love them!"
+}
+
+script MarigoldForest_TrainerScript_Gene {
+    trainerbattle_single(TRAINER_GENE_MARIGOLDFOREST, Gene_Intro, Gene_Outro)
+    msgbox(PostBattle_Gene, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Gene_Intro {
+    "This place is great! It's filled to the\n"
+    "brim with bugs to feed my birds with."
+}
+
+text Gene_Outro {
+    "How am I going to fly home..?"
+}
+
+text PostBattle_Gene {
+    "I come here to train my bird Pokémon.\n"
+    "Their attacks are all super effective\l"
+    "against the Bug-types."
+}
+
+script MarigoldForest_TrainerScript_Gary {
+    trainerbattle_single(TRAINER_GARY_MARIGOLDFOREST, Gary_Intro, Gary_Outro)
+    msgbox(PostBattle_Gary, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Gary_Intro {
+    "I can't find my way out of here!\n"
+    "Which way do I go?"
+}
+
+text Gary_Outro {
+    "No!"
+}
+
+text PostBattle_Gary {
+    "If I keep looking, I'm sure I'll find\n"
+    "my way out eventually."
+}
+
+script MarigoldForest_TrainerScript_Zeke {
+    trainerbattle_single(TRAINER_ZEKE_MARIGOLDFOREST, Zeke_Intro, Zeke_Outro)
+    msgbox(PostBattle_Zeke, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Zeke_Intro {
+    "Those ledges are fun to jump off of,\n"
+    "huh?"
+}
+
+text Zeke_Outro {
+    "That wasn't fun..."
+}
+
+text PostBattle_Zeke {
+    "Do you know how to get out of here?\n"
+    "I keep going in circles."
+}
+
+script MarigoldForest_TrainerScript_Brian {
+    trainerbattle_single(TRAINER_BRIAN_MARIGOLDFOREST, Brian_Intro, Brian_Outro)
+    msgbox(PostBattle_Brian, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Brian_Intro {
+    "I like training Bug Pokémon because\n"
+    "they evolve really quickly."
+}
+
+text Brian_Outro {
+    "Wait, what did I do wrong?"
+}
+
+text PostBattle_Brian {
+    "I guess just because a Pokémon is\n"
+    "evolved, it doesn't necessarily mean\l"
+    "that they're strong."
+}
+
+script MarigoldForest_TrainerScript_Tina {
+    trainerbattle_single(TRAINER_TINA_MARIGOLDFOREST, Tina_Intro, Tina_Outro)
+    msgbox(PostBattle_Tina, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Tina_Intro {
+    "Look at this really cute Pokémon I just\n"
+    "found here!"
+}
+
+text Tina_Outro {
+    "Ahh! My cute Pokémon!"
+}
+
+text PostBattle_Tina {
+    "My new Pokémon doesn't seem to want to\n"
+    "stay in its ball...\p"
+    "Is that normal?"
+}
+
+script MarigoldForest_TrainerScript_Dennis {
+    trainerbattle_single(TRAINER_DENNIS_MARIGOLDFOREST, Dennis_Intro, Dennis_Outro)
+    msgbox(PostBattle_Dennis, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Dennis_Intro {
+    "I'm going to poison your Pokémon!"
+}
+
+text Dennis_Outro {
+    "What?"
+}
+
+text PostBattle_Dennis {
+    "I guess poison isn't enough to win\n"
+    "battles with on its own."
+}
+
+script MarigoldForest_TrainerScript_Will {
+    trainerbattle_single(TRAINER_WILL_MARIGOLDFOREST, Will_Intro, Will_Outro)
+    msgbox(PostBattle_Will, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Will_Intro {
+    "I have some very strong Bug Pokémon!\n"
+    "Let me show you!"
+}
+
+text Will_Outro {
+    "Wow, your Pokémon are stronger."
+}
+
+text PostBattle_Will {
+    "I've been raising Bug Pokémon for a long\n"
+    "time, but I guess I still have a lot to\l"
+    "learn."
+}
+
+script MarigoldForest_NPCScript_SuicuneLore {
+    lock
+    faceplayer
+    msgbox("My mother once told me a story about a\n"
+            "Legendary Pokémon that lives in this\l"
+            "forest.\p"
+            "She said that it hides in the trees,\n"
+            "and only shows itself to trainers who\l"
+            "are pure of heart.")
+    release
+}
+
+script MarigoldForest_NPCScript_Headbutt {
+    lock
+    faceplayer
+    msgbox("Did you know that certain Pokémon can\n"
+            "only be found living in trees?")
+    release
+}
+
+script MarigoldForest_SignScript_Location {
+    lock
+    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}Marigold Forest.")
+    release
+}
+
+script MarigoldForest_SignScript_TrainerTips {
+    lock
+    msgbox("If you ever want to avoid wild\n"
+            "Pokémon encounters, use a Repel!\p"
+            "You can buy them at any Poké Mart.")
+    release
+}
+
+script MarigoldForest_ItemScript_Potion {
+    finditem(ITEM_POTION, 1)
+    setflag(FLAG_ITEM_MARIGOLD_FOREST_POTION)
+}
+
+script MarigoldForest_ItemScript_Antidote {
+    finditem(ITEM_ANTIDOTE, 3)
+    setflag(FLAG_ITEM_MARIGOLD_FOREST_ANTIDOTE)
+}
+
+script MarigoldForest_ItemScript_GreatBall {
+    finditem(ITEM_GREAT_BALL, 1)
+    setflag(FLAG_ITEM_MARIGOLD_FOREST_GREAT_BALL)
+}
