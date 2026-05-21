@@ -177,56 +177,60 @@ Route3_EventScript_April_FacingNorth_1:
 	msgbox Route3_EventScript_April_FacingNorth_Text_6
 Route3_EventScript_April_FacingNorth_5:
 # 126 "data/maps/Route3/scripts.pory"
-	trainerbattle_no_intro TRAINER_APRIL_ROUTE3, AprilOutro
+	setflag FLAG_NO_WHITEOUT
 # 127 "data/maps/Route3/scripts.pory"
+	trainerbattle_no_intro TRAINER_APRIL_ROUTE3, AprilOutro
+# 128 "data/maps/Route3/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Route3_EventScript_April_FacingNorth_10
-# 132 "data/maps/Route3/scripts.pory"
+# 133 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_April_FacingNorth_Text_8
 Route3_EventScript_April_FacingNorth_9:
-# 136 "data/maps/Route3/scripts.pory"
-	msgbox Route3_EventScript_April_FacingNorth_Text_9
 # 137 "data/maps/Route3/scripts.pory"
-	waitmessage
+	clearflag FLAG_NO_WHITEOUT
 # 138 "data/maps/Route3/scripts.pory"
-	closemessage
+	msgbox Route3_EventScript_April_FacingNorth_Text_9
 # 139 "data/maps/Route3/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
+	waitmessage
 # 140 "data/maps/Route3/scripts.pory"
-	delay 12
+	closemessage
 # 141 "data/maps/Route3/scripts.pory"
-	dofieldeffect FLDEFF_POKECENTER_HEAL
+	fadescreenswapbuffers FADE_TO_BLACK
 # 142 "data/maps/Route3/scripts.pory"
-	waitfieldeffect FLDEFF_POKECENTER_HEAL
-# 143 "data/maps/Route3/scripts.pory"
-	special HealPlayerParty
-# 144 "data/maps/Route3/scripts.pory"
 	delay 12
+# 143 "data/maps/Route3/scripts.pory"
+	dofieldeffect FLDEFF_POKECENTER_HEAL
+# 144 "data/maps/Route3/scripts.pory"
+	waitfieldeffect FLDEFF_POKECENTER_HEAL
 # 145 "data/maps/Route3/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
+	special HealPlayerParty
 # 146 "data/maps/Route3/scripts.pory"
 	delay 12
 # 147 "data/maps/Route3/scripts.pory"
-	msgbox Route3_EventScript_April_FacingNorth_Text_10
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 148 "data/maps/Route3/scripts.pory"
+	delay 12
 # 149 "data/maps/Route3/scripts.pory"
-	waitmessage
-# 150 "data/maps/Route3/scripts.pory"
-	closemessage
+	msgbox Route3_EventScript_April_FacingNorth_Text_10
 # 151 "data/maps/Route3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route3_EventScript_April_FacingNorth_Movement_0
+	waitmessage
 # 152 "data/maps/Route3/scripts.pory"
-	waitmovement 0
+	closemessage
 # 153 "data/maps/Route3/scripts.pory"
-	applymovement APRIL, Route3_EventScript_April_FacingNorth_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, Route3_EventScript_April_FacingNorth_Movement_0
 # 154 "data/maps/Route3/scripts.pory"
 	waitmovement 0
 # 155 "data/maps/Route3/scripts.pory"
-	setflag FLAG_HIDE_APRIL_ROUTE_3
+	applymovement APRIL, Route3_EventScript_April_FacingNorth_Movement_1
 # 156 "data/maps/Route3/scripts.pory"
-	removeobject APRIL
+	waitmovement 0
 # 157 "data/maps/Route3/scripts.pory"
-	addvar VAR_ROUTE_3_STATE, 1
+	setflag FLAG_HIDE_APRIL_ROUTE_3
 # 158 "data/maps/Route3/scripts.pory"
+	removeobject APRIL
+# 159 "data/maps/Route3/scripts.pory"
+	addvar VAR_ROUTE_3_STATE, 1
+# 160 "data/maps/Route3/scripts.pory"
 	release
 	return
 
@@ -241,112 +245,116 @@ Route3_EventScript_April_FacingNorth_6:
 	goto Route3_EventScript_April_FacingNorth_5
 
 Route3_EventScript_April_FacingNorth_10:
-# 128 "data/maps/Route3/scripts.pory"
+# 129 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_April_FacingNorth_Text_7
 	goto Route3_EventScript_April_FacingNorth_9
 
 
 Route3_EventScript_April_FacingLeft::
-# 162 "data/maps/Route3/scripts.pory"
+# 164 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_April_FacingNorth_Text_0
-# 168 "data/maps/Route3/scripts.pory"
-	waitmessage
-# 169 "data/maps/Route3/scripts.pory"
-	closemessage
 # 170 "data/maps/Route3/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
+	waitmessage
 # 171 "data/maps/Route3/scripts.pory"
-	delay 12
+	closemessage
 # 172 "data/maps/Route3/scripts.pory"
-	dofieldeffect FLDEFF_POKECENTER_HEAL
+	fadescreenswapbuffers FADE_TO_BLACK
 # 173 "data/maps/Route3/scripts.pory"
-	waitfieldeffect FLDEFF_POKECENTER_HEAL
-# 174 "data/maps/Route3/scripts.pory"
-	special HealPlayerParty
-# 175 "data/maps/Route3/scripts.pory"
 	delay 12
+# 174 "data/maps/Route3/scripts.pory"
+	dofieldeffect FLDEFF_POKECENTER_HEAL
+# 175 "data/maps/Route3/scripts.pory"
+	waitfieldeffect FLDEFF_POKECENTER_HEAL
 # 176 "data/maps/Route3/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
+	special HealPlayerParty
 # 177 "data/maps/Route3/scripts.pory"
 	delay 12
 # 178 "data/maps/Route3/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 179 "data/maps/Route3/scripts.pory"
+	delay 12
+# 180 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_April_FacingNorth_Text_1, MSGBOX_YESNO
-# 185 "data/maps/Route3/scripts.pory"
+# 187 "data/maps/Route3/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Route3_EventScript_April_FacingLeft_2
-# 188 "data/maps/Route3/scripts.pory"
+# 190 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_April_FacingNorth_Text_3
 Route3_EventScript_April_FacingLeft_1:
-# 206 "data/maps/Route3/scripts.pory"
-	msgbox Route3_EventScript_April_FacingNorth_Text_4, MSGBOX_YESNO
 # 208 "data/maps/Route3/scripts.pory"
+	msgbox Route3_EventScript_April_FacingNorth_Text_4, MSGBOX_YESNO
+# 210 "data/maps/Route3/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Route3_EventScript_April_FacingLeft_6
-# 211 "data/maps/Route3/scripts.pory"
+# 213 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_April_FacingNorth_Text_6
 Route3_EventScript_April_FacingLeft_5:
-# 213 "data/maps/Route3/scripts.pory"
+# 215 "data/maps/Route3/scripts.pory"
+	setflag FLAG_NO_WHITEOUT
+# 216 "data/maps/Route3/scripts.pory"
 	trainerbattle_no_intro TRAINER_APRIL_ROUTE3, AprilOutro
-# 214 "data/maps/Route3/scripts.pory"
+# 217 "data/maps/Route3/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Route3_EventScript_April_FacingLeft_10
-# 219 "data/maps/Route3/scripts.pory"
+# 222 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_April_FacingNorth_Text_8
 Route3_EventScript_April_FacingLeft_9:
-# 223 "data/maps/Route3/scripts.pory"
-	msgbox Route3_EventScript_April_FacingNorth_Text_9
-# 224 "data/maps/Route3/scripts.pory"
-	waitmessage
-# 225 "data/maps/Route3/scripts.pory"
-	closemessage
 # 226 "data/maps/Route3/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
+	clearflag FLAG_NO_WHITEOUT
 # 227 "data/maps/Route3/scripts.pory"
-	delay 12
+	msgbox Route3_EventScript_April_FacingNorth_Text_9
 # 228 "data/maps/Route3/scripts.pory"
-	dofieldeffect FLDEFF_POKECENTER_HEAL
+	waitmessage
 # 229 "data/maps/Route3/scripts.pory"
-	waitfieldeffect FLDEFF_POKECENTER_HEAL
+	closemessage
 # 230 "data/maps/Route3/scripts.pory"
-	special HealPlayerParty
+	fadescreenswapbuffers FADE_TO_BLACK
 # 231 "data/maps/Route3/scripts.pory"
 	delay 12
 # 232 "data/maps/Route3/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
+	dofieldeffect FLDEFF_POKECENTER_HEAL
 # 233 "data/maps/Route3/scripts.pory"
-	delay 12
+	waitfieldeffect FLDEFF_POKECENTER_HEAL
 # 234 "data/maps/Route3/scripts.pory"
-	msgbox Route3_EventScript_April_FacingNorth_Text_10
+	special HealPlayerParty
+# 235 "data/maps/Route3/scripts.pory"
+	delay 12
 # 236 "data/maps/Route3/scripts.pory"
-	waitmessage
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 237 "data/maps/Route3/scripts.pory"
-	closemessage
+	delay 12
 # 238 "data/maps/Route3/scripts.pory"
-	applymovement APRIL, Route3_EventScript_April_FacingLeft_Movement_0
-# 239 "data/maps/Route3/scripts.pory"
-	waitmovement 0
+	msgbox Route3_EventScript_April_FacingNorth_Text_10
 # 240 "data/maps/Route3/scripts.pory"
-	setflag FLAG_HIDE_APRIL_ROUTE_3
+	waitmessage
 # 241 "data/maps/Route3/scripts.pory"
-	removeobject APRIL
+	closemessage
 # 242 "data/maps/Route3/scripts.pory"
-	addvar VAR_ROUTE_3_STATE, 1
+	applymovement APRIL, Route3_EventScript_April_FacingLeft_Movement_0
 # 243 "data/maps/Route3/scripts.pory"
+	waitmovement 0
+# 244 "data/maps/Route3/scripts.pory"
+	setflag FLAG_HIDE_APRIL_ROUTE_3
+# 245 "data/maps/Route3/scripts.pory"
+	removeobject APRIL
+# 246 "data/maps/Route3/scripts.pory"
+	addvar VAR_ROUTE_3_STATE, 1
+# 247 "data/maps/Route3/scripts.pory"
 	release
 	return
 
 Route3_EventScript_April_FacingLeft_2:
-# 186 "data/maps/Route3/scripts.pory"
+# 188 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_April_FacingNorth_Text_2
 	goto Route3_EventScript_April_FacingLeft_1
 
 Route3_EventScript_April_FacingLeft_6:
-# 209 "data/maps/Route3/scripts.pory"
+# 211 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_April_FacingNorth_Text_5
 	goto Route3_EventScript_April_FacingLeft_5
 
 Route3_EventScript_April_FacingLeft_10:
-# 215 "data/maps/Route3/scripts.pory"
+# 218 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_April_FacingNorth_Text_7
 	goto Route3_EventScript_April_FacingLeft_9
 
@@ -391,59 +399,59 @@ Route3_EventScript_Trigger3_Movement_1:
 	walk_right
 	step_end
 
-# 151 "data/maps/Route3/scripts.pory"
+# 153 "data/maps/Route3/scripts.pory"
 Route3_EventScript_April_FacingNorth_Movement_0:
-# 151 "data/maps/Route3/scripts.pory"
+# 153 "data/maps/Route3/scripts.pory"
 	face_right
 	step_end
 
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 Route3_EventScript_April_FacingNorth_Movement_1:
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 	walk_right
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 	walk_right
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 	walk_right
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 	walk_right
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 	walk_right
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 	walk_right
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 	walk_right
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 	walk_right
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 	walk_right
-# 153 "data/maps/Route3/scripts.pory"
+# 155 "data/maps/Route3/scripts.pory"
 	walk_right
 	step_end
 
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 Route3_EventScript_April_FacingLeft_Movement_0:
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_down
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_right
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_right
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_right
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_right
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_right
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_right
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_right
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_right
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_right
-# 238 "data/maps/Route3/scripts.pory"
+# 242 "data/maps/Route3/scripts.pory"
 	walk_right
 	step_end
 
@@ -508,27 +516,27 @@ Route3_EventScript_April_FacingNorth_Text_6:
 	.string "Well, too bad. I wasn't asking!$"
 
 Route3_EventScript_April_FacingNorth_Text_7:
-# 128 "data/maps/Route3/scripts.pory"
+# 129 "data/maps/Route3/scripts.pory"
 	.string "Wow, that was a great battle!\n"
 	.string "I can see why Aspen has such high\l"
 	.string "hopes for you, {PLAYER}.$"
 
 Route3_EventScript_April_FacingNorth_Text_8:
-# 132 "data/maps/Route3/scripts.pory"
+# 133 "data/maps/Route3/scripts.pory"
 	.string "That was...surprisingly easy.\n"
 	.string "I've gotta say, I expected a much\l"
 	.string "tougher battle from you, {PLAYER}.$"
 
 Route3_EventScript_April_FacingNorth_Text_9:
-# 136 "data/maps/Route3/scripts.pory"
+# 138 "data/maps/Route3/scripts.pory"
 	.string "Here, let me heal your Pokémon again.$"
 
 Route3_EventScript_April_FacingNorth_Text_10:
-# 147 "data/maps/Route3/scripts.pory"
+# 149 "data/maps/Route3/scripts.pory"
 	.string "Well, I'll see you in Chartreuse City.\n"
 	.string "Best of luck, {PLAYER}!$"
 
 AprilOutro::
-# 246 "data/maps/Route3/scripts.pory"
+# 250 "data/maps/Route3/scripts.pory"
 	.string "I have a lot to learn from you,\n"
 	.string "{PLAYER}.$"

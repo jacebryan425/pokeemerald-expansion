@@ -123,6 +123,7 @@ script Route3_EventScript_April_FacingNorth {
     } else {
         msgbox("Well, too bad. I wasn't asking!")
     }
+    setflag(FLAG_NO_WHITEOUT)
     trainerbattle_no_intro(TRAINER_APRIL_ROUTE3, AprilOutro)
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
         msgbox("Wow, that was a great battle!\n"
@@ -133,6 +134,7 @@ script Route3_EventScript_April_FacingNorth {
                 "I've gotta say, I expected a much\l"
                 "tougher battle from you, {PLAYER}.")
     }
+    clearflag(FLAG_NO_WHITEOUT)
     msgbox("Here, let me heal your Pokémon again.")
     waitmessage
     closemessage
@@ -210,6 +212,7 @@ script Route3_EventScript_April_FacingLeft {
     } else {
         msgbox("Well, too bad. I wasn't asking!")
     }
+    setflag(FLAG_NO_WHITEOUT)
     trainerbattle_no_intro(TRAINER_APRIL_ROUTE3, AprilOutro)
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
         msgbox("Wow, that was a great battle!\n"
@@ -220,6 +223,7 @@ script Route3_EventScript_April_FacingLeft {
                 "I've gotta say, I expected a much\l"
                 "tougher battle from you, {PLAYER}.")
     }
+    clearflag(FLAG_NO_WHITEOUT)
     msgbox("Here, let me heal your Pokémon again.")
     waitmessage
     closemessage
