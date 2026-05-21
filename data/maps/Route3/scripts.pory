@@ -1,0 +1,249 @@
+mapscripts Route3_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION{
+        if (var(VAR_ROUTE_3_STATE) == 0) {
+            setflag(FLAG_HIDE_APRIL_ROUTE_3)
+            removeobject(APRIL)
+        }
+    }
+}
+
+script Route3_EventScript_Trigger1 {
+    lock
+    playse(SE_EXIT)
+    clearflag(FLAG_HIDE_APRIL_ROUTE_3)
+    addobject(APRIL)
+    waitse
+    playse(SE_PIN)
+    applymovement(APRIL, moves(emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    delay(30)
+    msgbox("{PLAYER}!")
+    waitmessage
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    applymovement(APRIL, moves(walk_down))
+    waitmovement(0)
+    call(Route3_EventScript_April_FacingNorth)
+
+}
+
+script Route3_EventScript_Trigger2 {
+    lock
+    playse(SE_EXIT)
+    clearflag(FLAG_HIDE_APRIL_ROUTE_3)
+    addobject(APRIL)
+    waitse
+    playse(SE_PIN)
+    applymovement(APRIL, moves(emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    delay(30)
+    msgbox("{PLAYER}!")
+    waitmessage
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    applymovement(APRIL, moves(walk_right, walk_down))
+    waitmovement(0)
+    call(Route3_EventScript_April_FacingNorth)
+}
+
+script Route3_EventScript_Trigger3 {
+    lock
+    playse(SE_EXIT)
+    clearflag(FLAG_HIDE_APRIL_ROUTE_3)
+    addobject(APRIL)
+    waitse
+    playse(SE_PIN)
+    applymovement(APRIL, moves(emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    delay(30)
+    msgbox("{PLAYER}!")
+    waitmessage
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(0)
+    applymovement(APRIL, moves(walk_down, walk_right))
+    waitmovement(0)
+    call(Route3_EventScript_April_FacingLeft)
+}
+
+script Route3_EventScript_April_FacingNorth {
+    msgbox("It took some serious convincing,\n"
+            "but Aspen gave me the new Pokédex, too!\p"
+            "Isn't that great? Now we can be on\n"
+            "an even playing field.\p"
+            "{PLAYER}, you look kind of tired.\n"
+            "Why don't I heal your Pokémon for you?")
+    waitmessage
+    closemessage
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    delay(12)
+    dofieldeffect(FLDEFF_POKECENTER_HEAL)
+    waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+    special(HealPlayerParty)
+    delay(12)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
+    delay(12)
+    msgbox("There, all done.\p"
+            "We're about halfway to Chartreuse City.\n"
+            "Once I get there, I plan on heading\l"
+            "straight to the Gym to test my skills\l"
+            "against their leader.\p"
+            "You do know about the Gym Challenge,\n"
+            "right, {PLAYER}?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Great! Saves me some explaining.")
+    } else {
+        msgbox("Really? I would have thought Aspen\n"
+                "would have told you about it.\p"
+                "Well, it's almost identical to the way\n"
+                "it worked in Kanto.\p"
+                "There are eight Gym Leaders throughout\n"
+                "Admiro, and once you've defeated all of\l"
+                "them, you'll be able to challenge the\l"
+                "Elite Four at the Obsidian League.\p"
+                "These are the four strongest trainers\n"
+                "in the region, and it's no easy task.\p"
+                "Once you've defeated them, you'll be\n"
+                "granted access to areas of Admiro not\l"
+                "accessible to the average trainer.\p"
+                "What this means, {PLAYER}, is that in\n"
+                "order to complete Aspen's Pokédex,\l"
+                "we'll both need to start by working our\l"
+                "way through the Gym Challenge.")
+    }
+    msgbox("Before I continue on, would you be up\n"
+            "for a battle, {PLAYER}?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Great! I'm going to give my all!")
+    } else {
+        msgbox("Well, too bad. I wasn't asking!")
+    }
+    trainerbattle_no_intro(TRAINER_APRIL_ROUTE3, AprilOutro)
+    if (var(VAR_RESULT) == B_OUTCOME_WON) {
+        msgbox("Wow, that was a great battle!\n"
+                "I can see why Aspen has such high\l"
+                "hopes for you, {PLAYER}.")
+    } else {
+        msgbox("That was...surprisingly easy.\n"
+                "I've gotta say, I expected a much\l"
+                "tougher battle from you, {PLAYER}.")
+    }
+    msgbox("Here, let me heal your Pokémon again.")
+    waitmessage
+    closemessage
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    delay(12)
+    dofieldeffect(FLDEFF_POKECENTER_HEAL)
+    waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+    special(HealPlayerParty)
+    delay(12)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
+    delay(12)
+    msgbox("Well, I'll see you in Chartreuse City.\n"
+            "Best of luck, {PLAYER}!")
+    waitmessage
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    applymovement(APRIL, moves(walk_right * 10))
+    waitmovement(0)
+    setflag(FLAG_HIDE_APRIL_ROUTE_3)
+    removeobject(APRIL)
+    addvar(VAR_ROUTE_3_STATE, 1)
+    release
+}
+
+script Route3_EventScript_April_FacingLeft {
+    msgbox("It took some serious convincing,\n"
+            "but Aspen gave me the new Pokédex, too!\p"
+            "Isn't that great? Now we can be on\n"
+            "an even playing field.\p"
+            "{PLAYER}, you look kind of tired.\n"
+            "Why don't I heal your Pokémon for you?")
+    waitmessage
+    closemessage
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    delay(12)
+    dofieldeffect(FLDEFF_POKECENTER_HEAL)
+    waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+    special(HealPlayerParty)
+    delay(12)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
+    delay(12)
+    msgbox("There, all done.\p"
+            "We're about halfway to Chartreuse City.\n"
+            "Once I get there, I plan on heading\l"
+            "straight to the Gym to test my skills\l"
+            "against their leader.\p"
+            "You do know about the Gym Challenge,\n"
+            "right, {PLAYER}?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Great! Saves me some explaining.")
+    } else {
+        msgbox("Really? I would have thought Aspen\n"
+                "would have told you about it.\p"
+                "Well, it's almost identical to the way\n"
+                "it worked in Kanto.\p"
+                "There are eight Gym Leaders throughout\n"
+                "Admiro, and once you've defeated all of\l"
+                "them, you'll be able to challenge the\l"
+                "Elite Four at the Obsidian League.\p"
+                "These are the four strongest trainers\n"
+                "in the region, and it's no easy task.\p"
+                "Once you've defeated them, you'll be\n"
+                "granted access to areas of Admiro not\l"
+                "accessible to the average trainer.\p"
+                "What this means, {PLAYER}, is that in\n"
+                "order to complete Aspen's Pokédex,\l"
+                "we'll both need to start by working our\l"
+                "way through the Gym Challenge.")
+    }
+    msgbox("Before I continue on, would you be up\n"
+            "for a battle, {PLAYER}?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Great! I'm going to give my all!")
+    } else {
+        msgbox("Well, too bad. I wasn't asking!")
+    }
+    trainerbattle_no_intro(TRAINER_APRIL_ROUTE3, AprilOutro)
+    if (var(VAR_RESULT) == B_OUTCOME_WON) {
+        msgbox("Wow, that was a great battle!\n"
+                "I can see why Aspen has such high\l"
+                "hopes for you, {PLAYER}.")
+    } else {
+        msgbox("That was...surprisingly easy.\n"
+                "I've gotta say, I expected a much\l"
+                "tougher battle from you, {PLAYER}.")
+    }
+    msgbox("Here, let me heal your Pokémon again.")
+    waitmessage
+    closemessage
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    delay(12)
+    dofieldeffect(FLDEFF_POKECENTER_HEAL)
+    waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+    special(HealPlayerParty)
+    delay(12)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
+    delay(12)
+    msgbox("Well, I'll see you in Chartreuse City.\n"
+            "Best of luck, {PLAYER}!")
+    waitmessage
+    closemessage
+    applymovement(APRIL, moves(walk_down, walk_right * 10))
+    waitmovement(0)
+    setflag(FLAG_HIDE_APRIL_ROUTE_3)
+    removeobject(APRIL)
+    addvar(VAR_ROUTE_3_STATE, 1)
+    release
+}
+
+text AprilOutro {
+    "I have a lot to learn from you,\n"
+    "{PLAYER}."
+}

@@ -109,7 +109,7 @@
 #define VAR_MARIGOLD_TOWN_STATE                          0x4059 // Changed - used for 1st rival sequence and to get Running Shoes
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
 #define VAR_ROUTE_1_STATE                                0x405B // Changed - used to battle Zigzagoon
-#define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var
+#define VAR_ROUTE_3_STATE                                0x405C // Changed - used to trigger April battle
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
 #define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
