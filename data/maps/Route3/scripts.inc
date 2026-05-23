@@ -359,6 +359,169 @@ Route3_EventScript_April_FacingLeft_10:
 	goto Route3_EventScript_April_FacingLeft_9
 
 
+Route3_TrainerScript_Tony::
+# 256 "data/maps/Route3/scripts.pory"
+	trainerbattle_single TRAINER_TONY_ROUTE3, Tony_Intro, Tony_Outro
+# 257 "data/maps/Route3/scripts.pory"
+	msgbox PostBattle_Tony, MSGBOX_AUTOCLOSE
+# 258 "data/maps/Route3/scripts.pory"
+	waitmessage
+	end
+
+
+Route3_TrainerScript_Aaron::
+# 276 "data/maps/Route3/scripts.pory"
+	trainerbattle_single TRAINER_AARON_ROUTE3, Aaron_Intro, Aaron_Outro
+# 277 "data/maps/Route3/scripts.pory"
+	msgbox PostBattle_Aaron, MSGBOX_AUTOCLOSE
+# 278 "data/maps/Route3/scripts.pory"
+	waitmessage
+	end
+
+
+Route3_TrainerScript_Christina::
+# 295 "data/maps/Route3/scripts.pory"
+	trainerbattle_single TRAINER_CHRISTINA_ROUTE3, Christina_Intro, Christina_Outro
+# 296 "data/maps/Route3/scripts.pory"
+	msgbox PostBattle_Christina, MSGBOX_AUTOCLOSE
+# 297 "data/maps/Route3/scripts.pory"
+	waitmessage
+	end
+
+
+Route3_TrainerScript_Trevin::
+# 316 "data/maps/Route3/scripts.pory"
+	trainerbattle_single TRAINER_TREVIN_ROUTE3, Trevin_Intro, Trevin_Outro
+# 317 "data/maps/Route3/scripts.pory"
+	msgbox PostBattle_Trevin, MSGBOX_AUTOCLOSE
+# 318 "data/maps/Route3/scripts.pory"
+	waitmessage
+	end
+
+
+Route3_NPCScript_1::
+# 337 "data/maps/Route3/scripts.pory"
+	lock
+# 338 "data/maps/Route3/scripts.pory"
+	faceplayer
+# 339 "data/maps/Route3/scripts.pory"
+	msgbox Route3_NPCScript_1_Text_0
+# 343 "data/maps/Route3/scripts.pory"
+	release
+	return
+
+
+Route3_NPCScript_2::
+# 347 "data/maps/Route3/scripts.pory"
+	lock
+# 348 "data/maps/Route3/scripts.pory"
+	faceplayer
+# 349 "data/maps/Route3/scripts.pory"
+	msgbox Route3_NPCScript_2_Text_0
+# 352 "data/maps/Route3/scripts.pory"
+	release
+	return
+
+
+Route3_NPCScript_3::
+# 356 "data/maps/Route3/scripts.pory"
+	lock
+# 357 "data/maps/Route3/scripts.pory"
+	faceplayer
+# 358 "data/maps/Route3/scripts.pory"
+	msgbox Route3_NPCScript_3_Text_0, MSGBOX_YESNO
+# 362 "data/maps/Route3/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq Route3_NPCScript_3_2
+# 377 "data/maps/Route3/scripts.pory"
+	msgbox Route3_NPCScript_3_Text_3
+Route3_NPCScript_3_1:
+# 379 "data/maps/Route3/scripts.pory"
+	release
+	return
+
+Route3_NPCScript_3_2:
+# 363 "data/maps/Route3/scripts.pory"
+	msgbox Route3_NPCScript_3_Text_1
+# 364 "data/maps/Route3/scripts.pory"
+	waitmessage
+# 365 "data/maps/Route3/scripts.pory"
+	closemessage
+# 366 "data/maps/Route3/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 367 "data/maps/Route3/scripts.pory"
+	delay 12
+# 368 "data/maps/Route3/scripts.pory"
+	dofieldeffect FLDEFF_POKECENTER_HEAL
+# 369 "data/maps/Route3/scripts.pory"
+	waitfieldeffect FLDEFF_POKECENTER_HEAL
+# 370 "data/maps/Route3/scripts.pory"
+	special HealPlayerParty
+# 371 "data/maps/Route3/scripts.pory"
+	delay 12
+# 372 "data/maps/Route3/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 373 "data/maps/Route3/scripts.pory"
+	delay 12
+# 374 "data/maps/Route3/scripts.pory"
+	msgbox Route3_NPCScript_3_Text_2
+	goto Route3_NPCScript_3_1
+
+
+Route3_SignScript_Location::
+# 383 "data/maps/Route3/scripts.pory"
+	lock
+# 384 "data/maps/Route3/scripts.pory"
+	msgbox Route3_SignScript_Location_Text_0
+# 385 "data/maps/Route3/scripts.pory"
+	release
+	return
+
+
+Route3_SignScript_TrainerTips1::
+# 389 "data/maps/Route3/scripts.pory"
+	lock
+# 390 "data/maps/Route3/scripts.pory"
+	msgbox Route3_SignScript_TrainerTips1_Text_0
+# 393 "data/maps/Route3/scripts.pory"
+	release
+	return
+
+
+Route3_SignScript_TrainerTips2::
+# 397 "data/maps/Route3/scripts.pory"
+	lock
+# 398 "data/maps/Route3/scripts.pory"
+	msgbox Route3_SignScript_TrainerTips2_Text_0
+# 402 "data/maps/Route3/scripts.pory"
+	release
+	return
+
+
+Route3_ItemScript_Potions::
+# 406 "data/maps/Route3/scripts.pory"
+	finditem ITEM_POTION, 3
+# 407 "data/maps/Route3/scripts.pory"
+	setflag FLAG_ITEM_ROUTE_3_POTIONS
+	return
+
+
+Route3_ItemScript_Repels::
+# 411 "data/maps/Route3/scripts.pory"
+	finditem ITEM_REPEL, 3
+# 412 "data/maps/Route3/scripts.pory"
+	setflag FLAG_ITEM_ROUTE_3_REPELS
+	return
+
+
+Route3_ItemScript_ParalyzeHeal::
+# 416 "data/maps/Route3/scripts.pory"
+	finditem ITEM_PARALYZE_HEAL, 1
+# 417 "data/maps/Route3/scripts.pory"
+	setflag FLAG_ITEM_ROUTE_3_PARALYZE_HEAL
+	return
+
+
 # 17 "data/maps/Route3/scripts.pory"
 Route3_EventScript_Trigger1_Movement_0:
 # 17 "data/maps/Route3/scripts.pory"
@@ -536,7 +699,110 @@ Route3_EventScript_April_FacingNorth_Text_10:
 	.string "Well, I'll see you in Chartreuse City.\n"
 	.string "Best of luck, {PLAYER}!$"
 
+Route3_NPCScript_1_Text_0:
+# 339 "data/maps/Route3/scripts.pory"
+	.string "The trek from Marigold to Chartreuse is\n"
+	.string "a lot longer than I thought it would be.\p"
+	.string "I think I bit off a little more than\n"
+	.string "I can chew.$"
+
+Route3_NPCScript_2_Text_0:
+# 349 "data/maps/Route3/scripts.pory"
+	.string "I think I saw a house up in the\n"
+	.string "distance, but I can't get to it since\l"
+	.string "there's a tree blocking my way.$"
+
+Route3_NPCScript_3_Text_0:
+# 358 "data/maps/Route3/scripts.pory"
+	.string "Whew...I need for rest for a second.\p"
+	.string "I don't do well with these\n"
+	.string "high-elevation hikes.\p"
+	.string "Would you like to take a rest as well?$"
+
+Route3_NPCScript_3_Text_1:
+# 363 "data/maps/Route3/scripts.pory"
+	.string "Good idea! Let's take a rest.$"
+
+Route3_NPCScript_3_Text_2:
+# 374 "data/maps/Route3/scripts.pory"
+	.string "There, now you'll have the energy\n"
+	.string "to take on whatever comes your way!$"
+
+Route3_NPCScript_3_Text_3:
+# 377 "data/maps/Route3/scripts.pory"
+	.string "Look at you, Mr. Endurance.$"
+
+Route3_SignScript_Location_Text_0:
+# 384 "data/maps/Route3/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Route 3.$"
+
+Route3_SignScript_TrainerTips1_Text_0:
+# 390 "data/maps/Route3/scripts.pory"
+	.string "You can register a Key Item to the\n"
+	.string "Select button in your Bag.\p"
+	.string "This is useful, take advantage of it!$"
+
+Route3_SignScript_TrainerTips2_Text_0:
+# 398 "data/maps/Route3/scripts.pory"
+	.string "If you ever want one of your Pokémon to\n"
+	.string "relearn one of it's old moves, go to\l"
+	.string "your Pokémon menu and select the\l"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}LEARN MOVES{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} option.$"
+
 AprilOutro::
 # 250 "data/maps/Route3/scripts.pory"
 	.string "I have a lot to learn from you,\n"
 	.string "{PLAYER}.$"
+
+Tony_Intro::
+# 262 "data/maps/Route3/scripts.pory"
+	.string "We're really out here in the middle\n"
+	.string "of nowhere, huh?$"
+
+Tony_Outro::
+# 267 "data/maps/Route3/scripts.pory"
+	.string "...I want to go home.$"
+
+PostBattle_Tony::
+# 271 "data/maps/Route3/scripts.pory"
+	.string "How far is it to Chartreuse City?$"
+
+Aaron_Intro::
+# 282 "data/maps/Route3/scripts.pory"
+	.string "Hey, do you want to battle me?$"
+
+Aaron_Outro::
+# 286 "data/maps/Route3/scripts.pory"
+	.string "I regret asking.$"
+
+PostBattle_Aaron::
+# 290 "data/maps/Route3/scripts.pory"
+	.string "I could really use some more practice.$"
+
+Christina_Intro::
+# 301 "data/maps/Route3/scripts.pory"
+	.string "What's your favorite Pokémon?\n"
+	.string "I have too many, I can't choose!$"
+
+Christina_Outro::
+# 306 "data/maps/Route3/scripts.pory"
+	.string "You're mean!$"
+
+PostBattle_Christina::
+# 310 "data/maps/Route3/scripts.pory"
+	.string "When there are this many Pokémon,\n"
+	.string "how can you pick just one favorite?$"
+
+Trevin_Intro::
+# 322 "data/maps/Route3/scripts.pory"
+	.string "I just got done hiking in Chartreuse\n"
+	.string "Cave. How 'bout a battle?$"
+
+Trevin_Outro::
+# 327 "data/maps/Route3/scripts.pory"
+	.string "My Geodude!$"
+
+PostBattle_Trevin::
+# 331 "data/maps/Route3/scripts.pory"
+	.string "I guess I'll need to hike through\n"
+	.string "again to heal up.$"

@@ -251,3 +251,168 @@ text AprilOutro {
     "I have a lot to learn from you,\n"
     "{PLAYER}."
 }
+
+script Route3_TrainerScript_Tony {
+    trainerbattle_single(TRAINER_TONY_ROUTE3, Tony_Intro, Tony_Outro)
+    msgbox(PostBattle_Tony, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Tony_Intro {
+    "We're really out here in the middle\n"
+    "of nowhere, huh?"
+}
+
+text Tony_Outro {
+    "...I want to go home."
+}
+
+text PostBattle_Tony {
+    "How far is it to Chartreuse City?"
+}
+
+script Route3_TrainerScript_Aaron {
+    trainerbattle_single(TRAINER_AARON_ROUTE3, Aaron_Intro, Aaron_Outro)
+    msgbox(PostBattle_Aaron, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Aaron_Intro {
+    "Hey, do you want to battle me?"
+}
+
+text Aaron_Outro {
+    "I regret asking."
+}
+
+text PostBattle_Aaron {
+    "I could really use some more practice."
+}
+
+script Route3_TrainerScript_Christina {
+    trainerbattle_single(TRAINER_CHRISTINA_ROUTE3, Christina_Intro, Christina_Outro)
+    msgbox(PostBattle_Christina, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Christina_Intro {
+    "What's your favorite Pokémon?\n"
+    "I have too many, I can't choose!"
+}
+
+text Christina_Outro {
+    "You're mean!"
+}
+
+text PostBattle_Christina {
+    "When there are this many Pokémon,\n"
+    "how can you pick just one favorite?"
+}
+
+script Route3_TrainerScript_Trevin {
+    trainerbattle_single(TRAINER_TREVIN_ROUTE3, Trevin_Intro, Trevin_Outro)
+    msgbox(PostBattle_Trevin, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Trevin_Intro {
+    "I just got done hiking in Chartreuse\n"
+    "Cave. How 'bout a battle?"
+}
+
+text Trevin_Outro {
+    "My Geodude!"
+}
+
+text PostBattle_Trevin {
+    "I guess I'll need to hike through\n"
+    "again to heal up."
+}
+
+script Route3_NPCScript_1 {
+    lock
+    faceplayer
+    msgbox("The trek from Marigold to Chartreuse is\n"
+            "a lot longer than I thought it would be.\p"
+            "I think I bit off a little more than\n"
+            "I can chew.")
+    release
+}
+
+script Route3_NPCScript_2 {
+    lock
+    faceplayer
+    msgbox("I think I saw a house up in the\n"
+            "distance, but I can't get to it since\l"
+            "there's a tree blocking my way.")
+    release
+}
+
+script Route3_NPCScript_3 {
+    lock
+    faceplayer
+    msgbox("Whew...I need for rest for a second.\p"
+            "I don't do well with these\n"
+            "high-elevation hikes.\p"
+            "Would you like to take a rest as well?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Good idea! Let's take a rest.")
+        waitmessage
+        closemessage
+        fadescreenswapbuffers(FADE_TO_BLACK)
+        delay(12)
+        dofieldeffect(FLDEFF_POKECENTER_HEAL)
+        waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+        special(HealPlayerParty)
+        delay(12)
+        fadescreenswapbuffers(FADE_FROM_BLACK)
+        delay(12)
+        msgbox("There, now you'll have the energy\n"
+                "to take on whatever comes your way!")
+    } else {
+        msgbox("Look at you, Mr. Endurance.")
+    }
+    release
+}
+
+script Route3_SignScript_Location {
+    lock
+    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}Route 3.")
+    release
+}
+
+script Route3_SignScript_TrainerTips1 {
+    lock
+    msgbox("You can register a Key Item to the\n"
+            "Select button in your Bag.\p"
+            "This is useful, take advantage of it!")
+    release
+}
+
+script Route3_SignScript_TrainerTips2 {
+    lock
+    msgbox("If you ever want one of your Pokémon to\n"
+            "relearn one of it's old moves, go to\l"
+            "your Pokémon menu and select the\l"
+            "{COLOR RED}{SHADOW LIGHT_RED}LEARN MOVES{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} option.")
+    release
+}
+
+script Route3_ItemScript_Potions {
+    finditem(ITEM_POTION, 3)
+    setflag(FLAG_ITEM_ROUTE_3_POTIONS)
+}
+
+script Route3_ItemScript_Repels {
+    finditem(ITEM_REPEL, 3)
+    setflag(FLAG_ITEM_ROUTE_3_REPELS)
+}
+
+script Route3_ItemScript_ParalyzeHeal {
+    finditem(ITEM_PARALYZE_HEAL, 1)
+    setflag(FLAG_ITEM_ROUTE_3_PARALYZE_HEAL)
+}

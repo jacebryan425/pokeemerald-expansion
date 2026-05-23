@@ -1229,9 +1229,9 @@
 #define FLAG_ITEM_MARIGOLD_FOREST_POTION                            0x495
 #define FLAG_ITEM_MARIGOLD_FOREST_ANTIDOTE                          0x496
 #define FLAG_ITEM_MARIGOLD_FOREST_GREAT_BALL                        0x497
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
+#define FLAG_ITEM_ROUTE_3_POTIONS                                   0x498
+#define FLAG_ITEM_ROUTE_3_REPELS                                    0x499
+#define FLAG_ITEM_ROUTE_3_PARALYZE_HEAL                             0x49A
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag

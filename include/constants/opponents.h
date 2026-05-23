@@ -19,10 +19,10 @@
 #define TRAINER_DENNIS_MARIGOLDFOREST        13
 #define TRAINER_WILL_MARIGOLDFOREST          14
 #define TRAINER_APRIL_ROUTE3                 15
-#define TRAINER_GRUNT_RUSTURF_TUNNEL         16
-#define TRAINER_GRUNT_WEATHER_INST_1         17
-#define TRAINER_GRUNT_WEATHER_INST_2         18
-#define TRAINER_GRUNT_WEATHER_INST_3         19
+#define TRAINER_TONY_ROUTE3                  16
+#define TRAINER_AARON_ROUTE3                 17
+#define TRAINER_CHRISTINA_ROUTE3             18
+#define TRAINER_TREVIN_ROUTE3                19
 #define TRAINER_GRUNT_MUSEUM_1               20
 #define TRAINER_GRUNT_MUSEUM_2               21
 #define TRAINER_GRUNT_SPACE_CENTER_1         22
