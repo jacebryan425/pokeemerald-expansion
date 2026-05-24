@@ -3,13 +3,13 @@
 
 #include "constants/battle_partner.h"
 
-#define TRAINER_NONE                          0
-#define TRAINER_BOBBY_ROUTE1                  1
-#define TRAINER_ELI_ROUTE1                    2
-#define TRAINER_LISA_ROUTE2                   3
-#define TRAINER_CHRIS_ROUTE2                  4
-#define TRAINER_NATE_ROUTE2                   5
-#define TRAINER_NED_ROUTE2                    6    
+#define TRAINER_NONE                         0
+#define TRAINER_BOBBY_ROUTE1                 1
+#define TRAINER_ELI_ROUTE1                   2
+#define TRAINER_LISA_ROUTE2                  3
+#define TRAINER_CHRIS_ROUTE2                 4
+#define TRAINER_NATE_ROUTE2                  5
+#define TRAINER_NED_ROUTE2                   6    
 #define TRAINER_TED_MARIGOLDFOREST           7
 #define TRAINER_GENE_MARIGOLDFOREST          8
 #define TRAINER_GARY_MARIGOLDFOREST          9
@@ -23,8 +23,8 @@
 #define TRAINER_AARON_ROUTE3                 17
 #define TRAINER_CHRISTINA_ROUTE3             18
 #define TRAINER_TREVIN_ROUTE3                19
-#define TRAINER_GRUNT_MUSEUM_1               20
-#define TRAINER_GRUNT_MUSEUM_2               21
+#define TRAINER_BARNEY_CHARTREUSE_CAVE       20
+#define TRAINER_KEVIN_CHARTREUSE_CAVE        21
 #define TRAINER_GRUNT_SPACE_CENTER_1         22
 #define TRAINER_GRUNT_MT_PYRE_1              23
 #define TRAINER_GRUNT_MT_PYRE_2              24

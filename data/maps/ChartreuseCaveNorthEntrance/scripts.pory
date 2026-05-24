@@ -1,0 +1,95 @@
+mapscripts ChartreuseCaveNorthEntrance_MapScripts {}
+
+script ChartreuseCaveNorthEntrance_TrainerScript_Barney {
+    trainerbattle_single(TRAINER_BARNEY_CHARTREUSE_CAVE, Barney_Intro, Barney_Outro)
+    msgbox(PostBattle_Barney, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Barney_Intro {
+    "I can barely see anything through\n"
+    "this fog!"
+}
+
+text Barney_Outro {
+    "I thought the fog would help me..."
+}
+
+text PostBattle_Barney {
+    "I've been searching for the exit for\n"
+    "twenty minutes."
+}
+
+script ChartreuseCaveNorthEntrance_TrainerScript_Kevin {
+    trainerbattle_single(TRAINER_KEVIN_CHARTREUSE_CAVE, Kevin_Intro, Kevin_Outro)
+    msgbox(PostBattle_Kevin, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Kevin_Intro {
+    "There doesn't seem to be much going\n"
+    "on in this cave...\p"
+    "I'm getting bored."
+}
+
+text Kevin_Outro {
+    "Thanks for the battle!"
+}
+
+text PostBattle_Kevin {
+    "I think I saw a tunnel or something,\n"
+    "but a bunch of rocks were blocking\l"
+    "the path!"
+}
+
+script ChartreuseCaveNorthEntrance_ItemScript_Nugget {
+    finditem(ITEM_NUGGET, 1)
+    setflag(FLAG_ITEM_CHARTREUSE_CAVE_NUGGET)
+}
+
+script ChartreuseCaveNorthEntrance_EventScript_TeamAlpha {
+    lock
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    delay(30)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right * 9, walk_down * 2))
+    waitmovement(0)
+    applymovement(ALPHA1, moves(face_right))
+    waitmovement(0)
+    applymovement(ALPHA2, moves(face_left))
+    waitmovement(0)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}How long until we get to Chartreuse\n"
+           "City? I feel like we've been walking for\l"
+           "a really long time!\p"
+           "{COLOR RED}{SHADOW LIGHT_RED}We're getting close. Just need to pass\n"
+           "through Route 4 and we'll be there.\p"
+           "{COLOR BLUE}{SHADOW LIGHT_BLUE}Thank goodness, I can't wait to share\n"
+           "the good news of Arceus with everyone!\p"
+           "Do you think they'll believe us?\p"
+           "{COLOR RED}{SHADOW LIGHT_RED}Of course they will! Now come on,\n"
+           "let's get a move on.")
+    waitmessage
+    closemessage
+    applymovement(ALPHA2, moves(walk_down * 4))
+    waitmovement(0)
+    playse(SE_EXIT)
+    setflag(FLAG_HIDE_ALPHA_CC_2)
+    removeobject(ALPHA2)
+    applymovement(ALPHA1, moves(walk_right, walk_down * 4))
+    waitmovement(0)
+    playse(SE_EXIT)
+    setflag(FLAG_HIDE_ALPHA_CC_1)
+    removeobject(ALPHA1)
+    waitse
+    delay(30)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_up * 2, walk_left * 9))
+    waitmovement(0)
+    special(RemoveCameraObject)
+    addvar(VAR_CHARTREUSE_CAVE_STATE, 1)
+    release
+}

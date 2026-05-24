@@ -677,8 +677,8 @@
 #define FLAG_HIDE_POTION_NPC           0x275 // Changed - used to hide Mart Employee in Route 1
 #define FLAG_HIDE_APRIL_ROUTE_3        0x276 // Changed - used to hide April in Route 3
 #define FLAG_NO_WHITEOUT               0x277 // Changed - used to prevent whiteout on fainting
-#define FLAG_UNUSED_0x278  0x278 // Unused Flag
-#define FLAG_UNUSED_0x279  0x279 // Unused Flag
+#define FLAG_HIDE_ALPHA_CC_1           0x278 // Changed - used to hide Alpha grunt in Chartreuse Cave
+#define FLAG_HIDE_ALPHA_CC_2           0x279 // Changed - used to hide Alpha grunt in Chartreuse Cave
 #define FLAG_UNUSED_0x27A  0x27A // Unused Flag
 #define FLAG_UNUSED_0x27B  0x27B // Unused Flag
 #define FLAG_UNUSED_0x27C  0x27C // Unused Flag
@@ -1232,7 +1232,7 @@
 #define FLAG_ITEM_ROUTE_3_POTIONS                                   0x498
 #define FLAG_ITEM_ROUTE_3_REPELS                                    0x499
 #define FLAG_ITEM_ROUTE_3_PARALYZE_HEAL                             0x49A
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
+#define FLAG_ITEM_CHARTREUSE_CAVE_NUGGET                            0x49B
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag

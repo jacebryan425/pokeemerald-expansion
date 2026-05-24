@@ -149,9 +149,9 @@ Route3_EventScript_April_FacingNorth::
 # 84 "data/maps/Route3/scripts.pory"
 	delay 12
 # 85 "data/maps/Route3/scripts.pory"
-	dofieldeffect FLDEFF_POKECENTER_HEAL
+	playfanfare MUS_HEAL
 # 86 "data/maps/Route3/scripts.pory"
-	waitfieldeffect FLDEFF_POKECENTER_HEAL
+	waitfanfare
 # 87 "data/maps/Route3/scripts.pory"
 	special HealPlayerParty
 # 88 "data/maps/Route3/scripts.pory"
@@ -199,9 +199,9 @@ Route3_EventScript_April_FacingNorth_9:
 # 142 "data/maps/Route3/scripts.pory"
 	delay 12
 # 143 "data/maps/Route3/scripts.pory"
-	dofieldeffect FLDEFF_POKECENTER_HEAL
+	playfanfare MUS_HEAL
 # 144 "data/maps/Route3/scripts.pory"
-	waitfieldeffect FLDEFF_POKECENTER_HEAL
+	waitfanfare
 # 145 "data/maps/Route3/scripts.pory"
 	special HealPlayerParty
 # 146 "data/maps/Route3/scripts.pory"
@@ -262,9 +262,9 @@ Route3_EventScript_April_FacingLeft::
 # 173 "data/maps/Route3/scripts.pory"
 	delay 12
 # 174 "data/maps/Route3/scripts.pory"
-	dofieldeffect FLDEFF_POKECENTER_HEAL
+	playfanfare MUS_HEAL
 # 175 "data/maps/Route3/scripts.pory"
-	waitfieldeffect FLDEFF_POKECENTER_HEAL
+	waitfanfare
 # 176 "data/maps/Route3/scripts.pory"
 	special HealPlayerParty
 # 177 "data/maps/Route3/scripts.pory"
@@ -312,9 +312,9 @@ Route3_EventScript_April_FacingLeft_9:
 # 231 "data/maps/Route3/scripts.pory"
 	delay 12
 # 232 "data/maps/Route3/scripts.pory"
-	dofieldeffect FLDEFF_POKECENTER_HEAL
+	playfanfare MUS_HEAL
 # 233 "data/maps/Route3/scripts.pory"
-	waitfieldeffect FLDEFF_POKECENTER_HEAL
+	waitfanfare
 # 234 "data/maps/Route3/scripts.pory"
 	special HealPlayerParty
 # 235 "data/maps/Route3/scripts.pory"
@@ -452,9 +452,9 @@ Route3_NPCScript_3_2:
 # 367 "data/maps/Route3/scripts.pory"
 	delay 12
 # 368 "data/maps/Route3/scripts.pory"
-	dofieldeffect FLDEFF_POKECENTER_HEAL
+	playfanfare MUS_HEAL
 # 369 "data/maps/Route3/scripts.pory"
-	waitfieldeffect FLDEFF_POKECENTER_HEAL
+	waitfanfare
 # 370 "data/maps/Route3/scripts.pory"
 	special HealPlayerParty
 # 371 "data/maps/Route3/scripts.pory"

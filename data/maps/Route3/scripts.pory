@@ -82,8 +82,8 @@ script Route3_EventScript_April_FacingNorth {
     closemessage
     fadescreenswapbuffers(FADE_TO_BLACK)
     delay(12)
-    dofieldeffect(FLDEFF_POKECENTER_HEAL)
-    waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+    playfanfare(MUS_HEAL)
+    waitfanfare
     special(HealPlayerParty)
     delay(12)
     fadescreenswapbuffers(FADE_FROM_BLACK)
@@ -140,8 +140,8 @@ script Route3_EventScript_April_FacingNorth {
     closemessage
     fadescreenswapbuffers(FADE_TO_BLACK)
     delay(12)
-    dofieldeffect(FLDEFF_POKECENTER_HEAL)
-    waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+    playfanfare(MUS_HEAL)
+    waitfanfare
     special(HealPlayerParty)
     delay(12)
     fadescreenswapbuffers(FADE_FROM_BLACK)
@@ -171,8 +171,8 @@ script Route3_EventScript_April_FacingLeft {
     closemessage
     fadescreenswapbuffers(FADE_TO_BLACK)
     delay(12)
-    dofieldeffect(FLDEFF_POKECENTER_HEAL)
-    waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+    playfanfare(MUS_HEAL)
+    waitfanfare
     special(HealPlayerParty)
     delay(12)
     fadescreenswapbuffers(FADE_FROM_BLACK)
@@ -229,8 +229,8 @@ script Route3_EventScript_April_FacingLeft {
     closemessage
     fadescreenswapbuffers(FADE_TO_BLACK)
     delay(12)
-    dofieldeffect(FLDEFF_POKECENTER_HEAL)
-    waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+    playfanfare(MUS_HEAL)
+    waitfanfare
     special(HealPlayerParty)
     delay(12)
     fadescreenswapbuffers(FADE_FROM_BLACK)
@@ -365,8 +365,8 @@ script Route3_NPCScript_3 {
         closemessage
         fadescreenswapbuffers(FADE_TO_BLACK)
         delay(12)
-        dofieldeffect(FLDEFF_POKECENTER_HEAL)
-        waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+        playfanfare(MUS_HEAL)
+        waitfanfare
         special(HealPlayerParty)
         delay(12)
         fadescreenswapbuffers(FADE_FROM_BLACK)
