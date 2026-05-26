@@ -33,10 +33,10 @@
 #define TRAINER_BEN_ROUTE4                   27
 #define TRAINER_ALPHA1_CC                    28
 #define TRAINER_ALPHA2_CC                    29
-#define TRAINER_MATT                         30
-#define TRAINER_ZANDER                       31
-#define TRAINER_SHELLY_WEATHER_INSTITUTE     32
-#define TRAINER_SHELLY_SEAFLOOR_CAVERN       33
+#define TRAINER_BETHANY_CC                   30
+#define TRAINER_TRISHA_CC                    31
+#define TRAINER_ANNE_CC                      32
+#define TRAINER_GRANT                        33
 #define TRAINER_ARCHIE                       34
 #define TRAINER_LEAH                         35
 #define TRAINER_DAISY                        36

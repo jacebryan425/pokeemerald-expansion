@@ -682,8 +682,8 @@
 #define FLAG_HIDE_APRIL_CC             0x27A // Changed - used to hide April in Chartreuse City
 #define FLAG_HIDE_OLD_MAN_CC           0x27B // Changed - used to hide Old Man in Chartreuse City
 #define FLAG_HIDE_PROFESSOR_AIDE       0x27C // Changed - used to hide Professor's Aide in Chartreuse City
-#define FLAG_UNUSED_0x27D  0x27D // Unused Flag
-#define FLAG_UNUSED_0x27E  0x27E // Unused Flag
+#define FLAG_RECEIVED_MAGIKARP         0x27D // Changed
+#define FLAG_OBTAINED_VINE_BADGE       0x27E // Changed
 #define FLAG_UNUSED_0x27F  0x27F // Unused Flag
 #define FLAG_UNUSED_0x280  0x280 // Unused Flag
 #define FLAG_UNUSED_0x281  0x281 // Unused Flag

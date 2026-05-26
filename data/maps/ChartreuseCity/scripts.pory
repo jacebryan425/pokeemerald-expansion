@@ -9,6 +9,10 @@ mapscripts ChartreuseCity_MapScripts {
             addobject(ALPHA1_CC)
             clearflag(FLAG_HIDE_ALPHA_CC_2)
             addobject(ALPHA2_CC)
+        } elif (var(VAR_CHARTREUSE_CITY_STATE) == 2) {
+            clearflag(FLAG_HIDE_PROFESSOR_AIDE)
+            addobject(AIDE)
+            call(ChartreuseCity_EventScript_Dexnav)
         }
     }
 }
@@ -236,25 +240,77 @@ text Alpha2_Outro {
 }
 
 script ChartreuseCity_EventScript_Dexnav {
-
+    lock
+    playse(SE_PIN)
+    applymovement(AIDE, moves(face_left, emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    msgbox("{PLAYER}, there you are!")
+    waitmessage
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    applymovement(AIDE, moves(walk_left * 2))
+    waitmovement(0)
+    msgbox("Congratulations on your first Gym\n"
+            "victory!\p"
+            "Professor Aspen sent me here to give\n"
+            "you this.")
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("{PLAYER} received the Dexnav!")
+    waitfanfare
+    setflag(FLAG_DEXNAV_GET)
+    msgbox("The Dexnav is a very helpful upgrade\n"
+            "to your Pokédex.\p"
+            "It shows you information about wild\n"
+            "Pokémon in your current location,\l"
+            "and makes it much easier to find rare\l"
+            "Pokémon!\p"
+            "We hope this helps you with your\n"
+            "research, {PLAYER}!")
+    waitmessage
+    closemessage
+    applymovement(AIDE, moves(walk_right * 5, walk_up * 6))
+    waitmovement(0)
+    setflag(FLAG_HIDE_PROFESSOR_AIDE)
+    removeobject(AIDE)
+    addvar(VAR_CHARTREUSE_CITY_STATE, 1)
+    release
 }
 
 script ChartreuseCity_NPCScript_1 {
-
+    lock
+    faceplayer
+    msgbox("I keep losing against Grant...\n"
+            "No matter what kind of strategy I use,\l"
+            "he always wins!")
+    release
 }
 
 script ChartreuseCity_NPCScript_2 {
-
+    lock
+    faceplayer
+    msgbox("I keep coming across these weird little\n"
+            "trees that block my path.\p"
+            "They're too tough to cut down by\n"
+            "myself, but maybe a Pokémon could help?")
+    release
 }
 
 script ChartreuseCity_SignScript_Location {
-
+    lock
+    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}Chartreuse City.")
+    release
 }
 
 script ChartreuseCity_SignScript_Gym {
-
+    lock
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Chartreuse City Pokémon Gym.\n"
+            "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Leader: Grant.")
+    release
 }
 
 script ChartreuseCity_ItemScript_GreatBall {
-
+    finditem(ITEM_GREAT_BALL, 3)
+    setflag(FLAG_ITEM_CHARTREUSE_CITY_GREAT_BALL)
 }

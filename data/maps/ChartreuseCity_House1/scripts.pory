@@ -1,0 +1,38 @@
+mapscripts ChartreuseCity_House1_MapScripts{}
+
+script ChartreuseCity_House1_NPCScript_OldMan {
+    lock
+    faceplayer
+    if (flag(FLAG_RECEIVED_HM_CUT) == TRUE) {
+        msgbox("I haven't had any trouble from Team\n"
+                "Alpha in a while.\p"
+                "Thank you again for your help!")
+    } elif (flag(FLAG_OBTAINED_VINE_BADGE) == TRUE) {
+        msgbox("Ah, yes! That's the badge from the\n"
+                "Chartreuse City Gym!\p"
+                "Congratulations, here's something I'm\n"
+                "sure will help you on your journey.")
+        giveitem(ITEM_HM01)
+        setflag(FLAG_RECEIVED_HM_CUT)
+        msgbox("That there is the HM for Cut.\p"
+                "If you teach it to one of your\n"
+                "Pokémon, they'll be able to cut down\l"
+                "those annoying little trees that keep\l"
+                "getting in your way.\p"
+                "Best of luck to you!")
+    } else {
+        msgbox("I enjoy my peace and quiet just\n"
+                "like anyone else.\p"
+                "I appreciate you getting those pesky\n"
+                "Team Alpha grunts to leave me alone.\p"
+                "If I remember correctly, didn't your\n"
+                "friend say you had a Gym leader to go\l"
+                "battle?\p"
+                "I wouldn't want to waste any more of\n"
+                "your time.\p"
+                "Come talk to me again once you've\n"
+                "defeated him, and I'll have something\l"
+                "special to give you.")
+    }
+    release
+}

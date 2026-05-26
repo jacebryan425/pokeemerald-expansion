@@ -1,0 +1,18 @@
+mapscripts ChartreuseCity_House2_MapScripts {}
+
+script ChartreuseCity_House2_NPCScript {
+    lock
+    faceplayer
+    msgbox("I love my sweet little Azurill!\n"
+            "Isn't she so cute?")
+    release
+}
+
+script ChartreuseCity_House2_Azurill {
+    lock
+    faceplayer
+    playmoncry(SPECIES_AZURILL, CRY_MODE_NORMAL)
+    msgbox("Azu..rill!")
+    waitmoncry
+    release
+}

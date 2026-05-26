@@ -1,0 +1,60 @@
+mapscripts ChartreuseCity_PokemonCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setrespawn(HEAL_LOCATION_CHARTREUSE_CITY)
+    }
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script ChartreuseCity_PokemonCenter_Nurse {
+    setvar(VAR_0x800B, 1)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
+}
+
+script ChartreuseCity_PokemonCenter_NPCScript1 {
+    lock
+    faceplayer
+    if (flag(FLAG_RECEIVED_MAGIKARP) == TRUE) {
+        msgbox("I think I need to buy a better\n"
+                "fishing rod.")
+    } else {
+        msgbox("I haven't been having much luck\n"
+            "lately while fishing.\p"
+            "It seems like all I'm reeling in\n"
+            "are Magikarp!\p"
+            "I must have caught at least 20 or so\n"
+            "today, would you like one of them?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            msgbox("Thanks for taking one off of my\n"
+                "hands, kid.")
+            playfanfare(MUS_OBTAIN_ITEM)
+            getpartysize
+            if(var(VAR_RESULT) == 6) {
+                msgbox("{PLAYER} received Magikarp!\p"
+                        "Magikarp has been sent to your PC.")
+            } else {
+                msgbox("{PLAYER} received Magikarp!\p"
+                        "Magikarp has been added to your party.")
+            }
+            waitfanfare
+            givemon(SPECIES_MAGIKARP, 5)
+            setflag(FLAG_RECEIVED_MAGIKARP)
+        } else {
+            msgbox("Your loss, kid.")
+        }
+    }
+    release
+}
+
+script ChartreuseCity_PokemonCenter_NPCScript2 {
+    lock
+    faceplayer
+    msgbox("They need to put a Pokémon Center\n"
+            "between here and Marigold!\p"
+            "I can't believe how long it took me\n"
+            "to get here.")
+    release
+}
+

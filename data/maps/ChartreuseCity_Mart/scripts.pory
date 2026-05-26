@@ -1,0 +1,21 @@
+mapscripts ChartreuseCity_Mart_MapScripts {}
+
+script ChartreuseCity_Mart_Employee {
+    lock
+    faceplayer
+    message("How may I help you?")
+    waitmessage
+    pokemart(0)
+    msgbox("Thank you, come again.")
+    release
+}
+
+script ChartreuseCity_Mart_NPCScript {
+    lock
+    faceplayer
+    msgbox("Why is everything sold here only\n"
+            "meant for Pokémon?\p"
+            "Where am I supposed to find human\n"
+            "food?")
+    release
+}

@@ -189,15 +189,6 @@
       "var": "VAR_CHARTREUSE_CITY_STATE",
       "var_value": "0",
       "script": "ChartreuseCity_EventScript_AlphaGrunts"
-    },
-    {
-      "type": "trigger",
-      "x": 21,
-      "y": 34,
-      "elevation": 0,
-      "var": "VAR_CHARTREUSE_CITY_STATE",
-      "var_value": "2",
-      "script": "ChartreuseCity_EventScript_Dexnav"
     }
   ],
   "bg_events": [
