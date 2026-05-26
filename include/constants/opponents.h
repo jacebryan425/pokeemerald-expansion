@@ -31,8 +31,8 @@
 #define TRAINER_JOHN_ROUTE4                  25
 #define TRAINER_DAVIE_ROUTE4                 26
 #define TRAINER_BEN_ROUTE4                   27
-#define TRAINER_GRUNT_AQUA_HIDEOUT_6         28
-#define TRAINER_FREDRICK                     29
+#define TRAINER_ALPHA1_CC                    28
+#define TRAINER_ALPHA2_CC                    29
 #define TRAINER_MATT                         30
 #define TRAINER_ZANDER                       31
 #define TRAINER_SHELLY_WEATHER_INSTITUTE     32

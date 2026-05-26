@@ -677,11 +677,11 @@
 #define FLAG_HIDE_POTION_NPC           0x275 // Changed - used to hide Mart Employee in Route 1
 #define FLAG_HIDE_APRIL_ROUTE_3        0x276 // Changed - used to hide April in Route 3
 #define FLAG_NO_WHITEOUT               0x277 // Changed - used to prevent whiteout on fainting
-#define FLAG_HIDE_ALPHA_CC_1           0x278 // Changed - used to hide Alpha grunt in Chartreuse Cave
-#define FLAG_HIDE_ALPHA_CC_2           0x279 // Changed - used to hide Alpha grunt in Chartreuse Cave
-#define FLAG_UNUSED_0x27A  0x27A // Unused Flag
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
-#define FLAG_UNUSED_0x27C  0x27C // Unused Flag
+#define FLAG_HIDE_ALPHA_CC_1           0x278 // Changed - used to hide Alpha grunt in Chartreuse Cave/City
+#define FLAG_HIDE_ALPHA_CC_2           0x279 // Changed - used to hide Alpha grunt in Chartreuse Cave/City
+#define FLAG_HIDE_APRIL_CC             0x27A // Changed - used to hide April in Chartreuse City
+#define FLAG_HIDE_OLD_MAN_CC           0x27B // Changed - used to hide Old Man in Chartreuse City
+#define FLAG_HIDE_PROFESSOR_AIDE       0x27C // Changed - used to hide Professor's Aide in Chartreuse City
 #define FLAG_UNUSED_0x27D  0x27D // Unused Flag
 #define FLAG_UNUSED_0x27E  0x27E // Unused Flag
 #define FLAG_UNUSED_0x27F  0x27F // Unused Flag
@@ -1236,7 +1236,7 @@
 #define FLAG_ITEM_ROUTE_4_AWAKENING                                 0x49C
 #define FLAG_ITEM_ROUTE_4_REVIVE                                    0x49D
 #define FLAG_ITEM_ROUTE_4_NUGGET                                    0x49E
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
+#define FLAG_ITEM_CHARTREUSE_CITY_GREAT_BALL                        0x49F
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag

@@ -1,0 +1,260 @@
+mapscripts ChartreuseCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION{
+        if (var(VAR_CHARTREUSE_CITY_STATE) == 0) {
+            setflag(FLAG_HIDE_APRIL_CC)
+            removeobject(APRIL_CC)
+            setflag(FLAG_HIDE_PROFESSOR_AIDE)
+            removeobject(AIDE)
+            clearflag(FLAG_HIDE_ALPHA_CC_1)
+            addobject(ALPHA1_CC)
+            clearflag(FLAG_HIDE_ALPHA_CC_2)
+            addobject(ALPHA2_CC)
+        }
+    }
+}
+
+script ChartreuseCity_EventScript_AlphaGrunts {
+    lock
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right, emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    delay(30)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right * 4, walk_up))
+    waitmovement(0)
+    msgbox("As I have told you every week for the\n"
+            "last two months, I'm not interested!\p"
+            "{COLOR BLUE}{SHADOW LIGHT_BLUE}But sir, Arceus' return is imminent!\p"
+            "{COLOR RED}{SHADOW LIGHT_RED}The only way to ensure your safety is\n"
+            "by joining us!\p"
+            "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Pfft...I'll take my chances.")
+    waitmessage
+    closemessage
+    applymovement(ALPHA1_CC, moves(face_down))
+    waitmovement(0)
+    applymovement(ALPHA2_CC, moves(face_down))
+    waitmovement(0)
+    delay(12)
+    playse(SE_PIN)
+    applymovement(ALPHA1_CC, moves(emote_exclamation_mark))
+    waitmovement(0)
+    applymovement(ALPHA2_CC, moves(emote_exclamation_mark))
+    waitmovement(0)
+    waitse
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Hey you! Come over here!")
+    waitmessage
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right * 4, walk_up))
+    waitmovement(0)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Would you like to hear about our lord\n"
+            "and savior, the Almighty Arceus?\p"
+            "{COLOR RED}{SHADOW LIGHT_RED}For only 10% of your annual battle\n"
+            "earnings, we can promise you eternal\l"
+            "life. Won't you join Team Alpha?")
+    waitmessage
+    closemessage
+    playse(SE_PIN)
+    applymovement(ALPHA1_CC, moves(face_right, emote_exclamation_mark))
+    waitmovement(0)
+    applymovement(ALPHA2_CC, moves(face_right, emote_exclamation_mark))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitse
+    clearflag(FLAG_HIDE_APRIL_CC)
+    addobject(APRIL_CC)
+    applymovement(APRIL_CC, moves(walk_left * 8))
+    waitmovement(0)
+    applymovement(ALPHA1_CC, moves(face_down))
+    waitmovement(0)
+    applymovement(ALPHA2_CC, moves(face_down))
+    waitmovement(0)
+    msgbox("{PLAYER}, there you are!\n"
+            "I've been at the Gym waiting for you.\p"
+            "What's the hold up?")
+    waitmessage
+    applymovement(APRIL_CC, moves(face_up))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}We're here trying to save your friend\n"
+            "from eternal damnation!\p"
+            "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}...What? That's ridiculous, what are\n"
+            "you talking about?")
+    waitmessage
+    applymovement(ALPHA1_CC, moves(face_right))
+    waitmovement(0)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Agh, why won't anyone listen to us?!")
+    waitmessage
+    applymovement(ALPHA1_CC, moves(face_down))
+    waitmovement(0)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}If we defeat you in battle, you'll have\n"
+            "to join us!")
+    waitmessage
+    applymovement(APRIL_CC, moves(face_left))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    msgbox("{PLAYER}, I'd help you with this,\n"
+            "but I'm ashamed to say that all of my\l"
+            "Pokémon are in pretty bad shape after\l"
+            "my defeat at the Gym...\p"
+            "Let me heal your Pokémon real quick.")
+    waitmessage
+    closemessage
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    delay(12)
+    playfanfare(MUS_HEAL)
+    waitfanfare
+    special(HealPlayerParty)
+    delay(12)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
+    delay(12)
+    msgbox("Alright, get these guys out of here,\n"
+            "{PLAYER}!")
+    waitmessage
+    closemessage
+    applymovement(APRIL_CC, moves(face_up))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    setflag(FLAG_NO_WHITEOUT)
+    trainerbattle_no_intro(TRAINER_ALPHA1_CC, Alpha1_Outro)
+    if (var(VAR_RESULT) == B_OUTCOME_LOST) {
+        msgbox("I don't care if you won,\n"
+                "we're still not joining Team Alpha!")
+        waitmessage
+        applymovement(APRIL_CC, moves(face_left))
+        waitmovement(0)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+        waitmovement(0)
+        msgbox("Let me heal your Pokémon again,\n"
+                "{PLAYER}.")
+        waitmessage
+        closemessage
+        fadescreenswapbuffers(FADE_TO_BLACK)
+        delay(12)
+        playfanfare(MUS_HEAL)
+        waitfanfare
+        special(HealPlayerParty)
+        delay(12)
+        fadescreenswapbuffers(FADE_FROM_BLACK)
+        delay(12)
+        applymovement(APRIL_CC, moves(face_up))
+        waitmovement(0)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+        waitmovement(0)
+    }
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Alright, now it's my turn!")
+    waitmessage
+    trainerbattle_no_intro(TRAINER_ALPHA2_CC, Alpha2_Outro)
+    if (var(VAR_RESULT) == B_OUTCOME_LOST) {
+        msgbox("I don't care if you won,\n"
+                "we're still not joining Team Alpha!")
+        waitmessage
+        applymovement(APRIL_CC, moves(face_left))
+        waitmovement(0)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+        waitmovement(0)
+        msgbox("Let me heal your Pokémon again,\n"
+                "{PLAYER}.")
+        waitmessage
+        closemessage
+        fadescreenswapbuffers(FADE_TO_BLACK)
+        delay(12)
+        playfanfare(MUS_HEAL)
+        waitfanfare
+        special(HealPlayerParty)
+        delay(12)
+        fadescreenswapbuffers(FADE_FROM_BLACK)
+        delay(12)
+        applymovement(APRIL_CC, moves(face_up))
+        waitmovement(0)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+        waitmovement(0)
+    }
+    clearflag(FLAG_NO_WHITEOUT)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Alright, alright, we'll leave.\n"
+            "We'll be seeing you around though!\p"
+            "{COLOR RED}{SHADOW LIGHT_RED}Have a blessed day!")
+    waitmessage
+    closemessage
+    applymovement(ALPHA2_CC, moves(walk_right * 10))
+    applymovement(ALPHA1_CC, moves(walk_right * 10))
+    waitmovement(0)
+    setflag(FLAG_HIDE_ALPHA_CC_2)
+    removeobject(ALPHA2_CC)
+    setflag(FLAG_HIDE_ALPHA_CC_1)
+    removeobject(ALPHA1_CC)
+    applymovement(OLD_MAN, moves(walk_down, walk_left, face_down))
+    waitmovement(0)
+    msgbox("Thank you for getting them to go away.\n"
+            "Every week they show up here and start\l"
+            "talking about Arceus this, Arceus that!\p"
+            "I even put up a {COLOR RED}{SHADOW LIGHT_RED}NO SOLICITING{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} sign,\n"
+            "but does that stop them? No!\p"
+            "Take care, you two.")
+    waitmessage
+    closemessage
+    applymovement(OLD_MAN, moves(walk_right, walk_up))
+    waitmovement(0)
+    playse(SE_EXIT)
+    opendoor(16, 24)
+    waitdooranim
+    applymovement(OLD_MAN, moves(walk_up))
+    waitmovement(0)
+    setflag(FLAG_HIDE_OLD_MAN_CC)
+    removeobject(OLD_MAN)
+    closedoor(16, 24)
+    waitdooranim
+    applymovement(APRIL_CC, moves(face_left))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    msgbox("Now that that's over with...\n"
+            "It's time to challenge the Gym Leader!\p"
+            "I'm going to go first, but I wish\n"
+            "you the best of luck, {PLAYER}!\p"
+            "See ya later!")
+    waitmessage
+    closemessage
+    applymovement(APRIL_CC, moves(walk_right * 10))
+    waitmovement
+    setflag(FLAG_HIDE_APRIL_CC)
+    removeobject(APRIL_CC)
+    removeobject(OBJ_EVENT_ID_CAMERA)
+    addvar(VAR_CHARTREUSE_CITY_STATE, 1)
+    release
+}
+
+text Alpha1_Outro {
+    "But...how? I had Arceus on my side!"
+}
+
+text Alpha2_Outro {
+    "Ignored, once again..."
+}
+
+script ChartreuseCity_EventScript_Dexnav {
+
+}
+
+script ChartreuseCity_NPCScript_1 {
+
+}
+
+script ChartreuseCity_NPCScript_2 {
+
+}
+
+script ChartreuseCity_SignScript_Location {
+
+}
+
+script ChartreuseCity_SignScript_Gym {
+
+}
+
+script ChartreuseCity_ItemScript_GreatBall {
+
+}
