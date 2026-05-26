@@ -22,41 +22,60 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 17,
-      "y": 21,
+      "x": 26,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_CHARTREUSE_CITY_POKEMON_CENTER",
       "dest_warp_id": "1"
     },
     {
-      "x": 31,
+      "x": 21,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_CHARTREUSE_CITY_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 31,
-      "y": 32,
+      "x": 21,
+      "y": 33,
       "elevation": 0,
       "dest_map": "MAP_CHARTREUSE_CITY_GYM",
       "dest_warp_id": "0"
     },
     {
-      "x": 24,
-      "y": 20,
+      "x": 16,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_CHARTREUSE_CITY_HOUSE1",
       "dest_warp_id": "1"
     },
     {
-      "x": 17,
-      "y": 32,
+      "x": 5,
+      "y": 36,
       "elevation": 0,
       "dest_map": "MAP_CHARTREUSE_CITY_HOUSE2",
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    }
+  ],
   "bg_events": []
 }

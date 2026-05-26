@@ -1,0 +1,185 @@
+mapscripts Route4_MapScripts {}
+
+script Route4_TrainerScript_Jenny {
+    trainerbattle_single(TRAINER_JENNY_ROUTE4, Jenny_Intro, Jenny_Outro)
+    msgbox(PostBattle_Jenny, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Jenny_Intro{
+    "Finally, a trainer!\n"
+    "Let's battle!"
+}
+
+text Jenny_Outro{
+    "Why would I lose..?"
+}
+
+text PostBattle_Jenny{
+    "I'm almost out of Potions,\n"
+    "but you took all of my money!"
+}
+
+script Route4_TrainerScript_Lance {
+    trainerbattle_single(TRAINER_LANCE_ROUTE4, Lance_Intro, Lance_Outro)
+    msgbox(PostBattle_Lance, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Lance_Intro{
+    "What a great day for a battle,\n"
+    "don't you think?"
+}
+
+text Lance_Outro{
+    "Guess it wasn't my day to win."
+}
+
+text PostBattle_Lance{
+    "This is my favorite weather to\n"
+    "hike in. It's so nice and sunny!"
+}
+
+script Route4_TrainerScript_Isabelle {
+    trainerbattle_single(TRAINER_ISABELLE_ROUTE4, Isabelle_Intro, Isabelle_Outro)
+    msgbox(PostBattle_Isabelle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Isabelle_Intro{
+    "Stop right there!\n"
+    "I want to show you my Pokémon."
+}
+
+text Isabelle_Outro{
+    "Yet another defeat."
+}
+
+text PostBattle_Isabelle{
+    "You have some pretty neat Pokémon!"
+}
+
+script Route4_TrainerScript_John {
+    trainerbattle_single(TRAINER_JOHN_ROUTE4, John_Intro, John_Outro)
+    msgbox(PostBattle_John, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text John_Intro{
+    "No Pokémon are biting today...\n"
+    "Maybe I don't have the right bait."
+}
+
+text John_Outro{
+    "Dumb fish."
+}
+
+text PostBattle_John{
+    "Magikarp are useless, why can't I catch\n"
+    "something cool like a Goldeen?"
+}
+
+script Route4_TrainerScript_Davie {
+    trainerbattle_single(TRAINER_DAVIE_ROUTE4, Davie_Intro, Davie_Outro)
+    msgbox(PostBattle_Davie, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Davie_Intro{
+    "Hey, watch it!\n"
+    "You're scaring away all of the Pokémon!"
+}
+
+text Davie_Outro{
+    "At least I can get back to fishing now."
+}
+
+text PostBattle_Davie{
+    "Fishing is so peaceful.\n"
+    "I could do it all day."
+}
+
+script Route4_TrainerScript_Ben {
+    trainerbattle_single(TRAINER_BEN_ROUTE4, Ben_Intro, Ben_Outro)
+    msgbox(PostBattle_Ben, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Ben_Intro{
+    "I don't know if I can beat you,\n"
+    "but I sure as heck am going to try!"
+}
+
+text Ben_Outro{
+    "Aw, rats."
+}
+
+text PostBattle_Ben{
+    "I've been training here for hours,\n"
+    "why do I keep losing?!"
+}
+
+script Route4_NPCScript_1 {
+    lock
+    faceplayer
+    msgbox("Two people just came up to me and\n"
+            "started preaching about Arceus.\p"
+            "Isn't that the Pokémon that created\n"
+            "the universe?\p"
+            "I always thought of it as just a myth,\n"
+            "but maybe it's real after all.")
+    release
+}
+
+script Route4_NPCScript_2 {
+    lock
+    faceplayer
+    msgbox("So...close...to Chartreuse.\n"
+            "I'm...so...exhausted...\p"
+            "Need...to rest...")
+    release
+}
+
+script Route4_SignScript_Location {
+    lock
+    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}Route 4.")
+    release
+}
+
+script Route4_SignScript_TrainerTips1 {
+    lock
+    msgbox("You can sort your items by pressing\n"
+            "the START button in your bag.\p"
+            "It's best to stay organized!")
+    release
+}
+
+script Route4_SignScript_TrainerTips2 {
+    lock
+    msgbox("You can view your Pokémon's EVs and IVs\n"
+            "from the summary screen.\p"
+            "This is a great way to see how strong\n"
+            "each of your Pokémon are!")
+    release
+}
+
+script Route4_ItemScript_Awakening {
+    finditem(ITEM_AWAKENING, 1)
+    setflag(FLAG_ITEM_ROUTE_4_AWAKENING)
+}
+
+script Route4_ItemScript_Revive {
+    finditem(ITEM_REVIVE, 1)
+    setflag(FLAG_ITEM_ROUTE_4_REVIVE)
+}
+
+script Route4_ItemScript_Nugget {
+    finditem(ITEM_NUGGET, 1)
+    setflag(FLAG_ITEM_ROUTE_4_NUGGET)
+}
