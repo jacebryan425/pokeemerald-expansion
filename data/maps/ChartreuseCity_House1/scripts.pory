@@ -7,14 +7,13 @@ script ChartreuseCity_House1_NPCScript_OldMan {
         msgbox("I haven't had any trouble from Team\n"
                 "Alpha in a while.\p"
                 "Thank you again for your help!")
-    } elif (flag(FLAG_OBTAINED_VINE_BADGE) == TRUE) {
+    } elif (flag(FLAG_BADGE01_GET) == TRUE) {
         msgbox("Ah, yes! That's the badge from the\n"
                 "Chartreuse City Gym!\p"
                 "Congratulations, here's something I'm\n"
                 "sure will help you on your journey.")
         giveitem(ITEM_HM01)
         setflag(FLAG_RECEIVED_HM_CUT)
-        setflag(FLAG_BADGE01_GET) //allows you to use Cut
         msgbox("That there is the HM for Cut.\p"
                 "If you teach it to one of your\n"
                 "Pokémon, they'll be able to cut down\l"

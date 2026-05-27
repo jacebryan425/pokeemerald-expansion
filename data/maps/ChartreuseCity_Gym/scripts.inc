@@ -8,7 +8,7 @@ ChartreuseCity_Gym_NPCScript::
 # 5 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	faceplayer
 # 6 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	goto_if_set FLAG_OBTAINED_VINE_BADGE, ChartreuseCity_Gym_NPCScript_2
+	goto_if_set FLAG_BADGE01_GET, ChartreuseCity_Gym_NPCScript_2
 # 10 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	msgbox ChartreuseCity_Gym_NPCScript_Text_1
 ChartreuseCity_Gym_NPCScript_1:
@@ -58,7 +58,7 @@ ChartreuseCity_Gym_TrainerScript_Grant::
 # 84 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	faceplayer
 # 85 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	goto_if_set FLAG_OBTAINED_VINE_BADGE, ChartreuseCity_Gym_TrainerScript_Grant_2
+	goto_if_set FLAG_BADGE01_GET, ChartreuseCity_Gym_TrainerScript_Grant_2
 # 88 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	msgbox ChartreuseCity_Gym_TrainerScript_Grant_Text_1
 # 91 "data/maps/ChartreuseCity_Gym/scripts.pory"
@@ -98,7 +98,7 @@ ChartreuseCity_Gym_TrainerScript_Grant_5:
 # 112 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	waitfanfare
 # 113 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	setflag FLAG_OBTAINED_VINE_BADGE
+	setflag FLAG_BADGE01_GET
 # 114 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	addvar VAR_CHARTREUSE_CITY_STATE, 1
 # 115 "data/maps/ChartreuseCity_Gym/scripts.pory"

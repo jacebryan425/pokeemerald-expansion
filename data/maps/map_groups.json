@@ -38,7 +38,8 @@
     "gMapGroup_NewDungeons",
     "gMapGroup_IndoorPeriwinkle",
     "gMapGroup_IndoorMarigold",
-    "gMapGroup_IndoorChartreuse"
+    "gMapGroup_IndoorChartreuse",
+    "gMapGroup_IndoorRoute3"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -658,5 +659,8 @@
     "ChartreuseCity_House1",
     "ChartreuseCity_House2",
     "ChartreuseCity_Gym"
+  ],
+  "gMapGroup_IndoorRoute3": [
+    "Route3_PCCreatorHouse"
   ]
 }

@@ -1,0 +1,25 @@
+mapscripts Route3_PCCreatorHouse_MapScripts {}
+
+script Route3_PCCreatorHouse_Liam {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_PC_LANETTE) == TRUE) {
+        msgbox("Have you been finding the {PKMN} Box Link\n"
+                "useful?")
+    } else {
+        setflag(FLAG_SYS_PC_LANETTE)
+        msgbox("Oh, hi there! I'm Liam.\p"
+                "I maintain the PC system here in\n"
+                "Admiro.\p"
+                "I'm sorry it's so cluttered in here.\n"
+                "I've been hard at work developing this.")
+        giveitem(ITEM_POKEMON_BOX)
+        msgbox("Isn't it kind of annoying having\n"
+                "to visit a Pokémon Center every time\l"
+                "you want to check on your Pokémon?\p"
+                "I thought so too, so I made it possible\n"
+                "to access your PC boxes from your bag!\p"
+                "I hope you enjoy it!")
+    }
+    release
+}

@@ -4570,6 +4570,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/MarigoldTown_RivalHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/MarigoldTown_RivalHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3_PCCREATOR_HOUSE",
+      "name": "Route3_PCCreatorHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Route3_PCCreatorHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route3_PCCreatorHouse/map.bin"
     }
   ]
 }

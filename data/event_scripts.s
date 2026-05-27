@@ -1209,3 +1209,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ChartreuseCity_PokemonCenter/scripts.inc"
 
 	.include "data/maps/MarigoldTown_House1/scripts.inc"
+
+	.include "data/maps/Route3_PCCreatorHouse/scripts.inc"

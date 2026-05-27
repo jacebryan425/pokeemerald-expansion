@@ -3,7 +3,7 @@ mapscripts ChartreuseCity_Gym_MapScripts {}
 script ChartreuseCity_Gym_NPCScript {
     lock
     faceplayer
-    if (flag(FLAG_OBTAINED_VINE_BADGE) == TRUE) {
+    if (flag(FLAG_BADGE01_GET) == TRUE) {
         msgbox("Hey, that's the Vine Badge!\n"
                 "Way to go!")
     } else {
@@ -82,7 +82,7 @@ text PostBattle_Anne {
 script ChartreuseCity_Gym_TrainerScript_Grant {
     lock
     faceplayer
-    if (flag(FLAG_OBTAINED_VINE_BADGE) == TRUE) {
+    if (flag(FLAG_BADGE01_GET) == TRUE) {
         msgbox("Best of luck to you, {PLAYER}.")
     } else {
         msgbox("Welcome to my Gym! I'm Grant.\n"
@@ -110,7 +110,7 @@ script ChartreuseCity_Gym_TrainerScript_Grant {
             playfanfare(MUS_OBTAIN_BADGE)
             msgbox("{PLAYER} obtained the Vine Badge!")
             waitfanfare
-            setflag(FLAG_OBTAINED_VINE_BADGE)
+            setflag(FLAG_BADGE01_GET)
             addvar(VAR_CHARTREUSE_CITY_STATE, 1)
             msgbox("I would also like to give you this.")
             giveitem(ITEM_TM09)
