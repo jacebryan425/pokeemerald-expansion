@@ -12,7 +12,6 @@ mapscripts ChartreuseCity_MapScripts {
         } elif (var(VAR_CHARTREUSE_CITY_STATE) == 2) {
             clearflag(FLAG_HIDE_PROFESSOR_AIDE)
             addobject(AIDE)
-            call(ChartreuseCity_EventScript_Dexnav)
         }
     }
 }
@@ -239,20 +238,11 @@ text Alpha2_Outro {
     "Ignored, once again..."
 }
 
-script ChartreuseCity_EventScript_Dexnav {
+script ChartreuseCity_NPCScript_Dexnav {
     lock
-    playse(SE_PIN)
-    applymovement(AIDE, moves(face_left, emote_exclamation_mark))
-    waitmovement(0)
-    waitse
-    msgbox("{PLAYER}, there you are!")
-    waitmessage
-    closemessage
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-    waitmovement(0)
-    applymovement(AIDE, moves(walk_left * 2))
-    waitmovement(0)
-    msgbox("Congratulations on your first Gym\n"
+    faceplayer
+    msgbox("{PLAYER}, there you are!\p"
+            "Congratulations on your first Gym\n"
             "victory!\p"
             "Professor Aspen sent me here to give\n"
             "you this.")
@@ -270,8 +260,13 @@ script ChartreuseCity_EventScript_Dexnav {
             "research, {PLAYER}!")
     waitmessage
     closemessage
-    applymovement(AIDE, moves(walk_right * 5, walk_up * 6))
-    waitmovement(0)
+    if (var(VAR_FACING) == DIR_NORTH) {
+        applymovement(AIDE, moves(walk_left, walk_down * 2, walk_right * 5, walk_up * 8))
+        waitmovement(0)
+    } else {
+        applymovement(AIDE, moves(walk_down, walk_right * 4, walk_up * 7))
+        waitmovement(0)
+    }
     setflag(FLAG_HIDE_PROFESSOR_AIDE)
     removeobject(AIDE)
     addvar(VAR_CHARTREUSE_CITY_STATE, 1)

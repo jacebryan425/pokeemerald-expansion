@@ -11,10 +11,10 @@ ChartreuseCity_House1_NPCScript_OldMan::
 	goto_if_set FLAG_RECEIVED_HM_CUT, ChartreuseCity_House1_NPCScript_OldMan_2
 # 10 "data/maps/ChartreuseCity_House1/scripts.pory"
 	goto_if_set FLAG_OBTAINED_VINE_BADGE, ChartreuseCity_House1_NPCScript_OldMan_3
-# 24 "data/maps/ChartreuseCity_House1/scripts.pory"
+# 25 "data/maps/ChartreuseCity_House1/scripts.pory"
 	msgbox ChartreuseCity_House1_NPCScript_OldMan_Text_3
 ChartreuseCity_House1_NPCScript_OldMan_1:
-# 37 "data/maps/ChartreuseCity_House1/scripts.pory"
+# 38 "data/maps/ChartreuseCity_House1/scripts.pory"
 	release
 	return
 
@@ -31,6 +31,8 @@ ChartreuseCity_House1_NPCScript_OldMan_3:
 # 16 "data/maps/ChartreuseCity_House1/scripts.pory"
 	setflag FLAG_RECEIVED_HM_CUT
 # 17 "data/maps/ChartreuseCity_House1/scripts.pory"
+	setflag FLAG_BADGE01_GET
+# 18 "data/maps/ChartreuseCity_House1/scripts.pory"
 	msgbox ChartreuseCity_House1_NPCScript_OldMan_Text_2
 	goto ChartreuseCity_House1_NPCScript_OldMan_1
 
@@ -49,7 +51,7 @@ ChartreuseCity_House1_NPCScript_OldMan_Text_1:
 	.string "sure will help you on your journey.$"
 
 ChartreuseCity_House1_NPCScript_OldMan_Text_2:
-# 17 "data/maps/ChartreuseCity_House1/scripts.pory"
+# 18 "data/maps/ChartreuseCity_House1/scripts.pory"
 	.string "That there is the HM for Cut.\p"
 	.string "If you teach it to one of your\n"
 	.string "Pokémon, they'll be able to cut down\l"
@@ -58,7 +60,7 @@ ChartreuseCity_House1_NPCScript_OldMan_Text_2:
 	.string "Best of luck to you!$"
 
 ChartreuseCity_House1_NPCScript_OldMan_Text_3:
-# 24 "data/maps/ChartreuseCity_House1/scripts.pory"
+# 25 "data/maps/ChartreuseCity_House1/scripts.pory"
 	.string "I enjoy my peace and quiet just\n"
 	.string "like anyone else.\p"
 	.string "I appreciate you getting those pesky\n"

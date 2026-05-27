@@ -14,6 +14,7 @@ script ChartreuseCity_House1_NPCScript_OldMan {
                 "sure will help you on your journey.")
         giveitem(ITEM_HM01)
         setflag(FLAG_RECEIVED_HM_CUT)
+        setflag(FLAG_BADGE01_GET) //allows you to use Cut
         msgbox("That there is the HM for Cut.\p"
                 "If you teach it to one of your\n"
                 "Pokémon, they'll be able to cut down\l"
