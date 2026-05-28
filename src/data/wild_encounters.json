@@ -73,6 +73,16 @@
               9
             ]
           }
+        },
+        {
+          "type": "headbutt_mons",
+          "encounter_rates": [
+            30,
+            30,
+            20,
+            10,
+            10
+          ]
         }
       ],
       "encounters": [
@@ -12040,6 +12050,36 @@
                 "min_level": 6,
                 "max_level": 6,
                 "species": "SPECIES_PIKACHU"
+              }
+            ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
               }
             ]
           }
