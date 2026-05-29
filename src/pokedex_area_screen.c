@@ -458,6 +458,9 @@ static bool8 MapHasSpecies(const struct WildEncounterTypes *info, u16 species)
     if (MonListHasSpecies(info->rockSmashMonsInfo, species, ROCK_WILD_COUNT))
         return TRUE;
     return FALSE;
+    if (MonListHasSpecies(info->headbuttMonsInfo, species, HEADBUTT_WILD_COUNT))
+        return TRUE;
+    return FALSE;
 }
 
 static bool8 MonListHasSpecies(const struct WildPokemonInfo *info, u16 species, u16 size)

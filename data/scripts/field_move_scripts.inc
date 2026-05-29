@@ -402,7 +402,7 @@ EventScript_UseCutGrass::
 @ Interact with a tree a Pokémon can use headbutt on
 EventScript_Headbutt::
 	lockall
-	checkpartymove MOVE_HEADBUTT
+	checkfieldmove FIELD_MOVE_HEADBUTT, TRUE
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq EventScript_CantHeadbuttTree
 	setfieldeffectargument 0, VAR_RESULT
