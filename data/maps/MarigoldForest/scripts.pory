@@ -188,8 +188,37 @@ script MarigoldForest_NPCScript_Headbutt {
     lock
     faceplayer
     msgbox("Did you know that certain Pokémon can\n"
-            "only be found living in trees?")
+            "only be found living in trees?\p"
+            "You can find them with a move called\n"
+            "Headbutt.\p"
+            "Would you like me to teach Headbutt to\n"
+            "one of your Pokémon?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Alright, which Pokémon wants to learn\n"
+                "how to Headbutt?")
+        setvar(VAR_0x8005, MOVE_HEADBUTT)
+        call(HeadbuttTutor_EventScript_OpenPartyMenu)
+        if (var(VAR_RESULT) == 0) {
+            msgbox("Okay then. Come back if you ever\n"
+                    "change your mind.")
+        }
+        msgbox("Teaching your Pokémon this move\n"
+                "is much safer than using your own head.\p"
+                "I hope you find tons of new\n"
+                "Pokémon!")
+    } else {
+        msgbox("Okay then. Come back if you ever\n"
+                "change your mind.")
+    }
     release
+}
+
+script HeadbuttTutor_EventScript_OpenPartyMenu {
+    special(ChooseMonForMoveTutor)
+    waitstate
+	lock
+	faceplayer
+	return
 }
 
 script MarigoldForest_SignScript_Location {

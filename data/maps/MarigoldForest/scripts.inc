@@ -100,52 +100,90 @@ MarigoldForest_NPCScript_Headbutt::
 # 189 "data/maps/MarigoldForest/scripts.pory"
 	faceplayer
 # 190 "data/maps/MarigoldForest/scripts.pory"
-	msgbox MarigoldForest_NPCScript_Headbutt_Text_0
-# 192 "data/maps/MarigoldForest/scripts.pory"
+	msgbox MarigoldForest_NPCScript_Headbutt_Text_0, MSGBOX_YESNO
+# 196 "data/maps/MarigoldForest/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq MarigoldForest_NPCScript_Headbutt_2
+# 210 "data/maps/MarigoldForest/scripts.pory"
+	msgbox MarigoldForest_NPCScript_Headbutt_Text_2
+MarigoldForest_NPCScript_Headbutt_1:
+# 213 "data/maps/MarigoldForest/scripts.pory"
 	release
+	return
+
+MarigoldForest_NPCScript_Headbutt_2:
+# 197 "data/maps/MarigoldForest/scripts.pory"
+	msgbox MarigoldForest_NPCScript_Headbutt_Text_1
+# 199 "data/maps/MarigoldForest/scripts.pory"
+	setvar VAR_0x8005, MOVE_HEADBUTT
+# 200 "data/maps/MarigoldForest/scripts.pory"
+	call HeadbuttTutor_EventScript_OpenPartyMenu
+# 201 "data/maps/MarigoldForest/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq MarigoldForest_NPCScript_Headbutt_6
+MarigoldForest_NPCScript_Headbutt_5:
+# 205 "data/maps/MarigoldForest/scripts.pory"
+	msgbox MarigoldForest_NPCScript_Headbutt_Text_3
+	goto MarigoldForest_NPCScript_Headbutt_1
+
+MarigoldForest_NPCScript_Headbutt_6:
+# 202 "data/maps/MarigoldForest/scripts.pory"
+	msgbox MarigoldForest_NPCScript_Headbutt_Text_2
+	goto MarigoldForest_NPCScript_Headbutt_5
+
+
+HeadbuttTutor_EventScript_OpenPartyMenu::
+# 217 "data/maps/MarigoldForest/scripts.pory"
+	special ChooseMonForMoveTutor
+# 218 "data/maps/MarigoldForest/scripts.pory"
+	waitstate
+# 219 "data/maps/MarigoldForest/scripts.pory"
+	lock
+# 220 "data/maps/MarigoldForest/scripts.pory"
+	faceplayer
 	return
 
 
 MarigoldForest_SignScript_Location::
-# 196 "data/maps/MarigoldForest/scripts.pory"
+# 225 "data/maps/MarigoldForest/scripts.pory"
 	lock
-# 197 "data/maps/MarigoldForest/scripts.pory"
+# 226 "data/maps/MarigoldForest/scripts.pory"
 	msgbox MarigoldForest_SignScript_Location_Text_0
-# 198 "data/maps/MarigoldForest/scripts.pory"
+# 227 "data/maps/MarigoldForest/scripts.pory"
 	release
 	return
 
 
 MarigoldForest_SignScript_TrainerTips::
-# 202 "data/maps/MarigoldForest/scripts.pory"
+# 231 "data/maps/MarigoldForest/scripts.pory"
 	lock
-# 203 "data/maps/MarigoldForest/scripts.pory"
+# 232 "data/maps/MarigoldForest/scripts.pory"
 	msgbox MarigoldForest_SignScript_TrainerTips_Text_0
-# 206 "data/maps/MarigoldForest/scripts.pory"
+# 235 "data/maps/MarigoldForest/scripts.pory"
 	release
 	return
 
 
 MarigoldForest_ItemScript_Potion::
-# 210 "data/maps/MarigoldForest/scripts.pory"
+# 239 "data/maps/MarigoldForest/scripts.pory"
 	finditem ITEM_POTION, 1
-# 211 "data/maps/MarigoldForest/scripts.pory"
+# 240 "data/maps/MarigoldForest/scripts.pory"
 	setflag FLAG_ITEM_MARIGOLD_FOREST_POTION
 	return
 
 
 MarigoldForest_ItemScript_Antidote::
-# 215 "data/maps/MarigoldForest/scripts.pory"
+# 244 "data/maps/MarigoldForest/scripts.pory"
 	finditem ITEM_ANTIDOTE, 3
-# 216 "data/maps/MarigoldForest/scripts.pory"
+# 245 "data/maps/MarigoldForest/scripts.pory"
 	setflag FLAG_ITEM_MARIGOLD_FOREST_ANTIDOTE
 	return
 
 
 MarigoldForest_ItemScript_GreatBall::
-# 220 "data/maps/MarigoldForest/scripts.pory"
+# 249 "data/maps/MarigoldForest/scripts.pory"
 	finditem ITEM_GREAT_BALL, 1
-# 221 "data/maps/MarigoldForest/scripts.pory"
+# 250 "data/maps/MarigoldForest/scripts.pory"
 	setflag FLAG_ITEM_MARIGOLD_FOREST_GREAT_BALL
 	return
 
@@ -162,14 +200,35 @@ MarigoldForest_NPCScript_SuicuneLore_Text_0:
 MarigoldForest_NPCScript_Headbutt_Text_0:
 # 190 "data/maps/MarigoldForest/scripts.pory"
 	.string "Did you know that certain Pokémon can\n"
-	.string "only be found living in trees?$"
+	.string "only be found living in trees?\p"
+	.string "You can find them with a move called\n"
+	.string "Headbutt.\p"
+	.string "Would you like me to teach Headbutt to\n"
+	.string "one of your Pokémon?$"
+
+MarigoldForest_NPCScript_Headbutt_Text_1:
+# 197 "data/maps/MarigoldForest/scripts.pory"
+	.string "Alright, which Pokémon wants to learn\n"
+	.string "how to Headbutt?$"
+
+MarigoldForest_NPCScript_Headbutt_Text_2:
+# 202 "data/maps/MarigoldForest/scripts.pory"
+	.string "Okay then. Come back if you ever\n"
+	.string "change your mind.$"
+
+MarigoldForest_NPCScript_Headbutt_Text_3:
+# 205 "data/maps/MarigoldForest/scripts.pory"
+	.string "Teaching your Pokémon this move\n"
+	.string "is much safer than using your own head.\p"
+	.string "I hope you find tons of new\n"
+	.string "Pokémon!$"
 
 MarigoldForest_SignScript_Location_Text_0:
-# 197 "data/maps/MarigoldForest/scripts.pory"
+# 226 "data/maps/MarigoldForest/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Marigold Forest.$"
 
 MarigoldForest_SignScript_TrainerTips_Text_0:
-# 203 "data/maps/MarigoldForest/scripts.pory"
+# 232 "data/maps/MarigoldForest/scripts.pory"
 	.string "If you ever want to avoid wild\n"
 	.string "Pokémon encounters, use a Repel!\p"
 	.string "You can buy them at any Poké Mart.$"

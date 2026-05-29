@@ -11983,6 +11983,36 @@
                 "species": "SPECIES_PIKACHU"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
           }
         },
         {
@@ -12057,29 +12087,29 @@
             "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
               }
             ]
           }
@@ -12149,6 +12179,36 @@
                 "min_level": 6,
                 "max_level": 6,
                 "species": "SPECIES_PIKACHU"
+              }
+            ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
               }
             ]
           }
