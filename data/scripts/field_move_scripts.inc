@@ -456,7 +456,7 @@ Text_WantToDive:
 	.string "The sea is deep here.\n"
 	.string "Would you like to use Dive?$"
 
-	Text_WantToHeadbutt:
+Text_WantToHeadbutt:
 	.string "It's a moderated sized tree.\n"
 	.string "Would you like to use Headbutt?$"
 

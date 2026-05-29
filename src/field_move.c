@@ -218,7 +218,7 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
         .moveID = MOVE_HEADBUTT,
         .partyMsgID = PARTY_MSG_CANT_USE_HERE,
     },
-
+    
 #if OW_ROCK_CLIMB_FIELD_MOVE == TRUE
     [FIELD_MOVE_ROCK_CLIMB] =
     {
