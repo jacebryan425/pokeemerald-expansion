@@ -470,3 +470,4 @@ const u32 gObjectEventPic_ApricornTree[] = INCBIN_U32("graphics/object_events/pi
 
 const u32 gObjectEventPic_PokeDex[] = INCBIN_U32("graphics/object_events/pics/misc/pokedex.4bpp");
 const u16 gObjectEventPalette_PokeDex[] = INCBIN_U16("graphics/object_events/pics/misc/pokedex.gbapal");
+const u32 gObjectEventPic_AlphaGruntM[] = INCBIN_U32("graphics/object_events/pics/people/alpha_grunt_m.4bpp");

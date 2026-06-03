@@ -49,7 +49,7 @@
     },
     {
       "local_id": "ALPHA1_CC",
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_ALPHA_GRUNT_M",
       "x": 15,
       "y": 26,
       "elevation": 0,
@@ -63,7 +63,7 @@
     },
     {
       "local_id": "ALPHA2_CC",
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_ALPHA_GRUNT_M",
       "x": 16,
       "y": 26,
       "elevation": 0,
