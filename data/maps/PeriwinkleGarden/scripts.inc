@@ -22,459 +22,504 @@ PeriwinkleGarden_EventScript_ProfessorAspen::
 # 13 "data/maps/PeriwinkleGarden/scripts.pory"
 	faceplayer
 # 14 "data/maps/PeriwinkleGarden/scripts.pory"
-	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_0
-# 15 "data/maps/PeriwinkleGarden/scripts.pory"
-	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown
-# 16 "data/maps/PeriwinkleGarden/scripts.pory"
-	waitmovement 0
-# 17 "data/maps/PeriwinkleGarden/scripts.pory"
-	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_1
-# 18 "data/maps/PeriwinkleGarden/scripts.pory"
-	faceplayer
+	goto_if_set FLAG_STARTER_SELECTION, PeriwinkleGarden_EventScript_ProfessorAspen_2
 # 19 "data/maps/PeriwinkleGarden/scripts.pory"
-	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_2, MSGBOX_YESNO
-PeriwinkleGarden_EventScript_ProfessorAspen_2:
+	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_1
 # 20 "data/maps/PeriwinkleGarden/scripts.pory"
-	compare VAR_RESULT, 1
-	goto_if_ne PeriwinkleGarden_EventScript_ProfessorAspen_3
-# 23 "data/maps/PeriwinkleGarden/scripts.pory"
-	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_4
-# 24 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown
-# 25 "data/maps/PeriwinkleGarden/scripts.pory"
+# 21 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
+# 22 "data/maps/PeriwinkleGarden/scripts.pory"
+	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_2
 # 26 "data/maps/PeriwinkleGarden/scripts.pory"
-	setflag FLAG_STARTER_SELECTION
+	faceplayer
 # 27 "data/maps/PeriwinkleGarden/scripts.pory"
+	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_3, MSGBOX_YESNO
+# 31 "data/maps/PeriwinkleGarden/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq PeriwinkleGarden_EventScript_ProfessorAspen_5
+# 55 "data/maps/PeriwinkleGarden/scripts.pory"
+	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_7
+# 56 "data/maps/PeriwinkleGarden/scripts.pory"
+	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown
+# 57 "data/maps/PeriwinkleGarden/scripts.pory"
+	waitmovement 0
+# 58 "data/maps/PeriwinkleGarden/scripts.pory"
+	setflag FLAG_STARTER_SELECTION
+PeriwinkleGarden_EventScript_ProfessorAspen_1:
+# 61 "data/maps/PeriwinkleGarden/scripts.pory"
 	release
 	return
 
-PeriwinkleGarden_EventScript_ProfessorAspen_3:
-# 21 "data/maps/PeriwinkleGarden/scripts.pory"
-	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_3, MSGBOX_YESNO
-	goto PeriwinkleGarden_EventScript_ProfessorAspen_2
+PeriwinkleGarden_EventScript_ProfessorAspen_2:
+# 15 "data/maps/PeriwinkleGarden/scripts.pory"
+	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_0
+# 16 "data/maps/PeriwinkleGarden/scripts.pory"
+	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown
+# 17 "data/maps/PeriwinkleGarden/scripts.pory"
+	waitmovement 0
+	goto PeriwinkleGarden_EventScript_ProfessorAspen_1
+
+PeriwinkleGarden_EventScript_ProfessorAspen_5:
+# 32 "data/maps/PeriwinkleGarden/scripts.pory"
+	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_4, MSGBOX_YESNO
+# 33 "data/maps/PeriwinkleGarden/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq PeriwinkleGarden_EventScript_ProfessorAspen_8
+# 49 "data/maps/PeriwinkleGarden/scripts.pory"
+	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_7
+# 50 "data/maps/PeriwinkleGarden/scripts.pory"
+	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown
+# 51 "data/maps/PeriwinkleGarden/scripts.pory"
+	waitmovement 0
+# 52 "data/maps/PeriwinkleGarden/scripts.pory"
+	setflag FLAG_STARTER_SELECTION
+	goto PeriwinkleGarden_EventScript_ProfessorAspen_1
+
+PeriwinkleGarden_EventScript_ProfessorAspen_8:
+# 34 "data/maps/PeriwinkleGarden/scripts.pory"
+	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_5, MSGBOX_YESNO
+# 36 "data/maps/PeriwinkleGarden/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq PeriwinkleGarden_EventScript_ProfessorAspen_11
+# 43 "data/maps/PeriwinkleGarden/scripts.pory"
+	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_7
+# 44 "data/maps/PeriwinkleGarden/scripts.pory"
+	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown
+# 45 "data/maps/PeriwinkleGarden/scripts.pory"
+	waitmovement 0
+# 46 "data/maps/PeriwinkleGarden/scripts.pory"
+	setflag FLAG_STARTER_SELECTION
+	goto PeriwinkleGarden_EventScript_ProfessorAspen_1
+
+PeriwinkleGarden_EventScript_ProfessorAspen_11:
+# 37 "data/maps/PeriwinkleGarden/scripts.pory"
+	msgbox PeriwinkleGarden_EventScript_ProfessorAspen_Text_6
+# 39 "data/maps/PeriwinkleGarden/scripts.pory"
+	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_FaceDown
+# 40 "data/maps/PeriwinkleGarden/scripts.pory"
+	waitmovement 0
+# 41 "data/maps/PeriwinkleGarden/scripts.pory"
+	setflag FLAG_STARTER_SELECTION
+	goto PeriwinkleGarden_EventScript_ProfessorAspen_1
 
 
 PeriwinkleGarden_EventScript_PreventEscape::
-# 31 "data/maps/PeriwinkleGarden/scripts.pory"
+# 65 "data/maps/PeriwinkleGarden/scripts.pory"
 	lock
-# 32 "data/maps/PeriwinkleGarden/scripts.pory"
+# 66 "data/maps/PeriwinkleGarden/scripts.pory"
 	goto_if_set FLAG_STARTER_SELECTION, PeriwinkleGarden_EventScript_PreventEscape_2
-# 38 "data/maps/PeriwinkleGarden/scripts.pory"
+# 72 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_PreventEscape_Text_1
-# 39 "data/maps/PeriwinkleGarden/scripts.pory"
+# 73 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmessage
-# 40 "data/maps/PeriwinkleGarden/scripts.pory"
+# 74 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, PeriwinkleGarden_WalkLeft
-# 41 "data/maps/PeriwinkleGarden/scripts.pory"
+# 75 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
 PeriwinkleGarden_EventScript_PreventEscape_1:
-# 43 "data/maps/PeriwinkleGarden/scripts.pory"
+# 77 "data/maps/PeriwinkleGarden/scripts.pory"
 	release
 	return
 
 PeriwinkleGarden_EventScript_PreventEscape_2:
-# 33 "data/maps/PeriwinkleGarden/scripts.pory"
+# 67 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_PreventEscape_Text_0
-# 34 "data/maps/PeriwinkleGarden/scripts.pory"
+# 68 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmessage
-# 35 "data/maps/PeriwinkleGarden/scripts.pory"
+# 69 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, PeriwinkleGarden_WalkLeft
-# 36 "data/maps/PeriwinkleGarden/scripts.pory"
+# 70 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
 	goto PeriwinkleGarden_EventScript_PreventEscape_1
 
 
 PeriwinkleGarden_EventScript_ChikoritaBall::
-# 47 "data/maps/PeriwinkleGarden/scripts.pory"
+# 81 "data/maps/PeriwinkleGarden/scripts.pory"
 	lock
-# 48 "data/maps/PeriwinkleGarden/scripts.pory"
+# 82 "data/maps/PeriwinkleGarden/scripts.pory"
 	faceplayer
-# 49 "data/maps/PeriwinkleGarden/scripts.pory"
+# 83 "data/maps/PeriwinkleGarden/scripts.pory"
 	goto_if_set FLAG_STARTER_SELECTION, PeriwinkleGarden_EventScript_ChikoritaBall_2
-# 87 "data/maps/PeriwinkleGarden/scripts.pory"
+# 121 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_ChikoritaBall_Text_4
 PeriwinkleGarden_EventScript_ChikoritaBall_1:
-# 90 "data/maps/PeriwinkleGarden/scripts.pory"
+# 124 "data/maps/PeriwinkleGarden/scripts.pory"
 	release
 	return
 
 PeriwinkleGarden_EventScript_ChikoritaBall_2:
-# 50 "data/maps/PeriwinkleGarden/scripts.pory"
+# 84 "data/maps/PeriwinkleGarden/scripts.pory"
 	showmonpic SPECIES_CHIKORITA, 10, 3
-# 51 "data/maps/PeriwinkleGarden/scripts.pory"
+# 85 "data/maps/PeriwinkleGarden/scripts.pory"
 	playmoncry SPECIES_CHIKORITA, CRY_MODE_NORMAL
-# 52 "data/maps/PeriwinkleGarden/scripts.pory"
+# 86 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmoncry
-# 53 "data/maps/PeriwinkleGarden/scripts.pory"
+# 87 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_ChikoritaBall_Text_0, MSGBOX_YESNO
-# 54 "data/maps/PeriwinkleGarden/scripts.pory"
+# 88 "data/maps/PeriwinkleGarden/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PeriwinkleGarden_EventScript_ChikoritaBall_6
 PeriwinkleGarden_EventScript_ChikoritaBall_5:
-# 85 "data/maps/PeriwinkleGarden/scripts.pory"
+# 119 "data/maps/PeriwinkleGarden/scripts.pory"
 	hidemonpic
 	goto PeriwinkleGarden_EventScript_ChikoritaBall_1
 
 PeriwinkleGarden_EventScript_ChikoritaBall_6:
-# 55 "data/maps/PeriwinkleGarden/scripts.pory"
+# 89 "data/maps/PeriwinkleGarden/scripts.pory"
 	givemon SPECIES_CHIKORITA, 5, ITEM_NONE
-# 56 "data/maps/PeriwinkleGarden/scripts.pory"
+# 90 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
-# 57 "data/maps/PeriwinkleGarden/scripts.pory"
+# 91 "data/maps/PeriwinkleGarden/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 58 "data/maps/PeriwinkleGarden/scripts.pory"
+# 92 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_ChikoritaBall_Text_1
-# 59 "data/maps/PeriwinkleGarden/scripts.pory"
+# 93 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitfanfare
-# 60 "data/maps/PeriwinkleGarden/scripts.pory"
+# 94 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_CHIKORITA_CHOSEN
-# 61 "data/maps/PeriwinkleGarden/scripts.pory"
+# 95 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject CHIKORITA_BALL
-# 62 "data/maps/PeriwinkleGarden/scripts.pory"
+# 96 "data/maps/PeriwinkleGarden/scripts.pory"
 	hidemonpic
-# 63 "data/maps/PeriwinkleGarden/scripts.pory"
+# 97 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_ChikoritaBall_Text_2
-# 64 "data/maps/PeriwinkleGarden/scripts.pory"
+# 98 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmessage
-# 65 "data/maps/PeriwinkleGarden/scripts.pory"
+# 99 "data/maps/PeriwinkleGarden/scripts.pory"
 	closemessage
-# 66 "data/maps/PeriwinkleGarden/scripts.pory"
+# 100 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_TORCHIC_CHOSEN
-# 67 "data/maps/PeriwinkleGarden/scripts.pory"
+# 101 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject TORCHIC_BALL
-# 68 "data/maps/PeriwinkleGarden/scripts.pory"
+# 102 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_ChoseChikorita_1
-# 69 "data/maps/PeriwinkleGarden/scripts.pory"
+# 103 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
-# 70 "data/maps/PeriwinkleGarden/scripts.pory"
+# 104 "data/maps/PeriwinkleGarden/scripts.pory"
 	delay 30
-# 71 "data/maps/PeriwinkleGarden/scripts.pory"
+# 105 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_SQUIRTLE_CHOSEN
-# 72 "data/maps/PeriwinkleGarden/scripts.pory"
+# 106 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject SQUIRTLE_BALL
-# 73 "data/maps/PeriwinkleGarden/scripts.pory"
+# 107 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_ChoseChikorita_2
-# 74 "data/maps/PeriwinkleGarden/scripts.pory"
+# 108 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
-# 75 "data/maps/PeriwinkleGarden/scripts.pory"
+# 109 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_ChikoritaBall_Text_3
-# 76 "data/maps/PeriwinkleGarden/scripts.pory"
+# 110 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmessage
-# 77 "data/maps/PeriwinkleGarden/scripts.pory"
+# 111 "data/maps/PeriwinkleGarden/scripts.pory"
 	closemessage
-# 78 "data/maps/PeriwinkleGarden/scripts.pory"
+# 112 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway
-# 79 "data/maps/PeriwinkleGarden/scripts.pory"
+# 113 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
-# 80 "data/maps/PeriwinkleGarden/scripts.pory"
+# 114 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_HIDE_PROFESSOR_ASPEN
-# 81 "data/maps/PeriwinkleGarden/scripts.pory"
+# 115 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject PROFESSOR_ASPEN
-# 82 "data/maps/PeriwinkleGarden/scripts.pory"
+# 116 "data/maps/PeriwinkleGarden/scripts.pory"
 	addvar VAR_PERIWINKLE_GARDEN_STATE, 1
-# 83 "data/maps/PeriwinkleGarden/scripts.pory"
+# 117 "data/maps/PeriwinkleGarden/scripts.pory"
 	addvar VAR_PERIWINKLE_TOWN_STATE, 1
 	goto PeriwinkleGarden_EventScript_ChikoritaBall_5
 
 
 PeriwinkleGarden_EventScript_TorchicBall::
-# 94 "data/maps/PeriwinkleGarden/scripts.pory"
+# 128 "data/maps/PeriwinkleGarden/scripts.pory"
 	lock
-# 95 "data/maps/PeriwinkleGarden/scripts.pory"
+# 129 "data/maps/PeriwinkleGarden/scripts.pory"
 	faceplayer
-# 96 "data/maps/PeriwinkleGarden/scripts.pory"
+# 130 "data/maps/PeriwinkleGarden/scripts.pory"
 	goto_if_set FLAG_STARTER_SELECTION, PeriwinkleGarden_EventScript_TorchicBall_2
-# 137 "data/maps/PeriwinkleGarden/scripts.pory"
+# 171 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_TorchicBall_Text_2
 PeriwinkleGarden_EventScript_TorchicBall_1:
-# 140 "data/maps/PeriwinkleGarden/scripts.pory"
+# 174 "data/maps/PeriwinkleGarden/scripts.pory"
 	release
 	return
 
 PeriwinkleGarden_EventScript_TorchicBall_2:
-# 97 "data/maps/PeriwinkleGarden/scripts.pory"
+# 131 "data/maps/PeriwinkleGarden/scripts.pory"
 	showmonpic SPECIES_TORCHIC, 10, 3
-# 98 "data/maps/PeriwinkleGarden/scripts.pory"
+# 132 "data/maps/PeriwinkleGarden/scripts.pory"
 	playmoncry SPECIES_TORCHIC, CRY_MODE_NORMAL
-# 99 "data/maps/PeriwinkleGarden/scripts.pory"
+# 133 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmoncry
-# 100 "data/maps/PeriwinkleGarden/scripts.pory"
+# 134 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_TorchicBall_Text_0, MSGBOX_YESNO
-# 101 "data/maps/PeriwinkleGarden/scripts.pory"
+# 135 "data/maps/PeriwinkleGarden/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PeriwinkleGarden_EventScript_TorchicBall_6
 PeriwinkleGarden_EventScript_TorchicBall_5:
-# 135 "data/maps/PeriwinkleGarden/scripts.pory"
+# 169 "data/maps/PeriwinkleGarden/scripts.pory"
 	hidemonpic
 	goto PeriwinkleGarden_EventScript_TorchicBall_1
 
 PeriwinkleGarden_EventScript_TorchicBall_6:
-# 102 "data/maps/PeriwinkleGarden/scripts.pory"
+# 136 "data/maps/PeriwinkleGarden/scripts.pory"
 	givemon SPECIES_TORCHIC, 5, ITEM_NONE
-# 103 "data/maps/PeriwinkleGarden/scripts.pory"
+# 137 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
-# 104 "data/maps/PeriwinkleGarden/scripts.pory"
+# 138 "data/maps/PeriwinkleGarden/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 105 "data/maps/PeriwinkleGarden/scripts.pory"
+# 139 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_TorchicBall_Text_1
-# 106 "data/maps/PeriwinkleGarden/scripts.pory"
+# 140 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitfanfare
-# 107 "data/maps/PeriwinkleGarden/scripts.pory"
+# 141 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_TORCHIC_CHOSEN
-# 108 "data/maps/PeriwinkleGarden/scripts.pory"
+# 142 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject TORCHIC_BALL
-# 109 "data/maps/PeriwinkleGarden/scripts.pory"
+# 143 "data/maps/PeriwinkleGarden/scripts.pory"
 	hidemonpic
-# 110 "data/maps/PeriwinkleGarden/scripts.pory"
+# 144 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_ChikoritaBall_Text_2
-# 111 "data/maps/PeriwinkleGarden/scripts.pory"
+# 145 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmessage
-# 112 "data/maps/PeriwinkleGarden/scripts.pory"
+# 146 "data/maps/PeriwinkleGarden/scripts.pory"
 	closemessage
-# 113 "data/maps/PeriwinkleGarden/scripts.pory"
+# 147 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_ChoseTorchic_1
-# 114 "data/maps/PeriwinkleGarden/scripts.pory"
+# 148 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
-# 115 "data/maps/PeriwinkleGarden/scripts.pory"
+# 149 "data/maps/PeriwinkleGarden/scripts.pory"
 	delay 30
-# 116 "data/maps/PeriwinkleGarden/scripts.pory"
+# 150 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_CHIKORITA_CHOSEN
-# 117 "data/maps/PeriwinkleGarden/scripts.pory"
+# 151 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject CHIKORITA_BALL
-# 118 "data/maps/PeriwinkleGarden/scripts.pory"
+# 152 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_ChoseTorchic_2
-# 119 "data/maps/PeriwinkleGarden/scripts.pory"
+# 153 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
-# 120 "data/maps/PeriwinkleGarden/scripts.pory"
+# 154 "data/maps/PeriwinkleGarden/scripts.pory"
 	delay 30
-# 121 "data/maps/PeriwinkleGarden/scripts.pory"
+# 155 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_SQUIRTLE_CHOSEN
-# 122 "data/maps/PeriwinkleGarden/scripts.pory"
+# 156 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject SQUIRTLE_BALL
-# 123 "data/maps/PeriwinkleGarden/scripts.pory"
+# 157 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_ChoseTorchic_1
-# 124 "data/maps/PeriwinkleGarden/scripts.pory"
+# 158 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
-# 125 "data/maps/PeriwinkleGarden/scripts.pory"
+# 159 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_ChikoritaBall_Text_3
-# 126 "data/maps/PeriwinkleGarden/scripts.pory"
+# 160 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmessage
-# 127 "data/maps/PeriwinkleGarden/scripts.pory"
+# 161 "data/maps/PeriwinkleGarden/scripts.pory"
 	closemessage
-# 128 "data/maps/PeriwinkleGarden/scripts.pory"
+# 162 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway
-# 129 "data/maps/PeriwinkleGarden/scripts.pory"
+# 163 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
-# 130 "data/maps/PeriwinkleGarden/scripts.pory"
+# 164 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_HIDE_PROFESSOR_ASPEN
-# 131 "data/maps/PeriwinkleGarden/scripts.pory"
+# 165 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject PROFESSOR_ASPEN
-# 132 "data/maps/PeriwinkleGarden/scripts.pory"
+# 166 "data/maps/PeriwinkleGarden/scripts.pory"
 	addvar VAR_PERIWINKLE_GARDEN_STATE, 1
-# 133 "data/maps/PeriwinkleGarden/scripts.pory"
+# 167 "data/maps/PeriwinkleGarden/scripts.pory"
 	addvar VAR_PERIWINKLE_TOWN_STATE, 1
 	goto PeriwinkleGarden_EventScript_TorchicBall_5
 
 
 PeriwinkleGarden_EventScript_SquirtleBall::
-# 144 "data/maps/PeriwinkleGarden/scripts.pory"
+# 178 "data/maps/PeriwinkleGarden/scripts.pory"
 	lock
-# 145 "data/maps/PeriwinkleGarden/scripts.pory"
+# 179 "data/maps/PeriwinkleGarden/scripts.pory"
 	faceplayer
-# 146 "data/maps/PeriwinkleGarden/scripts.pory"
+# 180 "data/maps/PeriwinkleGarden/scripts.pory"
 	goto_if_set FLAG_STARTER_SELECTION, PeriwinkleGarden_EventScript_SquirtleBall_2
-# 184 "data/maps/PeriwinkleGarden/scripts.pory"
+# 218 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_SquirtleBall_Text_2
 PeriwinkleGarden_EventScript_SquirtleBall_1:
-# 187 "data/maps/PeriwinkleGarden/scripts.pory"
+# 221 "data/maps/PeriwinkleGarden/scripts.pory"
 	release
 	return
 
 PeriwinkleGarden_EventScript_SquirtleBall_2:
-# 147 "data/maps/PeriwinkleGarden/scripts.pory"
+# 181 "data/maps/PeriwinkleGarden/scripts.pory"
 	showmonpic SPECIES_SQUIRTLE, 10, 3
-# 148 "data/maps/PeriwinkleGarden/scripts.pory"
+# 182 "data/maps/PeriwinkleGarden/scripts.pory"
 	playmoncry SPECIES_SQUIRTLE, CRY_MODE_NORMAL
-# 149 "data/maps/PeriwinkleGarden/scripts.pory"
+# 183 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmoncry
-# 150 "data/maps/PeriwinkleGarden/scripts.pory"
+# 184 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_SquirtleBall_Text_0, MSGBOX_YESNO
-# 151 "data/maps/PeriwinkleGarden/scripts.pory"
+# 185 "data/maps/PeriwinkleGarden/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PeriwinkleGarden_EventScript_SquirtleBall_6
 PeriwinkleGarden_EventScript_SquirtleBall_5:
-# 182 "data/maps/PeriwinkleGarden/scripts.pory"
+# 216 "data/maps/PeriwinkleGarden/scripts.pory"
 	hidemonpic
 	goto PeriwinkleGarden_EventScript_SquirtleBall_1
 
 PeriwinkleGarden_EventScript_SquirtleBall_6:
-# 152 "data/maps/PeriwinkleGarden/scripts.pory"
+# 186 "data/maps/PeriwinkleGarden/scripts.pory"
 	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
-# 153 "data/maps/PeriwinkleGarden/scripts.pory"
+# 187 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
-# 154 "data/maps/PeriwinkleGarden/scripts.pory"
+# 188 "data/maps/PeriwinkleGarden/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 155 "data/maps/PeriwinkleGarden/scripts.pory"
+# 189 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_SquirtleBall_Text_1
-# 156 "data/maps/PeriwinkleGarden/scripts.pory"
+# 190 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitfanfare
-# 157 "data/maps/PeriwinkleGarden/scripts.pory"
+# 191 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_SQUIRTLE_CHOSEN
-# 158 "data/maps/PeriwinkleGarden/scripts.pory"
+# 192 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject SQUIRTLE_BALL
-# 159 "data/maps/PeriwinkleGarden/scripts.pory"
+# 193 "data/maps/PeriwinkleGarden/scripts.pory"
 	hidemonpic
-# 160 "data/maps/PeriwinkleGarden/scripts.pory"
+# 194 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_ChikoritaBall_Text_2
-# 161 "data/maps/PeriwinkleGarden/scripts.pory"
+# 195 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmessage
-# 162 "data/maps/PeriwinkleGarden/scripts.pory"
+# 196 "data/maps/PeriwinkleGarden/scripts.pory"
 	closemessage
-# 163 "data/maps/PeriwinkleGarden/scripts.pory"
+# 197 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_TORCHIC_CHOSEN
-# 164 "data/maps/PeriwinkleGarden/scripts.pory"
+# 198 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject TORCHIC_BALL
-# 165 "data/maps/PeriwinkleGarden/scripts.pory"
+# 199 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_ChoseSquirtle_1
-# 166 "data/maps/PeriwinkleGarden/scripts.pory"
+# 200 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
-# 167 "data/maps/PeriwinkleGarden/scripts.pory"
+# 201 "data/maps/PeriwinkleGarden/scripts.pory"
 	delay 30
-# 168 "data/maps/PeriwinkleGarden/scripts.pory"
+# 202 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_CHIKORITA_CHOSEN
-# 169 "data/maps/PeriwinkleGarden/scripts.pory"
+# 203 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject CHIKORITA_BALL
-# 170 "data/maps/PeriwinkleGarden/scripts.pory"
+# 204 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_ChoseSquirtle_2
-# 171 "data/maps/PeriwinkleGarden/scripts.pory"
+# 205 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
-# 172 "data/maps/PeriwinkleGarden/scripts.pory"
+# 206 "data/maps/PeriwinkleGarden/scripts.pory"
 	msgbox PeriwinkleGarden_EventScript_ChikoritaBall_Text_3
-# 173 "data/maps/PeriwinkleGarden/scripts.pory"
+# 207 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmessage
-# 174 "data/maps/PeriwinkleGarden/scripts.pory"
+# 208 "data/maps/PeriwinkleGarden/scripts.pory"
 	closemessage
-# 175 "data/maps/PeriwinkleGarden/scripts.pory"
+# 209 "data/maps/PeriwinkleGarden/scripts.pory"
 	applymovement PROFESSOR_ASPEN, PeriwinkleGarden_ProfessorBirchWalksAway
-# 176 "data/maps/PeriwinkleGarden/scripts.pory"
+# 210 "data/maps/PeriwinkleGarden/scripts.pory"
 	waitmovement 0
-# 177 "data/maps/PeriwinkleGarden/scripts.pory"
+# 211 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_HIDE_PROFESSOR_ASPEN
-# 178 "data/maps/PeriwinkleGarden/scripts.pory"
+# 212 "data/maps/PeriwinkleGarden/scripts.pory"
 	removeobject PROFESSOR_ASPEN
-# 179 "data/maps/PeriwinkleGarden/scripts.pory"
+# 213 "data/maps/PeriwinkleGarden/scripts.pory"
 	addvar VAR_PERIWINKLE_GARDEN_STATE, 1
-# 180 "data/maps/PeriwinkleGarden/scripts.pory"
+# 214 "data/maps/PeriwinkleGarden/scripts.pory"
 	addvar VAR_PERIWINKLE_TOWN_STATE, 1
 	goto PeriwinkleGarden_EventScript_SquirtleBall_5
 
 
 PeriwinkleGarden_ItemScript_Potion::
-# 191 "data/maps/PeriwinkleGarden/scripts.pory"
+# 225 "data/maps/PeriwinkleGarden/scripts.pory"
 	finditem ITEM_POTION, 1
-# 192 "data/maps/PeriwinkleGarden/scripts.pory"
+# 226 "data/maps/PeriwinkleGarden/scripts.pory"
 	setflag FLAG_ITEM_PERIWINKLE_GARDEN_POTION
 	return
 
 
-# 195 "data/maps/PeriwinkleGarden/scripts.pory"
+# 229 "data/maps/PeriwinkleGarden/scripts.pory"
 PeriwinkleGarden_FaceDown:
-# 196 "data/maps/PeriwinkleGarden/scripts.pory"
+# 230 "data/maps/PeriwinkleGarden/scripts.pory"
 	face_down
 	step_end
 
-# 199 "data/maps/PeriwinkleGarden/scripts.pory"
+# 233 "data/maps/PeriwinkleGarden/scripts.pory"
 PeriwinkleGarden_WalkDown:
-# 200 "data/maps/PeriwinkleGarden/scripts.pory"
+# 234 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_down
 	step_end
 
-# 203 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_WalkLeft:
-# 204 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_left
-	step_end
-
-# 207 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseChikorita_1:
-# 208 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
-# 209 "data/maps/PeriwinkleGarden/scripts.pory"
-	face_down
-	step_end
-
-# 212 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseChikorita_2:
-# 213 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_left
-# 214 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_left
-# 215 "data/maps/PeriwinkleGarden/scripts.pory"
-	face_down
-	step_end
-
-# 218 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseTorchic_1:
-# 219 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_left
-# 220 "data/maps/PeriwinkleGarden/scripts.pory"
-	face_down
-	step_end
-
-# 223 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseTorchic_2:
-# 224 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
-# 225 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
-# 226 "data/maps/PeriwinkleGarden/scripts.pory"
-	face_down
-	step_end
-
-# 229 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseSquirtle_1:
-# 230 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_left
-# 231 "data/maps/PeriwinkleGarden/scripts.pory"
-	face_down
-	step_end
-
-# 234 "data/maps/PeriwinkleGarden/scripts.pory"
-PeriwinkleGarden_ChoseSquirtle_2:
-# 235 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
-# 236 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
 # 237 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_WalkLeft:
+# 238 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_left
+	step_end
+
+# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_ChoseChikorita_1:
+# 242 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_right
+# 243 "data/maps/PeriwinkleGarden/scripts.pory"
 	face_down
 	step_end
 
-# 240 "data/maps/PeriwinkleGarden/scripts.pory"
+# 246 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_ChoseChikorita_2:
+# 247 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_left
+# 248 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_left
+# 249 "data/maps/PeriwinkleGarden/scripts.pory"
+	face_down
+	step_end
+
+# 252 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_ChoseTorchic_1:
+# 253 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_left
+# 254 "data/maps/PeriwinkleGarden/scripts.pory"
+	face_down
+	step_end
+
+# 257 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_ChoseTorchic_2:
+# 258 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_right
+# 259 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_right
+# 260 "data/maps/PeriwinkleGarden/scripts.pory"
+	face_down
+	step_end
+
+# 263 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_ChoseSquirtle_1:
+# 264 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_left
+# 265 "data/maps/PeriwinkleGarden/scripts.pory"
+	face_down
+	step_end
+
+# 268 "data/maps/PeriwinkleGarden/scripts.pory"
+PeriwinkleGarden_ChoseSquirtle_2:
+# 269 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_right
+# 270 "data/maps/PeriwinkleGarden/scripts.pory"
+	walk_right
+# 271 "data/maps/PeriwinkleGarden/scripts.pory"
+	face_down
+	step_end
+
+# 274 "data/maps/PeriwinkleGarden/scripts.pory"
 PeriwinkleGarden_ProfessorBirchWalksAway:
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+# 275 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+# 275 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+# 275 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+# 275 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+# 275 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+# 275 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+# 275 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+# 275 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+# 275 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
-	walk_right
-# 241 "data/maps/PeriwinkleGarden/scripts.pory"
+# 275 "data/maps/PeriwinkleGarden/scripts.pory"
 	walk_right
 	step_end
 
@@ -483,73 +528,93 @@ PeriwinkleGarden_EventScript_BeginStarterSequence_Text_0:
 	.string "Hey! Over here!$"
 
 PeriwinkleGarden_EventScript_ProfessorAspen_Text_0:
-# 14 "data/maps/PeriwinkleGarden/scripts.pory"
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Professor Aspen:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Look at this!$"
+# 15 "data/maps/PeriwinkleGarden/scripts.pory"
+	.string "Go on and choose.$"
 
 PeriwinkleGarden_EventScript_ProfessorAspen_Text_1:
-# 17 "data/maps/PeriwinkleGarden/scripts.pory"
-	.string "Somebody caught these three poor\nPokémon and just left them here,\ltrapped inside of their balls!\pI know...$"
+# 19 "data/maps/PeriwinkleGarden/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Professor Aspen:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Look at this!$"
 
 PeriwinkleGarden_EventScript_ProfessorAspen_Text_2:
-# 19 "data/maps/PeriwinkleGarden/scripts.pory"
-	.string "{PLAYER}, you seem to be\nwithout a partner Pokémon.\pWould you like to have one of these\nPokémon join you?$"
+# 22 "data/maps/PeriwinkleGarden/scripts.pory"
+	.string "Somebody caught these three poor\n"
+	.string "Pokémon and just left them here,\l"
+	.string "trapped inside of their balls!\p"
+	.string "I know...$"
 
 PeriwinkleGarden_EventScript_ProfessorAspen_Text_3:
-# 21 "data/maps/PeriwinkleGarden/scripts.pory"
-	.string "...You really won't save one of\nthese poor Pokémon?$"
+# 27 "data/maps/PeriwinkleGarden/scripts.pory"
+	.string "{PLAYER}, you left all of your other\n"
+	.string "Pokémon with Professor Oak, right?\p"
+	.string "Would you like to have one of these\n"
+	.string "Pokémon join you?$"
 
 PeriwinkleGarden_EventScript_ProfessorAspen_Text_4:
-# 23 "data/maps/PeriwinkleGarden/scripts.pory"
+# 32 "data/maps/PeriwinkleGarden/scripts.pory"
+	.string "...Really?$"
+
+PeriwinkleGarden_EventScript_ProfessorAspen_Text_5:
+# 34 "data/maps/PeriwinkleGarden/scripts.pory"
+	.string "They're really rare...\n"
+	.string "...are you sure..?$"
+
+PeriwinkleGarden_EventScript_ProfessorAspen_Text_6:
+# 37 "data/maps/PeriwinkleGarden/scripts.pory"
+	.string "You've got to be messing with me.\n"
+	.string "Just go on and choose.$"
+
+PeriwinkleGarden_EventScript_ProfessorAspen_Text_7:
+# 43 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "Great! Go on and choose.$"
 
 PeriwinkleGarden_EventScript_PreventEscape_Text_0:
-# 33 "data/maps/PeriwinkleGarden/scripts.pory"
+# 67 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "Wait, where are you going?!\nDon't you want to save one of\lthese Pokémon?$"
 
 PeriwinkleGarden_EventScript_PreventEscape_Text_1:
-# 38 "data/maps/PeriwinkleGarden/scripts.pory"
+# 72 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "Wait, don't go!\nCome and see this!$"
 
 PeriwinkleGarden_EventScript_ChikoritaBall_Text_0:
-# 53 "data/maps/PeriwinkleGarden/scripts.pory"
+# 87 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "Do you want the Leaf Pokémon,\nChikorita?$"
 
 PeriwinkleGarden_EventScript_ChikoritaBall_Text_1:
-# 58 "data/maps/PeriwinkleGarden/scripts.pory"
+# 92 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "{PLAYER} received Chikorita!$"
 
 PeriwinkleGarden_EventScript_ChikoritaBall_Text_2:
-# 63 "data/maps/PeriwinkleGarden/scripts.pory"
+# 97 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "Very well, then.\pI'll take these two and release them\nback into their habitats.$"
 
 PeriwinkleGarden_EventScript_ChikoritaBall_Text_3:
-# 75 "data/maps/PeriwinkleGarden/scripts.pory"
+# 109 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "But first, I have something back at\nthe lab that I need to talk to you\labout, {PLAYER}.\pPlease come by when you have the time.$"
 
 PeriwinkleGarden_EventScript_ChikoritaBall_Text_4:
-# 87 "data/maps/PeriwinkleGarden/scripts.pory"
+# 121 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "It's a Poké Ball containing a\nwild Pokémon.\p...It's covered in weeds.$"
 
 PeriwinkleGarden_EventScript_TorchicBall_Text_0:
-# 100 "data/maps/PeriwinkleGarden/scripts.pory"
+# 134 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "Do you want the Chick Pokémon,\nTorchic?$"
 
 PeriwinkleGarden_EventScript_TorchicBall_Text_1:
-# 105 "data/maps/PeriwinkleGarden/scripts.pory"
+# 139 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "{PLAYER} received Torchic!$"
 
 PeriwinkleGarden_EventScript_TorchicBall_Text_2:
-# 137 "data/maps/PeriwinkleGarden/scripts.pory"
+# 171 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "It's a Poké Ball containing a\nwild Pokémon.\p...It's hot to the touch.$"
 
 PeriwinkleGarden_EventScript_SquirtleBall_Text_0:
-# 150 "data/maps/PeriwinkleGarden/scripts.pory"
+# 184 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "Do you want the Tiny Turtle Pokémon,\nSquirtle?$"
 
 PeriwinkleGarden_EventScript_SquirtleBall_Text_1:
-# 155 "data/maps/PeriwinkleGarden/scripts.pory"
+# 189 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "{PLAYER} received Squirtle!$"
 
 PeriwinkleGarden_EventScript_SquirtleBall_Text_2:
-# 184 "data/maps/PeriwinkleGarden/scripts.pory"
+# 218 "data/maps/PeriwinkleGarden/scripts.pory"
 	.string "It's a Poké Ball containing a\nwild Pokémon.\p...It's a little wet.$"

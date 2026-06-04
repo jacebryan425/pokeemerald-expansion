@@ -31,8 +31,8 @@
   ],
   "object_events": [
     {
-      "local_id": "APRIL",
-      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "local_id": "RIVAL_ROUTE3",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_3",
       "x": 10,
       "y": 41,
       "elevation": 0,
@@ -42,7 +42,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_APRIL_ROUTE_3"
+      "flag": "FLAG_HIDE_RIVAL_ROUTE_3"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",

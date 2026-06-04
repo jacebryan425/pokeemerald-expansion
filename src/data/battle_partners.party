@@ -49,9 +49,30 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 Name: April
 Class: Rival
 Pic: May
+Gender: Female
+Music: Female
+Back Pic: May
+AI: Basic Trainer
+
+Ralts
+Level: 10
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Mudkip
+Level: 12
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Shinx
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== PARTNER_RYAN ===
+Name: Ryan
+Class: Rival
+Pic: Brendan
 Gender: Male
 Music: Male
-Back Pic: May
+Back Pic: Brendan
 AI: Basic Trainer
 
 Ralts

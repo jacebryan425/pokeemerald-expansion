@@ -7,11 +7,20 @@ script MarigoldTown_House1_EventScript_TownMapNPC {
         msgbox("Have you found yourself getting\n"
                 "lost lately?")
     } else {
-        msgbox("Oh, hi!\p"
-                "...April told you I'd give you a\n"
-                "Town Map?\p"
-                "I'm sure I have an extra one laying\n"
-                "around somewhere...")
+        checkplayergender
+        if (var(VAR_RESULT) == MALE) {
+            msgbox("Oh, hi!\p"
+                    "...April told you I'd give you a\n"
+                    "Town Map?\p"
+                    "I'm sure I have an extra one laying\n"
+                    "around somewhere...")
+        } else {
+            msgbox("Oh, hi!\p"
+                    "...Ryan told you I'd give you a\n"
+                    "Town Map?\p"
+                    "I'm sure I have an extra one laying\n"
+                    "around somewhere...")
+        }
         waitmessage
         closemessage
         if (var(VAR_FACING) == DIR_SOUTH) {

@@ -102,8 +102,8 @@
       "flag": "0"
     },
     {
-      "local_id": "APRIL_CC",
-      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "local_id": "RIVAL_CC",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_3",
       "x": 24,
       "y": 27,
       "elevation": 0,
@@ -113,7 +113,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_APRIL_CC"
+      "flag": "FLAG_HIDE_RIVAL_CC"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",

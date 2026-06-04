@@ -1,4 +1,8 @@
-mapscripts MarigoldTown_MapScripts {}
+mapscripts MarigoldTown_MapScripts {
+        MAP_SCRIPT_ON_LOAD {
+                call(Common_EventScript_SetupRivalGfxId)
+        }
+}
 
 script MarigoldTown_EventScript_Sign {
     lock
@@ -76,15 +80,28 @@ script MarigoldTown_EventScript_Trigger4 {
 }
 
 script MarigoldTown_EventScript_MeetRival {
-    msgbox("I'm April. I'm Professor Aspen's\n"
+    checkplayergender
+    if (var(VAR_RESULT) == MALE) {
+        msgbox("I'm April. I'm Professor Aspen's\n"
             "other assistant.\p"
             "Aspen asked me to meet you here and\n"
             "show you around Marigold.\p"
             "I figured a trainer such as yourself\n"
             "wouldn't need help finding your way\l"
             "around, but he insisted...")
-    waitmessage
-    closemessage
+        waitmessage
+        closemessage
+    } else {
+        msgbox("I'm Ryan. I'm Professor Aspen's\n"
+            "other assistant.\p"
+            "Aspen asked me to meet you here and\n"
+            "show you around Marigold.\p"
+            "I figured a trainer such as yourself\n"
+            "wouldn't need help finding your way\l"
+            "around, but he insisted...")
+        waitmessage
+        closemessage
+    }
     applymovement(RIVAL, moves(walk_right, face_up))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, face_up))
     waitmovement(0)
@@ -145,7 +162,7 @@ script MarigoldTown_EventScript_MeetRival {
     waitmovement(0)
     applymovement(RIVAL, moves(walk_down, walk_right * 5, walk_up *12))
     waitmovement(0)
-    setflag(HIDE_APRIL_MARIGOLD_TOWN)
+    setflag(FLAG_HIDE_RIVAL_MARIGOLD_TOWN)
     removeobject(RIVAL)
     addvar(VAR_MARIGOLD_TOWN_STATE, 1)
     fadedefaultbgm

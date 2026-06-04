@@ -39,7 +39,7 @@ text Lance_Outro{
 
 text PostBattle_Lance{
     "This is my favorite weather to\n"
-    "hike in. It's so nice and sunny!"
+    "hike in. It's so nice out!"
 }
 
 script Route4_TrainerScript_Isabelle {

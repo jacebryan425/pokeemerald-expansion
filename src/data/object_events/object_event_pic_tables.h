@@ -1366,13 +1366,5 @@ static const struct SpriteFrameImage sPicTable_PokeDex[] = {
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_AlphaGruntM[] = {
-    overworld_frame(gObjectEventPic_AlphaGruntM, 4, 4, 0),
-    overworld_frame(gObjectEventPic_AlphaGruntM, 4, 4, 1),
-    overworld_frame(gObjectEventPic_AlphaGruntM, 4, 4, 2),
-    overworld_frame(gObjectEventPic_AlphaGruntM, 4, 4, 3),
-    overworld_frame(gObjectEventPic_AlphaGruntM, 4, 4, 4),
-    overworld_frame(gObjectEventPic_AlphaGruntM, 4, 4, 5),
-    overworld_frame(gObjectEventPic_AlphaGruntM, 4, 4, 6),
-    overworld_frame(gObjectEventPic_AlphaGruntM, 4, 4, 7),
-    overworld_frame(gObjectEventPic_AlphaGruntM, 4, 4, 8),
+    overworld_ascending_frames(gObjectEventPic_AlphaGruntM, 2, 4),
 };

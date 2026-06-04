@@ -81,28 +81,6 @@ Gender: Male
 Music: Male
 Double Battle: No
 
-=== TRAINER_ARCHIE ===
-Name: ARCHIE
-Class: Aqua Leader
-Pic: Aqua Leader Archie
-Gender: Male
-Music: Aqua
-Items: Super Potion / Super Potion
-Double Battle: No
-AI: Basic Trainer
-
-Mightyena
-Level: 41
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-Crobat
-Level: 41
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-Sharpedo
-Level: 43
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
 === TRAINER_LEAH ===
 Name: LEAH
 Class: Hex Maniac
@@ -16786,7 +16764,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALPHA1_CC ===
 Name: Grunt
-Class: Team Aqua
+Class: Team Alpha
 Pic: Alpha Grunt M
 Gender: Male
 Music: Aqua
@@ -16798,7 +16776,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALPHA2_CC ===
 Name: Grunt
-Class: Team Aqua
+Class: Team Alpha
 Pic: Alpha Grunt M
 Gender: Male
 Music: Aqua
@@ -16888,3 +16866,20 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Giga Drain
 - Stun Spore
 - Bullet Seed
+
+=== TRAINER_RYAN_ROUTE3 ===
+Name: Ryan
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Ralts
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Mudkip
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe

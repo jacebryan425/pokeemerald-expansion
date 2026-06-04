@@ -198,7 +198,7 @@ Lance_Outro::
 PostBattle_Lance::
 # 40 "data/maps/Route4/scripts.pory"
 	.string "This is my favorite weather to\n"
-	.string "hike in. It's so nice and sunny!$"
+	.string "hike in. It's so nice out!$"
 
 Isabelle_Intro::
 # 52 "data/maps/Route4/scripts.pory"

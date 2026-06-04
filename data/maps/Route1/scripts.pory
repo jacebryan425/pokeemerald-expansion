@@ -1,6 +1,6 @@
 mapscripts Route1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION{
-        if (var(VAR_MARIGOLD_TOWN_STATE) == 1) {
+        if (var(VAR_MARIGOLD_TOWN_STATE) >= 1) {
             setflag(FLAG_HIDE_POTION_NPC)
             removeobject(POTION_NPC)
         }

@@ -672,14 +672,14 @@
 #define FLAG_DEXNAV_GET                0x270 // Changed - DexNav shows in start menu
 #define FLAG_DEXNAV_DETECTOR_MODE      0x271 // Changed - allow player to find hidden mons
 #define FLAG_GAVE_POTION               0x272 // Changed - NPC in Route 1
-#define HIDE_APRIL_MARIGOLD_TOWN       0x273 // Changed
+#define FLAG_HIDE_RIVAL_MARIGOLD_TOWN  0x273 // Changed
 #define FLAG_GAVE_TOWN_MAP             0x274 // Changed - NPC in Marigold Town
 #define FLAG_HIDE_POTION_NPC           0x275 // Changed - used to hide Mart Employee in Route 1
-#define FLAG_HIDE_APRIL_ROUTE_3        0x276 // Changed - used to hide April in Route 3
+#define FLAG_HIDE_RIVAL_ROUTE_3        0x276 // Changed - used to hide April in Route 3
 #define FLAG_NO_WHITEOUT               0x277 // Changed - used to prevent whiteout on fainting
 #define FLAG_HIDE_ALPHA_CC_1           0x278 // Changed - used to hide Alpha grunt in Chartreuse Cave/City
 #define FLAG_HIDE_ALPHA_CC_2           0x279 // Changed - used to hide Alpha grunt in Chartreuse Cave/City
-#define FLAG_HIDE_APRIL_CC             0x27A // Changed - used to hide April in Chartreuse City
+#define FLAG_HIDE_RIVAL_CC             0x27A // Changed - used to hide April in Chartreuse City
 #define FLAG_HIDE_OLD_MAN_CC           0x27B // Changed - used to hide Old Man in Chartreuse City
 #define FLAG_HIDE_PROFESSOR_AIDE       0x27C // Changed - used to hide Professor's Aide in Chartreuse City
 #define FLAG_RECEIVED_MAGIKARP         0x27D // Changed

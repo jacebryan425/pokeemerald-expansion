@@ -6,7 +6,7 @@ Route1_MapScripts::
 Route1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 # 3 "data/maps/Route1/scripts.pory"
 	compare VAR_MARIGOLD_TOWN_STATE, 1
-	goto_if_eq Route1_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	goto_if_ge Route1_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	return
 
 Route1_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:

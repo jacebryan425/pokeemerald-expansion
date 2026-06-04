@@ -1,8 +1,8 @@
 mapscripts ChartreuseCity_MapScripts {
     MAP_SCRIPT_ON_TRANSITION{
         if (var(VAR_CHARTREUSE_CITY_STATE) == 0) {
-            setflag(FLAG_HIDE_APRIL_CC)
-            removeobject(APRIL_CC)
+            setflag(FLAG_HIDE_RIVAL_CC)
+            removeobject(RIVAL_CC)
             setflag(FLAG_HIDE_PROFESSOR_AIDE)
             removeobject(AIDE)
             clearflag(FLAG_HIDE_ALPHA_CC_1)
@@ -13,6 +13,10 @@ mapscripts ChartreuseCity_MapScripts {
             clearflag(FLAG_HIDE_PROFESSOR_AIDE)
             addobject(AIDE)
         }
+    }
+
+    MAP_SCRIPT_ON_LOAD {
+        call(Common_EventScript_SetupRivalGfxId)
     }
 }
 
@@ -64,9 +68,9 @@ script ChartreuseCity_EventScript_AlphaGrunts {
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitse
-    clearflag(FLAG_HIDE_APRIL_CC)
-    addobject(APRIL_CC)
-    applymovement(APRIL_CC, moves(walk_left * 8))
+    clearflag(FLAG_HIDE_RIVAL_CC)
+    addobject(RIVAL_CC)
+    applymovement(RIVAL_CC, moves(walk_left * 8))
     waitmovement(0)
     applymovement(ALPHA1_CC, moves(face_down))
     waitmovement(0)
@@ -76,7 +80,7 @@ script ChartreuseCity_EventScript_AlphaGrunts {
             "I've been at the Gym waiting for you.\p"
             "What's the hold up?")
     waitmessage
-    applymovement(APRIL_CC, moves(face_up))
+    applymovement(RIVAL_CC, moves(face_up))
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
@@ -94,14 +98,11 @@ script ChartreuseCity_EventScript_AlphaGrunts {
     msgbox("{COLOR RED}{SHADOW LIGHT_RED}If we defeat you in battle, you'll have\n"
             "to join us!")
     waitmessage
-    applymovement(APRIL_CC, moves(face_left))
+    applymovement(RIVAL_CC, moves(face_left))
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement(0)
-    msgbox("{PLAYER}, I'd help you with this,\n"
-            "but I'm ashamed to say that all of my\l"
-            "Pokémon are in pretty bad shape after\l"
-            "my defeat at the Gym...\p"
+    msgbox("{PLAYER}, I'll team up with you!\n"
             "Let me heal your Pokémon real quick.")
     waitmessage
     closemessage
@@ -113,70 +114,15 @@ script ChartreuseCity_EventScript_AlphaGrunts {
     delay(12)
     fadescreenswapbuffers(FADE_FROM_BLACK)
     delay(12)
-    msgbox("Alright, get these guys out of here,\n"
-            "{PLAYER}!")
-    waitmessage
-    closemessage
-    applymovement(APRIL_CC, moves(face_up))
-    waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(0)
-    setflag(FLAG_NO_WHITEOUT)
-    trainerbattle_no_intro(TRAINER_ALPHA1_CC, Alpha1_Outro)
-    if (var(VAR_RESULT) == B_OUTCOME_LOST) {
-        msgbox("I don't care if you won,\n"
-                "we're still not joining Team Alpha!")
-        waitmessage
-        applymovement(APRIL_CC, moves(face_left))
-        waitmovement(0)
-        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-        waitmovement(0)
-        msgbox("Let me heal your Pokémon again,\n"
-                "{PLAYER}.")
-        waitmessage
-        closemessage
-        fadescreenswapbuffers(FADE_TO_BLACK)
-        delay(12)
-        playfanfare(MUS_HEAL)
-        waitfanfare
-        special(HealPlayerParty)
-        delay(12)
-        fadescreenswapbuffers(FADE_FROM_BLACK)
-        delay(12)
-        applymovement(APRIL_CC, moves(face_up))
-        waitmovement(0)
-        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-        waitmovement(0)
+    checkplayergender
+    if (var(VAR_RESULT) == MALE) {
+        call(ChartreuseCity_EventScript_April)
+    } else {
+        call(ChartreuseCity_EventScript_Ryan)
     }
-    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Alright, now it's my turn!")
-    waitmessage
-    trainerbattle_no_intro(TRAINER_ALPHA2_CC, Alpha2_Outro)
-    if (var(VAR_RESULT) == B_OUTCOME_LOST) {
-        msgbox("I don't care if you won,\n"
-                "we're still not joining Team Alpha!")
-        waitmessage
-        applymovement(APRIL_CC, moves(face_left))
-        waitmovement(0)
-        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-        waitmovement(0)
-        msgbox("Let me heal your Pokémon again,\n"
-                "{PLAYER}.")
-        waitmessage
-        closemessage
-        fadescreenswapbuffers(FADE_TO_BLACK)
-        delay(12)
-        playfanfare(MUS_HEAL)
-        waitfanfare
-        special(HealPlayerParty)
-        delay(12)
-        fadescreenswapbuffers(FADE_FROM_BLACK)
-        delay(12)
-        applymovement(APRIL_CC, moves(face_up))
-        waitmovement(0)
-        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-        waitmovement(0)
-    }
-    clearflag(FLAG_NO_WHITEOUT)
+}
+
+script ChartreuseCity_EventScript_AlphaDefeated {
     msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Alright, alright, we'll leave.\n"
             "We'll be seeing you around though!\p"
             "{COLOR RED}{SHADOW LIGHT_RED}Have a blessed day!")
@@ -210,7 +156,7 @@ script ChartreuseCity_EventScript_AlphaGrunts {
     removeobject(OLD_MAN)
     closedoor(16, 24)
     waitdooranim
-    applymovement(APRIL_CC, moves(face_left))
+    applymovement(RIVAL_CC, moves(face_left))
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement(0)
@@ -221,14 +167,70 @@ script ChartreuseCity_EventScript_AlphaGrunts {
             "See ya later!")
     waitmessage
     closemessage
-    applymovement(APRIL_CC, moves(walk_right * 10))
+    applymovement(RIVAL_CC, moves(walk_right * 10))
     waitmovement
-    setflag(FLAG_HIDE_APRIL_CC)
-    removeobject(APRIL_CC)
+    setflag(FLAG_HIDE_RIVAL_CC)
+    removeobject(RIVAL_CC)
     removeobject(OBJ_EVENT_ID_CAMERA)
     addvar(VAR_CHARTREUSE_CITY_STATE, 1)
     release
 }
+
+script ChartreuseCity_EventScript_April {
+    msgbox("Alright, choose up to 3 Pokémon to\n"
+           "battle with.")
+    applymovement(RIVAL_CC, moves(face_up))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    call(ChartreuseCity_EventScript_ChoosePokemonApril)
+}
+
+script ChartreuseCity_EventScript_Ryan {
+    msgbox("Alright, choose up to 3 Pokémon to\n"
+           "battle with.")
+    applymovement(RIVAL_CC, moves(face_up))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    call(ChartreuseCity_EventScript_ChoosePokemonRyan)
+}
+
+raw `
+ChartreuseCity_EventScript_ChoosePokemonApril::
+    special SavePlayerParty
+    fadescreen FADE_TO_BLACK
+    special ChooseHalfPartyForBattle
+    waitstate
+    goto_if_ne VAR_RESULT, 0, ChartreuseCity_TrainerScript_AlphaGruntsApril
+    special LoadPlayerParty
+    goto ChartreuseCity_EventScript_April
+
+ChartreuseCity_EventScript_ChoosePokemonRyan::
+    special SavePlayerParty
+    fadescreen FADE_TO_BLACK
+    special ChooseHalfPartyForBattle
+    waitstate
+    goto_if_ne VAR_RESULT, 0, ChartreuseCity_TrainerScript_AlphaGruntsRyan
+    special LoadPlayerParty
+    goto ChartreuseCity_EventScript_Ryan
+
+ChartreuseCity_TrainerScript_AlphaGruntsApril::
+        multi_2_vs_2 TRAINER_ALPHA1_CC, Alpha1_Outro, TRAINER_ALPHA2_CC, Alpha2_Outro, PARTNER_APRIL
+        switch VAR_RESULT
+	case 1, ChartreuseCity_EventScript_AlphaDefeated
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+
+ChartreuseCity_TrainerScript_AlphaGruntsRyan::
+        multi_2_vs_2 TRAINER_ALPHA1_CC, Alpha1_Outro, TRAINER_ALPHA2_CC, Alpha2_Outro, PARTNER_RYAN
+        switch VAR_RESULT
+	case 1, ChartreuseCity_EventScript_AlphaDefeated
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+`
 
 text Alpha1_Outro {
     "But...how? I had Arceus on my side!"

@@ -2,9 +2,16 @@ mapscripts MarigoldTown_RivalHouse_2F_MapScripts {}
 
 script MarigoldTown_RivalHouse_2F_EventScript_GameCube {
     lock
-    msgbox("It's a Nintendo GameCube with\n"
-            "Super Monkey Ball.\p"
-            "I knew I liked this girl.")
+    checkplayergender
+    if (var(VAR_RESULT) == MALE) {
+        msgbox("It's a Nintendo GameCube with\n"
+                "Super Monkey Ball.\p"
+                "I knew I liked this girl.")
+    } else {
+        msgbox("It's a Nintendo GameCube with\n"
+                "Super Monkey Ball.\p"
+                "I knew I liked this guy.")
+    }
     release
 }
 

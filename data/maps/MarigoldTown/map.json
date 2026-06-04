@@ -32,7 +32,7 @@
   "object_events": [
     {
       "local_id": "RIVAL",
-      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_3",
       "x": 9,
       "y": 12,
       "elevation": 0,
@@ -42,7 +42,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "HIDE_APRIL_MARIGOLD_TOWN"
+      "flag": "FLAG_HIDE_RIVAL_MARIGOLD_TOWN"
     }
   ],
   "warp_events": [

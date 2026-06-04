@@ -1,20 +1,24 @@
 mapscripts Route3_MapScripts {
     MAP_SCRIPT_ON_TRANSITION{
         if (var(VAR_ROUTE_3_STATE) == 0) {
-            setflag(FLAG_HIDE_APRIL_ROUTE_3)
-            removeobject(APRIL)
+            setflag(FLAG_HIDE_RIVAL_ROUTE_3)
+            removeobject(RIVAL_ROUTE3)
         }
+    }
+
+    MAP_SCRIPT_ON_LOAD {
+        call(Common_EventScript_SetupRivalGfxId)
     }
 }
 
 script Route3_EventScript_Trigger1 {
     lock
     playse(SE_EXIT)
-    clearflag(FLAG_HIDE_APRIL_ROUTE_3)
-    addobject(APRIL)
+    clearflag(FLAG_HIDE_RIVAL_ROUTE_3)
+    addobject(RIVAL_ROUTE3)
     waitse
     playse(SE_PIN)
-    applymovement(APRIL, moves(emote_exclamation_mark))
+    applymovement(RIVAL_ROUTE3, moves(emote_exclamation_mark))
     waitmovement(0)
     waitse
     delay(30)
@@ -23,20 +27,20 @@ script Route3_EventScript_Trigger1 {
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    applymovement(APRIL, moves(walk_down))
+    applymovement(RIVAL_ROUTE3, moves(walk_down))
     waitmovement(0)
-    call(Route3_EventScript_April_FacingNorth)
+    call(Route3_EventScript_Rival_FacingNorth)
 
 }
 
 script Route3_EventScript_Trigger2 {
     lock
     playse(SE_EXIT)
-    clearflag(FLAG_HIDE_APRIL_ROUTE_3)
-    addobject(APRIL)
+    clearflag(FLAG_HIDE_RIVAL_ROUTE_3)
+    addobject(RIVAL_ROUTE3)
     waitse
     playse(SE_PIN)
-    applymovement(APRIL, moves(emote_exclamation_mark))
+    applymovement(RIVAL_ROUTE3, moves(emote_exclamation_mark))
     waitmovement(0)
     waitse
     delay(30)
@@ -45,19 +49,19 @@ script Route3_EventScript_Trigger2 {
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    applymovement(APRIL, moves(walk_right, walk_down))
+    applymovement(RIVAL_ROUTE3, moves(walk_right, walk_down))
     waitmovement(0)
-    call(Route3_EventScript_April_FacingNorth)
+    call(Route3_EventScript_Rival_FacingNorth)
 }
 
 script Route3_EventScript_Trigger3 {
     lock
     playse(SE_EXIT)
-    clearflag(FLAG_HIDE_APRIL_ROUTE_3)
-    addobject(APRIL)
+    clearflag(FLAG_HIDE_RIVAL_ROUTE_3)
+    addobject(RIVAL_ROUTE3)
     waitse
     playse(SE_PIN)
-    applymovement(APRIL, moves(emote_exclamation_mark))
+    applymovement(RIVAL_ROUTE3, moves(emote_exclamation_mark))
     waitmovement(0)
     waitse
     delay(30)
@@ -66,12 +70,12 @@ script Route3_EventScript_Trigger3 {
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     waitmovement(0)
-    applymovement(APRIL, moves(walk_down, walk_right))
+    applymovement(RIVAL_ROUTE3, moves(walk_down, walk_right))
     waitmovement(0)
-    call(Route3_EventScript_April_FacingLeft)
+    call(Route3_EventScript_Rival_FacingLeft)
 }
 
-script Route3_EventScript_April_FacingNorth {
+script Route3_EventScript_Rival_FacingNorth {
     msgbox("It took some serious convincing,\n"
             "but Aspen gave me the new Pokédex, too!\p"
             "Isn't that great? Now we can be on\n"
@@ -124,7 +128,12 @@ script Route3_EventScript_April_FacingNorth {
         msgbox("Well, too bad. I wasn't asking!")
     }
     setflag(FLAG_NO_WHITEOUT)
-    trainerbattle_no_intro(TRAINER_APRIL_ROUTE3, AprilOutro)
+    checkplayergender
+    if (var(VAR_RESULT) == MALE) {
+        trainerbattle_no_intro(TRAINER_APRIL_ROUTE3, RivalOutro)
+    } else {
+        trainerbattle_no_intro(TRAINER_RYAN_ROUTE3, RivalOutro)
+    }
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
         msgbox("Wow, that was a great battle!\n"
                 "I can see why Aspen has such high\l"
@@ -152,15 +161,15 @@ script Route3_EventScript_April_FacingNorth {
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement(0)
-    applymovement(APRIL, moves(walk_right * 10))
+    applymovement(RIVAL_ROUTE3, moves(walk_right * 10))
     waitmovement(0)
-    setflag(FLAG_HIDE_APRIL_ROUTE_3)
-    removeobject(APRIL)
+    setflag(FLAG_HIDE_RIVAL_ROUTE_3)
+    removeobject(RIVAL_ROUTE3)
     addvar(VAR_ROUTE_3_STATE, 1)
     release
 }
 
-script Route3_EventScript_April_FacingLeft {
+script Route3_EventScript_Rival_FacingLeft {
     msgbox("It took some serious convincing,\n"
             "but Aspen gave me the new Pokédex, too!\p"
             "Isn't that great? Now we can be on\n"
@@ -213,7 +222,12 @@ script Route3_EventScript_April_FacingLeft {
         msgbox("Well, too bad. I wasn't asking!")
     }
     setflag(FLAG_NO_WHITEOUT)
-    trainerbattle_no_intro(TRAINER_APRIL_ROUTE3, AprilOutro)
+    checkplayergender
+    if (var(VAR_RESULT) == MALE) {
+        trainerbattle_no_intro(TRAINER_APRIL_ROUTE3, RivalOutro)
+    } else {
+        trainerbattle_no_intro(TRAINER_RYAN_ROUTE3, RivalOutro)
+    }
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
         msgbox("Wow, that was a great battle!\n"
                 "I can see why Aspen has such high\l"
@@ -239,15 +253,15 @@ script Route3_EventScript_April_FacingLeft {
             "Best of luck, {PLAYER}!")
     waitmessage
     closemessage
-    applymovement(APRIL, moves(walk_down, walk_right * 10))
+    applymovement(RIVAL_ROUTE3, moves(walk_down, walk_right * 10))
     waitmovement(0)
-    setflag(FLAG_HIDE_APRIL_ROUTE_3)
-    removeobject(APRIL)
+    setflag(FLAG_HIDE_RIVAL_ROUTE_3)
+    removeobject(RIVAL_ROUTE3)
     addvar(VAR_ROUTE_3_STATE, 1)
     release
 }
 
-text AprilOutro {
+text RivalOutro {
     "I have a lot to learn from you,\n"
     "{PLAYER}."
 }
