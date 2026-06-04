@@ -803,7 +803,7 @@ ChartreuseCity_SignScript_Location_Text_0:
 ChartreuseCity_SignScript_Gym_Text_0:
 # 305 "data/maps/ChartreuseCity/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Chartreuse City Pokémon Gym.\n"
-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Leader: Grant.$"
+	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Leader: Grace.$"
 
 Alpha1_Outro::
 # 235 "data/maps/ChartreuseCity/scripts.pory"

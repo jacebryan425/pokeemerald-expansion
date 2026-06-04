@@ -8,7 +8,7 @@ script ChartreuseCity_Gym_NPCScript {
                 "Way to go!")
     } else {
         msgbox("Welcome to the Chartreuse City Gym.\n"
-                "Our leader here is Grant.\p"
+                "Our leader here is Grace.\p"
                 "This Gym specializes in Grass-type\n"
                 "Pokémon, so any Flying or Fire-type\l"
                 "Pokémon should do the trick.")
@@ -24,7 +24,7 @@ script ChartreuseCity_Gym_TrainerScript_Bethany {
 }
 
 text Bethany_Intro {
-    "If you want to face Grant, you'll\n"
+    "If you want to face Grace, you'll\n"
     "have to get through me first!"
 }
 
@@ -35,7 +35,7 @@ text Bethany_Outro {
 text PostBattle_Bethany {
     "Best of luck to you.\n"
     "There's still two other trainers left\l"
-    "to fight before Grant."
+    "to fight before Grace."
 }
 
 script ChartreuseCity_Gym_TrainerScript_Trisha {
@@ -67,7 +67,7 @@ script ChartreuseCity_Gym_TrainerScript_Anne {
 }
 
 text Anne_Intro {
-    "It's time to send you packing!"
+    "It's time to whip you into shape!"
 }
 
 text Anne_Outro {
@@ -75,11 +75,11 @@ text Anne_Outro {
 }
 
 text PostBattle_Anne {
-    "Grant's right up ahead.\n"
+    "Grace is right up ahead.\n"
     "You've got this!"
 }
 
-script ChartreuseCity_Gym_TrainerScript_Grant {
+script ChartreuseCity_Gym_TrainerScript_Grace {
     lock
     faceplayer
     if (flag(FLAG_BADGE01_GET) == TRUE) {
@@ -89,7 +89,7 @@ script ChartreuseCity_Gym_TrainerScript_Grant {
                 "I specialize in Grass-type Poké-\p"
                 "...Wait a second. Are those...")
         playse(SE_PIN)
-        applymovement(GRANT, moves(emote_exclamation_mark))
+        applymovement(GRACE, moves(emote_exclamation_mark))
         waitmovement(0)
         waitse
         msgbox("They are! You have all eight badges\n"
@@ -102,7 +102,7 @@ script ChartreuseCity_Gym_TrainerScript_Grant {
                 "My Pokémon will leave you all cut up!\n"
                 "Get ready!")
         waitmessage
-        trainerbattle_no_intro(TRAINER_GRANT, Grant_Outro)
+        trainerbattle_no_intro(TRAINER_LEADER_GRACE, Grace_Outro)
         if (var(VAR_RESULT) == B_OUTCOME_WON) {
             msgbox("I would have expected no less from\n"
                     "a trainer such as yourself.\p"
@@ -126,6 +126,6 @@ script ChartreuseCity_Gym_TrainerScript_Grant {
     release
 }
 
-text Grant_Outro {
+text Grace_Outro {
     "I knew I didn't stand a chance."
 }

@@ -52,49 +52,49 @@ ChartreuseCity_Gym_TrainerScript_Anne::
 	end
 
 
-ChartreuseCity_Gym_TrainerScript_Grant::
+ChartreuseCity_Gym_TrainerScript_Grace::
 # 83 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	lock
 # 84 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	faceplayer
 # 85 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE01_GET, ChartreuseCity_Gym_TrainerScript_Grant_2
+	goto_if_set FLAG_BADGE01_GET, ChartreuseCity_Gym_TrainerScript_Grace_2
 # 88 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	msgbox ChartreuseCity_Gym_TrainerScript_Grant_Text_1
+	msgbox ChartreuseCity_Gym_TrainerScript_Grace_Text_1
 # 91 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	playse SE_PIN
 # 92 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	applymovement GRANT, ChartreuseCity_Gym_TrainerScript_Grant_Movement_0
+	applymovement GRACE, ChartreuseCity_Gym_TrainerScript_Grace_Movement_0
 # 93 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	waitmovement 0
 # 94 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	waitse
 # 95 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	msgbox ChartreuseCity_Gym_TrainerScript_Grant_Text_2
+	msgbox ChartreuseCity_Gym_TrainerScript_Grace_Text_2
 # 104 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	waitmessage
 # 105 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	trainerbattle_no_intro TRAINER_GRANT, Grant_Outro
+	trainerbattle_no_intro TRAINER_LEADER_GRACE, Grace_Outro
 # 106 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq ChartreuseCity_Gym_TrainerScript_Grant_5
-ChartreuseCity_Gym_TrainerScript_Grant_1:
+	goto_if_eq ChartreuseCity_Gym_TrainerScript_Grace_5
+ChartreuseCity_Gym_TrainerScript_Grace_1:
 # 126 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	release
 	return
 
-ChartreuseCity_Gym_TrainerScript_Grant_2:
+ChartreuseCity_Gym_TrainerScript_Grace_2:
 # 86 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	msgbox ChartreuseCity_Gym_TrainerScript_Grant_Text_0
-	goto ChartreuseCity_Gym_TrainerScript_Grant_1
+	msgbox ChartreuseCity_Gym_TrainerScript_Grace_Text_0
+	goto ChartreuseCity_Gym_TrainerScript_Grace_1
 
-ChartreuseCity_Gym_TrainerScript_Grant_5:
+ChartreuseCity_Gym_TrainerScript_Grace_5:
 # 107 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	msgbox ChartreuseCity_Gym_TrainerScript_Grant_Text_3
+	msgbox ChartreuseCity_Gym_TrainerScript_Grace_Text_3
 # 110 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	playfanfare MUS_OBTAIN_BADGE
 # 111 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	msgbox ChartreuseCity_Gym_TrainerScript_Grant_Text_4
+	msgbox ChartreuseCity_Gym_TrainerScript_Grace_Text_4
 # 112 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	waitfanfare
 # 113 "data/maps/ChartreuseCity_Gym/scripts.pory"
@@ -102,16 +102,16 @@ ChartreuseCity_Gym_TrainerScript_Grant_5:
 # 114 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	addvar VAR_CHARTREUSE_CITY_STATE, 1
 # 115 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	msgbox ChartreuseCity_Gym_TrainerScript_Grant_Text_5
+	msgbox ChartreuseCity_Gym_TrainerScript_Grace_Text_5
 # 116 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	giveitem ITEM_TM09
 # 117 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	msgbox ChartreuseCity_Gym_TrainerScript_Grant_Text_6
-	goto ChartreuseCity_Gym_TrainerScript_Grant_1
+	msgbox ChartreuseCity_Gym_TrainerScript_Grace_Text_6
+	goto ChartreuseCity_Gym_TrainerScript_Grace_1
 
 
 # 92 "data/maps/ChartreuseCity_Gym/scripts.pory"
-ChartreuseCity_Gym_TrainerScript_Grant_Movement_0:
+ChartreuseCity_Gym_TrainerScript_Grace_Movement_0:
 # 92 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	emote_exclamation_mark
 	step_end
@@ -124,22 +124,22 @@ ChartreuseCity_Gym_NPCScript_Text_0:
 ChartreuseCity_Gym_NPCScript_Text_1:
 # 10 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	.string "Welcome to the Chartreuse City Gym.\n"
-	.string "Our leader here is Grant.\p"
+	.string "Our leader here is Grace.\p"
 	.string "This Gym specializes in Grass-type\n"
 	.string "Pokémon, so any Flying or Fire-type\l"
 	.string "Pokémon should do the trick.$"
 
-ChartreuseCity_Gym_TrainerScript_Grant_Text_0:
+ChartreuseCity_Gym_TrainerScript_Grace_Text_0:
 # 86 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	.string "Best of luck to you, {PLAYER}.$"
 
-ChartreuseCity_Gym_TrainerScript_Grant_Text_1:
+ChartreuseCity_Gym_TrainerScript_Grace_Text_1:
 # 88 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	.string "Welcome to my Gym! I'm Grant.\n"
 	.string "I specialize in Grass-type Poké-\p"
 	.string "...Wait a second. Are those...$"
 
-ChartreuseCity_Gym_TrainerScript_Grant_Text_2:
+ChartreuseCity_Gym_TrainerScript_Grace_Text_2:
 # 95 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	.string "They are! You have all eight badges\n"
 	.string "from the Kanto region already?\p"
@@ -151,21 +151,21 @@ ChartreuseCity_Gym_TrainerScript_Grant_Text_2:
 	.string "My Pokémon will leave you all cut up!\n"
 	.string "Get ready!$"
 
-ChartreuseCity_Gym_TrainerScript_Grant_Text_3:
+ChartreuseCity_Gym_TrainerScript_Grace_Text_3:
 # 107 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	.string "I would have expected no less from\n"
 	.string "a trainer such as yourself.\p"
 	.string "Very well, here is the Vine Badge.$"
 
-ChartreuseCity_Gym_TrainerScript_Grant_Text_4:
+ChartreuseCity_Gym_TrainerScript_Grace_Text_4:
 # 111 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	.string "{PLAYER} obtained the Vine Badge!$"
 
-ChartreuseCity_Gym_TrainerScript_Grant_Text_5:
+ChartreuseCity_Gym_TrainerScript_Grace_Text_5:
 # 115 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	.string "I would also like to give you this.$"
 
-ChartreuseCity_Gym_TrainerScript_Grant_Text_6:
+ChartreuseCity_Gym_TrainerScript_Grace_Text_6:
 # 117 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	.string "That's the TM for Bullet Seed, one\n"
 	.string "of my favorite moves.\p"
@@ -177,7 +177,7 @@ ChartreuseCity_Gym_TrainerScript_Grant_Text_6:
 
 Bethany_Intro::
 # 26 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	.string "If you want to face Grant, you'll\n"
+	.string "If you want to face Grace, you'll\n"
 	.string "have to get through me first!$"
 
 Bethany_Outro::
@@ -188,7 +188,7 @@ PostBattle_Bethany::
 # 35 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	.string "Best of luck to you.\n"
 	.string "There's still two other trainers left\l"
-	.string "to fight before Grant.$"
+	.string "to fight before Grace.$"
 
 Trisha_Intro::
 # 48 "data/maps/ChartreuseCity_Gym/scripts.pory"
@@ -206,7 +206,7 @@ PostBattle_Trisha::
 
 Anne_Intro::
 # 69 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	.string "It's time to send you packing!$"
+	.string "It's time to whip you into shape!$"
 
 Anne_Outro::
 # 73 "data/maps/ChartreuseCity_Gym/scripts.pory"
@@ -214,9 +214,9 @@ Anne_Outro::
 
 PostBattle_Anne::
 # 77 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	.string "Grant's right up ahead.\n"
+	.string "Grace is right up ahead.\n"
 	.string "You've got this!$"
 
-Grant_Outro::
+Grace_Outro::
 # 129 "data/maps/ChartreuseCity_Gym/scripts.pory"
 	.string "I knew I didn't stand a chance.$"

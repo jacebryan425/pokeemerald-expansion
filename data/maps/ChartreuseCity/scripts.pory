@@ -303,7 +303,7 @@ script ChartreuseCity_SignScript_Location {
 script ChartreuseCity_SignScript_Gym {
     lock
     msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Chartreuse City Pokémon Gym.\n"
-            "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Leader: Grant.")
+            "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Leader: Grace.")
     release
 }
 

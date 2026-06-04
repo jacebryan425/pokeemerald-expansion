@@ -36,7 +36,7 @@
 #define TRAINER_BETHANY_CC                   30
 #define TRAINER_TRISHA_CC                    31
 #define TRAINER_ANNE_CC                      32
-#define TRAINER_GRANT                        33
+#define TRAINER_LEADER_GRACE                 33
 #define TRAINER_RYAN_ROUTE3                  34
 #define TRAINER_LEAH                         35
 #define TRAINER_DAISY                        36
