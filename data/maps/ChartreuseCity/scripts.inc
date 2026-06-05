@@ -785,9 +785,9 @@ ChartreuseCity_NPCScript_Dexnav_Text_2:
 
 ChartreuseCity_NPCScript_1_Text_0:
 # 281 "data/maps/ChartreuseCity/scripts.pory"
-	.string "I keep losing against Grant...\n"
+	.string "I keep losing against Grace...\n"
 	.string "No matter what kind of strategy I use,\l"
-	.string "he always wins!$"
+	.string "she always wins!$"
 
 ChartreuseCity_NPCScript_2_Text_0:
 # 290 "data/maps/ChartreuseCity/scripts.pory"

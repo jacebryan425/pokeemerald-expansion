@@ -135,7 +135,7 @@ ChartreuseCity_Gym_TrainerScript_Grace_Text_0:
 
 ChartreuseCity_Gym_TrainerScript_Grace_Text_1:
 # 88 "data/maps/ChartreuseCity_Gym/scripts.pory"
-	.string "Welcome to my Gym! I'm Grant.\n"
+	.string "Welcome to my Gym! I'm Grace.\n"
 	.string "I specialize in Grass-type Poké-\p"
 	.string "...Wait a second. Are those...$"
 
