@@ -95,7 +95,7 @@ script ChartreuseCity_Gym_TrainerScript_Grace {
         msgbox("They are! You have all eight badges\n"
                 "from the Kanto region already?\p"
                 "What's a trainer like you doing here?\p"
-                "...Oh, you want to take on the Obsidian\n"
+                "...Oh, you want to take on the Admiro\n"
                 "League? Very well then.\p"
                 "As I was saying, I specialize in\n"
                 "Grass-type Pokémon.\p"

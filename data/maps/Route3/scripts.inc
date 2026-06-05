@@ -297,7 +297,7 @@ Route3_EventScript_Rival_FacingLeft::
 	compare VAR_RESULT, YES
 	goto_if_eq Route3_EventScript_Rival_FacingLeft_2
 # 199 "data/maps/Route3/scripts.pory"
-	msgbox Route3_EventScript_Rival_FacingNorth_Text_3
+	msgbox Route3_EventScript_Rival_FacingLeft_Text_0
 Route3_EventScript_Rival_FacingLeft_1:
 # 217 "data/maps/Route3/scripts.pory"
 	msgbox Route3_EventScript_Rival_FacingNorth_Text_4, MSGBOX_YESNO
@@ -727,6 +727,26 @@ Route3_EventScript_Rival_FacingNorth_Text_10:
 # 158 "data/maps/Route3/scripts.pory"
 	.string "Well, I'll see you in Chartreuse City.\n"
 	.string "Best of luck, {PLAYER}!$"
+
+Route3_EventScript_Rival_FacingLeft_Text_0:
+# 199 "data/maps/Route3/scripts.pory"
+	.string "Really? I would have thought Aspen\n"
+	.string "would have told you about it.\p"
+	.string "Well, it's almost identical to the way\n"
+	.string "it worked in Kanto.\p"
+	.string "There are eight Gym Leaders throughout\n"
+	.string "Admiro, and once you've defeated all of\l"
+	.string "them, you'll be able to challenge the\l"
+	.string "Elite Four at the Admiro League.\p"
+	.string "These are the four strongest trainers\n"
+	.string "in the region, and it's no easy task.\p"
+	.string "Once you've defeated them, you'll be\n"
+	.string "granted access to areas of Admiro not\l"
+	.string "accessible to the average trainer.\p"
+	.string "What this means, {PLAYER}, is that in\n"
+	.string "order to complete Aspen's Pokédex,\l"
+	.string "we'll both need to start by working our\l"
+	.string "way through the Gym Challenge.$"
 
 Route3_NPCScript_1_Text_0:
 # 353 "data/maps/Route3/scripts.pory"

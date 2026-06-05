@@ -144,7 +144,7 @@ ChartreuseCity_Gym_TrainerScript_Grace_Text_2:
 	.string "They are! You have all eight badges\n"
 	.string "from the Kanto region already?\p"
 	.string "What's a trainer like you doing here?\p"
-	.string "...Oh, you want to take on the Obsidian\n"
+	.string "...Oh, you want to take on the Admiro\n"
 	.string "League? Very well then.\p"
 	.string "As I was saying, I specialize in\n"
 	.string "Grass-type Pokémon.\p"
