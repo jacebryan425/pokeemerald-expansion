@@ -278,9 +278,9 @@ script ChartreuseCity_NPCScript_Dexnav {
 script ChartreuseCity_NPCScript_1 {
     lock
     faceplayer
-    msgbox("I keep losing against Grant...\n"
+    msgbox("I keep losing against Grace...\n"
             "No matter what kind of strategy I use,\l"
-            "he always wins!")
+            "she always wins!")
     release
 }
 

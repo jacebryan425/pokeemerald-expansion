@@ -109,7 +109,8 @@
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
 #define TRAINER_PIC_ALPHA_GRUNT_M         93
-#define TRAINER_PIC_COUNT                 94
+#define TRAINER_PIC_LEADER_GRACE          94
+#define TRAINER_PIC_COUNT                 95
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -203,7 +204,7 @@
 #define FACILITY_CLASS_LEAF                  0x4f
 #define FACILITY_CLASS_RS_BRENDAN            0x50
 #define FACILITY_CLASS_RS_MAY                0x51
-#define FACILITY_CLASS_TEAM_ALPHA         0x52
+#define FACILITY_CLASS_TEAM_ALPHA            0x52
 
 #define FACILITY_CLASSES_COUNT               0x53
 

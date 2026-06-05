@@ -85,7 +85,7 @@ script ChartreuseCity_Gym_TrainerScript_Grace {
     if (flag(FLAG_BADGE01_GET) == TRUE) {
         msgbox("Best of luck to you, {PLAYER}.")
     } else {
-        msgbox("Welcome to my Gym! I'm Grant.\n"
+        msgbox("Welcome to my Gym! I'm Grace.\n"
                 "I specialize in Grass-type Poké-\p"
                 "...Wait a second. Are those...")
         playse(SE_PIN)
