@@ -11,7 +11,7 @@ Route111_OnLoad:
 	end
 
 Route111_EventScript_CloseDesertRuins::
-	setmetatile 29, 86, METATILE_General_RockWall_RockBase, TRUE
+	//setmetatile 29, 86, METATILE_General_RockWall_RockBase, TRUE
 	setmetatile 29, 87, METATILE_General_RockWall_SandBase, TRUE
 	return
 
