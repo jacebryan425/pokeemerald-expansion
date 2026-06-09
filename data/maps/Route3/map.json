@@ -32,7 +32,7 @@
   "object_events": [
     {
       "local_id": "RIVAL_ROUTE3",
-      "graphics_id": "OBJ_EVENT_GFX_VAR_3",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 10,
       "y": 41,
       "elevation": 0,
