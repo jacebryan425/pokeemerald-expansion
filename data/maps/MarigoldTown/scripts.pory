@@ -114,8 +114,8 @@ script MarigoldTown_EventScript_MeetRival {
             "this is the place to go.")
     waitmessage
     closemessage
-    applymovement(RIVAL, moves(walk_right * 7, face_up))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right * 7, face_up))
+    applymovement(RIVAL, moves(walk_right * 6, face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right * 6, face_up))
     waitmovement(0)
     msgbox("This is my house!")
     applymovement(RIVAL, moves(face_left))
@@ -125,8 +125,8 @@ script MarigoldTown_EventScript_MeetRival {
             "it's still part of the tour.")
     waitmessage
     closemessage
-    applymovement(RIVAL, moves(walk_down * 10, walk_left * 5, face_up))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, walk_down * 10, walk_left * 4, face_up))
+    applymovement(RIVAL, moves(walk_down * 10, walk_left * 4, face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, walk_down * 10, walk_left * 3, face_up))
     waitmovement(0)
     msgbox("And lastly, this is a Pokémon Center.\p"
             "If your Pokémon are ever in trouble,\n"
@@ -160,7 +160,7 @@ script MarigoldTown_EventScript_MeetRival {
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     waitmovement(0)
-    applymovement(RIVAL, moves(walk_down, walk_right * 5, walk_up *12))
+    applymovement(RIVAL, moves(walk_down, walk_right * 5, walk_up * 12))
     waitmovement(0)
     setflag(FLAG_HIDE_RIVAL_MARIGOLD_TOWN)
     removeobject(RIVAL)

@@ -343,8 +343,6 @@ MarigoldTown_EventScript_MeetRival_Movement_3:
 # 117 "data/maps/MarigoldTown/scripts.pory"
 	walk_right
 # 117 "data/maps/MarigoldTown/scripts.pory"
-	walk_right
-# 117 "data/maps/MarigoldTown/scripts.pory"
 	face_up
 	step_end
 
@@ -370,8 +368,6 @@ MarigoldTown_EventScript_MeetRival_Movement_4:
 	walk_down
 # 128 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 128 "data/maps/MarigoldTown/scripts.pory"
-	walk_left
 # 128 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
 # 128 "data/maps/MarigoldTown/scripts.pory"
@@ -408,8 +404,6 @@ MarigoldTown_EventScript_MeetRival_Movement_5:
 	walk_down
 # 129 "data/maps/MarigoldTown/scripts.pory"
 	walk_down
-# 129 "data/maps/MarigoldTown/scripts.pory"
-	walk_left
 # 129 "data/maps/MarigoldTown/scripts.pory"
 	walk_left
 # 129 "data/maps/MarigoldTown/scripts.pory"
