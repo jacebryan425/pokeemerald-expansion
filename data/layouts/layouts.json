@@ -4554,8 +4554,8 @@
     {
       "id": "LAYOUT_CHARTREUSE_CITY_GYM",
       "name": "ChartreuseCity_Gym_Layout",
-      "width": 18,
-      "height": 28,
+      "width": 16,
+      "height": 17,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_DewfordGym",
       "border_filepath": "data/layouts/ChartreuseCity_Gym/border.bin",

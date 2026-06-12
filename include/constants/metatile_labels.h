@@ -208,7 +208,7 @@
 #define METATILE_General_CalmWater            0x170
 #define METATILE_General_Door                 0x021
 #define METATILE_General_Door_Contest         0x1DB
-#define METATILE_General_Door_Gym             0x1CD
+#define METATILE_General_Door_Gym             0x1C3
 #define METATILE_General_Door_PokeCenter      0x061
 #define METATILE_General_Door_PokeMart        0x041
 #define METATILE_General_Grass                0x001
@@ -377,7 +377,7 @@
 // gTileset_Petalburg
 #define METATILE_Petalburg_Door_BirchsLab   0x22B
 #define METATILE_Petalburg_Door_Littleroot  0x249
-#define METATILE_Petalburg_Door_Oldale      0x287
+#define METATILE_Petalburg_Door_Oldale      0x251
 
 // gTileset_PetalburgGym
 #define METATILE_PetalburgGym_Door                0x224
