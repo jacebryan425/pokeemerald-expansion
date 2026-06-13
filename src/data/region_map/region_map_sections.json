@@ -817,6 +817,10 @@
     },
     {
       "id": "MAPSEC_CHARTREUSE_CAVE",
+      "name": "Chartreuse Cave"
+    },
+    {
+      "id": "MAPSEC_CHARTREUSE_CAVE_NORTH_ENTRANCE",
       "name": "Chartreuse Cave",
       "x": 11,
       "y": 10,
