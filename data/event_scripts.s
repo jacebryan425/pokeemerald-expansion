@@ -1211,3 +1211,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MarigoldTown_House1/scripts.inc"
 
 	.include "data/maps/Route3_PCCreatorHouse/scripts.inc"
+
+	.include "data/maps/Route5/scripts.inc"

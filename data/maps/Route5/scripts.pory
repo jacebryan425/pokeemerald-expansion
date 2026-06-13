@@ -1,0 +1,19 @@
+mapscripts Route5_MapScripts {}
+
+script Route5_NPCScript_BigManSnorlax {
+    lock
+    faceplayer
+    msgbox("Oh, hi there!\p"
+            "I'm the creator of this hack,\n"
+            "Big Man Snorlax.\p"
+            "Looks like you've made it to the end\n"
+            "of the demo.\p"
+            "Thank you so much for playing!\n"
+            "It truly means the world.\p"
+            "Now if you'll excuse me, I'm going to\n"
+            "get back to carving out this route.\p"
+            "See you soon!")
+    applymovement(BMS, moves(face_right))
+    waitmovement(0)
+    release
+}

@@ -9,9 +9,9 @@ script MarigoldTown_Mart_Employee {
         pokemart(0)
         msgbox("Thank you, come again.")
     } else {
-        msgbox("Nice to see you again!\p"
-                "Thank you again for chasing those\n"
-                "scary Zigzagoon off.\p"
+        msgbox("Hey, it's you!\p"
+                "Thank you for chasing those Zigzagoon\n"
+                "away.\p"
                 "I have something neat that just came\n"
                 "in and I'd like to give them to you.")
         playfanfare(MUS_OBTAIN_ITEM)

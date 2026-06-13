@@ -11569,6 +11569,36 @@
                 "species": "SPECIES_ZIGZAGOON"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
           }
         },
         {
@@ -11636,6 +11666,36 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_ZIGZAGOON"
+              }
+            ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
               }
             ]
           }
@@ -11707,6 +11767,36 @@
                 "species": "SPECIES_ZIGZAGOON"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
           }
         },
         {
@@ -11774,6 +11864,36 @@
                 "min_level": 4,
                 "max_level": 4,
                 "species": "SPECIES_NIDORAN_M"
+              }
+            ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
               }
             ]
           }
@@ -11845,6 +11965,36 @@
                 "species": "SPECIES_SUNKERN"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
           }
         },
         {
@@ -11912,6 +12062,36 @@
                 "min_level": 4,
                 "max_level": 4,
                 "species": "SPECIES_NIDORAN_M"
+              }
+            ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
               }
             ]
           }
@@ -12280,6 +12460,36 @@
                 "species": "SPECIES_BUDEW"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
           }
         },
         {
@@ -12349,6 +12559,36 @@
                 "species": "SPECIES_BELLSPROUT"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
           }
         },
         {
@@ -12416,6 +12656,36 @@
                 "min_level": 6,
                 "max_level": 6,
                 "species": "SPECIES_BELLSPROUT"
+              }
+            ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
               }
             ]
           }
@@ -12694,6 +12964,36 @@
                 "species": "SPECIES_JIGGLYPUFF"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
           }
         },
         {
@@ -12763,6 +13063,36 @@
                 "species": "SPECIES_JIGGLYPUFF"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
           }
         },
         {
@@ -12830,6 +13160,546 @@
                 "min_level": 7,
                 "max_level": 7,
                 "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PERIWINKLE_TOWN",
+          "base_label": "gPeriwinkleTown_Morning",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PERIWINKLE_TOWN",
+          "base_label": "gPeriwinkleTown_Day",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PERIWINKLE_TOWN",
+          "base_label": "gPeriwinkleTown_Night",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PERIWINKLE_GARDEN",
+          "base_label": "gPeriwinkleGarden_Morning",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PERIWINKLE_GARDEN",
+          "base_label": "gPeriwinkleGarden_Day",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PERIWINKLE_GARDEN",
+          "base_label": "gPeriwinkleGarden_Night",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MARIGOLD_TOWN",
+          "base_label": "gMarigoldTown_Morning",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MARIGOLD_TOWN",
+          "base_label": "gMarigoldTown_Day",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MARIGOLD_TOWN",
+          "base_label": "gMarigoldTown_Night",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CHARTREUSE_CITY",
+          "base_label": "gChartreuseCity_Morning",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CHARTREUSE_CITY",
+          "base_label": "gChartreuseCity_Day",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CHARTREUSE_CITY",
+          "base_label": "gChartreuseCity_Night",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE5",
+          "base_label": "gRoute5_Morning",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE5",
+          "base_label": "gRoute5_Day",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE5",
+          "base_label": "gRoute5_Night",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 8,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
               }
             ]
           }

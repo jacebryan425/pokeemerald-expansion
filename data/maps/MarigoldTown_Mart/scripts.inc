@@ -82,9 +82,9 @@ MarigoldTown_Mart_Employee_Text_1:
 
 MarigoldTown_Mart_Employee_Text_2:
 # 12 "data/maps/MarigoldTown_Mart/scripts.pory"
-	.string "Nice to see you again!\p"
-	.string "Thank you again for chasing those\n"
-	.string "scary Zigzagoon off.\p"
+	.string "Hey, it's you!\p"
+	.string "Thank you for chasing those Zigzagoon\n"
+	.string "away.\p"
 	.string "I have something neat that just came\n"
 	.string "in and I'd like to give them to you.$"
 
